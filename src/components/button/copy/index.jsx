@@ -44,6 +44,6 @@ const ButtonText = styled.span`
   font-size: 0.9rem;
   font-weight: 600;
   color: ${props => !props.copied ? "#fff" : "#43d35d"};
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   transition: all 1s ease-in-out
 `;

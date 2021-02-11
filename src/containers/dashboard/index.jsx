@@ -90,7 +90,7 @@ export const Dashboard = () => {
                 </ImagesContainer>
             </Section>
         </Content>
-        <Footer>© 2020 ZorrillosDev Community.</Footer>
+        <Footer>© 2021 ZorrillosDev Community.</Footer>
       </DashboardContainer>
   );
 };
@@ -99,7 +99,7 @@ const DashboardContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: #141518;
-  overflow: scroll;
+  overflow: hidden;
   
   &,
   & *,
@@ -114,10 +114,10 @@ const Footer = styled.div`
   padding: 3rem 0 3rem;
   text-align: center;
   color: #eee;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   box-shadow: 0 0px 17px 0 rgba(0,0,0,0.2), 0 36px 94px 0 rgba(0,0,0,0.19);
   font-size: 0.8rem;
-  font-weight: 200;
+  word-spacing: 2px;
   background-color: #14161b;
 `;
 
@@ -158,7 +158,7 @@ const ImageTitle = styled.div`
   text-align: center;
   color: #475e71;
   text-transform: capitalize;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem;
 `;
 
@@ -194,7 +194,7 @@ const HashTitle = styled.div`
   font-weight: 600;
   color: #e58e26;
   text-transform: uppercase;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem;
 `;
 
@@ -204,7 +204,7 @@ const HashCount = styled.div`
   text-align: center;
   color: #20bf6b;
   text-transform: capitalize;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem;
 `;
 
@@ -225,7 +225,7 @@ const Hash = styled.input`
   text-align: center;
   color: white;
   text-transform: capitalize;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem;
   padding: 0.5rem 4rem 0.5rem 0.5rem;
   border-radius: 0.5rem;
@@ -257,7 +257,7 @@ const Title = styled.div`
   text-align: center;
   color: white;
   text-transform: capitalize;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin-bottom: 2rem;
 `;
 
@@ -267,7 +267,7 @@ const SubTitle = styled.div`
   text-align: center;
   color: white;
   text-transform: uppercase;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1.5rem 0 0.5rem;
 `;
 
@@ -279,7 +279,7 @@ const TextContent = styled.div`
   text-align: justify;
   color: #999;
   text-transform: none;
-  font-family: 'Nunito Sans',sans-serif;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
   
   @media (max-width: 650px) {
     width: 90%;

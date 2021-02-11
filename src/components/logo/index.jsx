@@ -52,7 +52,7 @@ const LogoImg = styled.img`
 const LogoText = styled.span`
   font-weight: 600;
   font-size: 4rem;
-  font-family: 'Cantarell', sans-serif;
+  font-family: 'Oswald', 'Cantarell', Arial, sans-serif;
   line-height: 1;
   margin-left: -1rem;
   user-select: none;
