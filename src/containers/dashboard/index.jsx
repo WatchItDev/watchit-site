@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Landing} from '../../components/landing'
+import {CopyButton} from '../../components/button/copy'
 import styled from "styled-components";
 import orbit from '../../assets/img/orbit.png'
 import electron from '../../assets/img/electron.png'
@@ -7,11 +8,40 @@ import react from '../../assets/img/react.png'
 import ipfs from '../../assets/img/ipfs.png'
 
 export const Dashboard = () => {
+    let warezRef = useRef(null);
+    let pdmRef = useRef(null);
+
+    function copyCodeToClipboard (ref) {
+        console.log(ref);
+        ref.current.select();
+        document.execCommand("copy")
+    }
 
   return (
       <DashboardContainer>
         <Landing />
         <Content>
+            <Section>
+                <Title>Public Keys Available</Title>
+                <HashesContainer>
+                    <HashOption>
+                        <HashTitle>Warez</HashTitle>
+                        <HashCount>{process.env.REACT_APP_WAREZ_COUNT} <small>Movies</small></HashCount>
+                        <HashClipboard>
+                            <Hash type='text' ref={warezRef} value={process.env.REACT_APP_WAREZ_HASH} readOnly/>
+                            <CopyButton copy={()=>copyCodeToClipboard(warezRef)} />
+                        </HashClipboard>
+                    </HashOption>
+                    <HashOption>
+                        <HashTitle>PDM</HashTitle>
+                        <HashCount>{process.env.REACT_APP_PDM_COUNT} <small>Movies</small></HashCount>
+                        <HashClipboard>
+                            <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
+                            <CopyButton copy={()=>copyCodeToClipboard(pdmRef)} />
+                        </HashClipboard>
+                    </HashOption>
+                </HashesContainer>
+            </Section>
             <Section>
                 <Title>A movie platform with a decentralized network approach</Title>
                 <TextContent>
@@ -70,6 +100,13 @@ const DashboardContainer = styled.div`
   height: 100%;
   background-color: #141518;
   overflow: scroll;
+  
+  &,
+  & *,
+  :before,
+  :after {
+    box-sizing: border-box;
+  }
 `;
 
 const Footer = styled.div`
@@ -125,15 +162,90 @@ const ImageTitle = styled.div`
   margin: 1rem;
 `;
 
+const HashesContainer = styled.div`
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+const HashOption = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 7px 0 rgba(0,0,0,0.2), 0 5px 22px 0 rgba(0,0,0,0.19);
+  margin: 1rem;
+  border-radius: 1rem;
+  width: calc(50% - 3rem);
+  padding: 1rem;
+  
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+`;
+
+const HashTitle = styled.div`
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #e58e26;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans',sans-serif;
+  margin: 1rem;
+`;
+
+const HashCount = styled.div`
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #20bf6b;
+  text-transform: capitalize;
+  font-family: 'Nunito Sans',sans-serif;
+  margin: 1rem;
+`;
+
+const HashClipboard = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
+
+const Hash = styled.input`
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  font-family: 'Nunito Sans',sans-serif;
+  margin: 1rem;
+  padding: 0.5rem 4rem 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  background: transparent;
+  box-shadow: none !important;
+  outline: none !important;
+  cursor: text;
+  width: 100%;
+`;
+
 const Section = styled.div`
   width: 60%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   
-  @media (max-width: 500px) {
+  @media (max-width: 900px) {
     width: 90%;
     padding: 1rem 0;
   }
@@ -169,24 +281,9 @@ const TextContent = styled.div`
   text-transform: none;
   font-family: 'Nunito Sans',sans-serif;
   
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     width: 90%;
     min-width: auto;
     font-size: 1rem;
   }
-`;
-
-const Command = styled.div`
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 0.5rem;
-  background-color: rgba(255,255,255,0.8);
-  color: #000;
-  border-radius: 0.5rem;
-  margin: 1.5rem 0 0.5rem;
-  width: auto;
-  display: inline-block;
-  text-transform: none;
-  font-family: 'Nunito Sans',sans-serif;
 `;
