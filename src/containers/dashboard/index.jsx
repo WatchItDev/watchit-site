@@ -11,88 +11,97 @@ export const Dashboard = () => {
     let warezRef = useRef(null);
     let pdmRef = useRef(null);
 
-    function copyCodeToClipboard (ref) {
+    function copyCodeToClipboard(ref) {
         console.log(ref);
         ref.current.select();
         document.execCommand("copy")
     }
 
-  return (
-      <DashboardContainer>
-        <Landing />
-        <Content>
-            <Section>
-                <Title>Public Keys Available</Title>
-                <HashesContainer>
-                    <HashOption>
-                        <HashTitle>Warez</HashTitle>
-                        <HashCount>{process.env.REACT_APP_WAREZ_COUNT} <small>Movies</small></HashCount>
-                        <HashClipboard>
-                            <Hash type='text' ref={warezRef} value={process.env.REACT_APP_WAREZ_HASH} readOnly/>
-                            <CopyButton copy={()=>copyCodeToClipboard(warezRef)} />
-                        </HashClipboard>
-                    </HashOption>
-                    <HashOption>
-                        <HashTitle>PDM</HashTitle>
-                        <HashCount>{process.env.REACT_APP_PDM_COUNT} <small>Movies</small></HashCount>
-                        <HashClipboard>
-                            <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
-                            <CopyButton copy={()=>copyCodeToClipboard(pdmRef)} />
-                        </HashClipboard>
-                    </HashOption>
-                </HashesContainer>
-            </Section>
-            <Section>
-                <Title>A movie platform with a decentralized network approach</Title>
-                <TextContent>
-                    For a long time watching movies has overwhelmed me, I am simply limited by my time to go to the cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
-                    Somehow the internet today helps us to cope with some of these problems, the other problem is that the internet offers very few resources to see good quality movies and those who offer it do so with movies that are definitely not the "last" launch of the Avengers (sarcasm). <br/><br/>
-                    For this reason, a team of friends with the same ideology and need decided to take this crossroads to find, compile and expose a safe resource with quality films (no lag please). <br/><br/>
-                    Today, having the ability to share information with each other (P2P) directly, is simply amazing to me. My friend can have the Spiderman movie and transmit it to my other friend 300 KM away and that he can instead transmit the last Avengers movie for me to see it comfortably in my chair happily, it is also fantastic. This collective entertainment methodology is amazing. <br/><br/>
-                    Well, in order to decentralize our films so that everyone can have access to them, we resorted to incredible tools such as IPFS and OrbitDB, which allowed us to have created a DAPP (Decentralized App). In simple words, Watchit is an application that does not require external resources, but rather everyone helps everyone to make it work and this classifies it as a "Decentralized Autonomous Organization". We are all happy together :) yay!!
-                </TextContent>
-                <SubTitle>
-                    Important note:
-                </SubTitle>
-                <TextContent>
-                    Some resources contain intellectual property or copyright so there are two versions of the application: Official App and Warez App (Use at your own risk). <br/><br/>
-                    The difference between these is that one provides public domain content (old and boring movies) and the other version provides access to a database containing a wide variety of movies (constantly growing) from the oldest to the most recent. <br/><br/>
-                    The real goal is to entertain but also to show the potential of decentralized networks, so whatever the goal, you will love Watchit!
-                </TextContent>
-            </Section>
-            <Section>
-                <Title>Stack</Title>
-                <ImagesContainer>
-                    <ImageWrapper>
-                        <Image src={orbit} />
-                        <ImageTitle>
-                            orbit db
-                        </ImageTitle>
-                    </ImageWrapper>
-                    <ImageWrapper>
-                        <Image src={ipfs} />
-                        <ImageTitle>
-                            ipfs
-                        </ImageTitle>
-                    </ImageWrapper>
-                    <ImageWrapper>
-                        <Image src={react} />
-                        <ImageTitle>
-                            React
-                        </ImageTitle>
-                    </ImageWrapper>
-                    <ImageWrapper>
-                        <Image src={electron} />
-                        <ImageTitle>
-                            electron
-                        </ImageTitle>
-                    </ImageWrapper>
-                </ImagesContainer>
-            </Section>
-        </Content>
-        <Footer>© 2021 ZorrillosDev Community.</Footer>
-      </DashboardContainer>
-  );
+    return (
+        <DashboardContainer>
+            <Landing/>
+            <Content>
+                <Section>
+                    <Title>Public Keys Available</Title>
+                    <HashesContainer>
+                        <HashOption>
+                            <HashTitle>PDM</HashTitle>
+                            <HashClipboard>
+                                <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
+                                <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
+                            </HashClipboard>
+                        </HashOption>
+                    </HashesContainer>
+                </Section>
+                <Section>
+                    <Title>A movie platform with a decentralized network approach</Title>
+                    <TextContent>
+                        For a long time watching movies has overwhelmed me, I am simply limited by my time to go to the
+                        cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket
+                        and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
+                        Somehow the internet today helps us to cope with some of these problems, the other problem is
+                        that the internet offers very few resources to see good quality movies and those who offer it do
+                        so with movies that are definitely not the "last" launch of the Avengers (sarcasm). <br/><br/>
+                        For this reason, a team of friends with the same ideology and need decided to take this
+                        crossroads to find, compile and expose a safe resource with quality films (no lag please). <br/><br/>
+                        Today, having the ability to share information with each other (P2P) directly, is simply amazing
+                        to me. My friend can have the Spiderman movie and transmit it to my other friend 300 KM away and
+                        that he can instead transmit the last Avengers movie for me to see it comfortably in my chair
+                        happily, it is also fantastic. This collective entertainment methodology is amazing. <br/><br/>
+                        Well, in order to decentralize our films so that everyone can have access to them, we resorted
+                        to incredible tools such as IPFS and OrbitDB, which allowed us to have created a DAPP
+                        (Decentralized App). In simple words, Watchit is an application that does not require external
+                        resources, but rather everyone helps everyone to make it work and this classifies it as a
+                        "Decentralized Autonomous Organization". We are all happy together :) yay!!
+                    </TextContent>
+                    <SubTitle>
+                        Important note:
+                    </SubTitle>
+                    <TextContent>
+                        Some resources contain intellectual property or copyright so we consider that the content that
+                        is distributed through the application is the responsibility of its providers.<br/><br/>
+                        Official App Key contain Public Domain Movies so any not official key please use it
+                        at your own risk.
+                        The difference between these is that one provides legal public domain movies and other
+                        may provides access to a database containing a wide variety of movies some containing
+                        copyright.<br/><br/>
+                        The real goal is to entertain but also to show the potential of decentralized networks, so
+                        whatever the goal, you will love Watchit!
+                    </TextContent>
+                </Section>
+                <Section>
+                    <Title>Stack</Title>
+                    <ImagesContainer>
+                        <ImageWrapper>
+                            <Image src={orbit}/>
+                            <ImageTitle>
+                                orbit db
+                            </ImageTitle>
+                        </ImageWrapper>
+                        <ImageWrapper>
+                            <Image src={ipfs}/>
+                            <ImageTitle>
+                                ipfs
+                            </ImageTitle>
+                        </ImageWrapper>
+                        <ImageWrapper>
+                            <Image src={react}/>
+                            <ImageTitle>
+                                React
+                            </ImageTitle>
+                        </ImageWrapper>
+                        <ImageWrapper>
+                            <Image src={electron}/>
+                            <ImageTitle>
+                                electron
+                            </ImageTitle>
+                        </ImageWrapper>
+                    </ImagesContainer>
+                </Section>
+            </Content>
+            <Footer>© 2021 ZorrillosDev Community.</Footer>
+        </DashboardContainer>
+    );
 };
 
 const DashboardContainer = styled.div`
@@ -173,7 +182,6 @@ const HashesContainer = styled.div`
 
 const HashOption = styled.div`
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 0;
   align-items: center;
@@ -181,7 +189,7 @@ const HashOption = styled.div`
   box-shadow: 0 0px 7px 0 rgba(0,0,0,0.2), 0 5px 22px 0 rgba(0,0,0,0.19);
   margin: 1rem;
   border-radius: 1rem;
-  width: calc(50% - 3rem);
+  width: 100% !important;
   padding: 1rem;
   
   @media (max-width: 500px) {
@@ -195,18 +203,9 @@ const HashTitle = styled.div`
   color: #e58e26;
   text-transform: uppercase;
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
-  margin: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
 `;
 
-const HashCount = styled.div`
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  color: #20bf6b;
-  text-transform: capitalize;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
-  margin: 1rem;
-`;
 
 const HashClipboard = styled.div`
   display: flex;
@@ -216,6 +215,7 @@ const HashClipboard = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-right: 1rem
 `;
 
 
