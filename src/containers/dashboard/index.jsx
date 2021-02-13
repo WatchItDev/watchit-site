@@ -8,11 +8,9 @@ import react from '../../assets/img/react.png'
 import ipfs from '../../assets/img/ipfs.png'
 
 export const Dashboard = () => {
-    let warezRef = useRef(null);
     let pdmRef = useRef(null);
 
     function copyCodeToClipboard(ref) {
-        console.log(ref);
         ref.current.select();
         document.execCommand("copy")
     }
