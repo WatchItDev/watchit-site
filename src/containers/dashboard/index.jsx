@@ -222,7 +222,6 @@ const Hash = styled.input`
   font-weight: 600;
   text-align: center;
   color: white;
-  text-transform: capitalize;
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem;
   padding: 0.5rem 4rem 0.5rem 0.5rem;
