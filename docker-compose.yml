@@ -10,6 +10,7 @@ services:
     volumes:
       - cert-data:/etc/letsencrypt
       - ./config/domains:/opt/certbot/domains/
+
   watchit_reverse_proxy:
     image: peelvalley/proxy
     restart: unless-stopped
