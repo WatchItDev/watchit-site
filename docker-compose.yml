@@ -1,8 +1,36 @@
 version: '3'
 services:
-  watchit_blogsite_ipfs:
-    image: ipfs/go-ipfs:v0.6.0
+  watchit_certbot:
+    image: peelvalley/certbot
     restart: unless-stopped
+    networks:
+      - certbot
+    environment:
+      NOTIFY_EMAIL: 'gmjun2000@gmail.com'
+    volumes:
+      - cert-data:/etc/letsencrypt
+      - ./config/domains:/opt/certbot/domains/
+  watchit_reverse_proxy:
+    image: peelvalley/proxy
+    restart: unless-stopped
+    networks:
+      - certbot
+      - ipfs
+    ports:
+      - "0.0.0.0.0:80:80/tcp"
+      - "0.0.0.0.0:443:443/tcp"
+    volumes:
+      - ./config/reverse-proxy/conf.d.available:/etc/nginx/conf.d.available
+      - ./config/domains:/etc/nginx/conf.d.enabled
+      - proxy-conf:/etc/nginx/conf.d
+      - cert-data:/etc/letsencrypt
+
+  watchit_blogsite_ipfs:
+    image: ipfs/go-ipfs
+    restart: unless-stopped
+    command: ["daemon", "--migrate=true", "--enable-gc", "--enable-namesys-pubsub"]
+    networks:
+      - ipfs
     environment:
       - IPFS_PROFILE=server
       - IPFS_PATH=/ipfsdata
@@ -12,5 +40,38 @@ services:
     ports:
       - "4005:4005"
       - "4006:4006"
-      - "8081:8081"
-      - "5003:5003"
+      - "0.0.0.0:8081:8081"
+      - "0.0.0.0:5003:5003"
+
+  watchit_orbit_api:
+    image:  phillmac/orbit-db-http-api-dev:debug
+    restart: unless-stopped
+    command: ["node", "src/cli.js", "api"]
+    #command: ["node", "--trace-warnings", "src/cli.js", "api", "--debug"]
+    environment:
+      IPFS_HOST: 'ipfs'
+      ORBITDB_DIR: '/orbitdb'
+      FORCE_HTTP1: 'true'
+      #DEBUG_QUERY: 'true'
+      #LOG: DEBUG
+      #ANNOUNCE_DBS: 'true'
+    depends_on:
+      - watchit_blogsite_ipfs
+    networks:
+      - ipfs
+    volumes:
+      - orbitdb-data:/orbitdb
+
+volumes:
+  ipfs-data:
+  orbitdb-data:
+  cert-data:
+  proxy-conf:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+
+
+networks:
+  certbot:
+  ipfs:
