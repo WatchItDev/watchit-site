@@ -54,7 +54,7 @@ const LogoText = styled.span`
   font-size: 4rem;
   font-family: 'Oswald', 'Cantarell', Arial, sans-serif;
   line-height: 1;
-  margin-left: -1rem;
+  margin-left: -0.5rem;
   user-select: none;
   
   @media (max-width: 500px) {
