@@ -3,6 +3,7 @@ import {Landing} from '../../components/landing'
 import {CopyButton} from '../../components/button/copy'
 import styled from "styled-components";
 import orbit from '../../assets/img/orbit.png'
+import orbit2 from '../../assets/img/orbit2.png'
 import electron from '../../assets/img/electron.png'
 import react from '../../assets/img/react.png'
 import ipfs from '../../assets/img/ipfs.png'
@@ -33,66 +34,48 @@ export const Dashboard = () => {
                 </Section>
                 <Section>
                     <Title>A movie platform with a decentralized network approach</Title>
-                    <TextContent>
+                    <Cite>
                         For a long time watching movies has overwhelmed me, I am simply limited by my time to go to the
                         cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket
                         and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
                         Somehow the internet today helps us to cope with some of these problems, the other problem is
                         that the internet offers very few resources to see good quality movies and those who offer it do
-                        so with movies that are definitely not the "last" launch of the Avengers (sarcasm). <br/><br/>
-                        For this reason, a team of friends with the same ideology and need decided to take this
-                        crossroads to find, compile and expose a safe resource with quality films (no lag please). <br/><br/>
-                        Today, having the ability to share information with each other (P2P) directly, is simply amazing
-                        to me. My friend can have the Spiderman movie and transmit it to my other friend 300 KM away and
-                        that he can instead transmit the last Avengers movie for me to see it comfortably in my chair
-                        happily, it is also fantastic. This collective entertainment methodology is amazing. <br/><br/>
-                        Well, in order to decentralize our films so that everyone can have access to them, we resorted
-                        to incredible tools such as IPFS and OrbitDB, which allowed us to have created a DAPP
-                        (Decentralized App). In simple words, Watchit is an application that does not require external
-                        resources, but rather everyone helps everyone to make it work and this classifies it as a
-                        "Decentralized Autonomous Organization". We are all happy together :) yay!!
-                    </TextContent>
-                    <SubTitle>
-                        Important note:
-                    </SubTitle>
-                    <TextContent>
-                        Some resources contain intellectual property or copyright so we consider that the content that
-                        is distributed through the application is the responsibility of its providers.<br/><br/>
-                        Official App Key contain Public Domain Movies so any not official key please use it
-                        at your own risk.
-                        The difference between these is that one provides legal public domain movies and other
-                        may provides access to a database containing a wide variety of movies some containing
-                        copyright.<br/><br/>
-                        The real goal is to entertain but also to show the potential of decentralized networks, so
-                        whatever the goal, you will love Watchit!
-                    </TextContent>
+                        so with movies that are definitely not the "last" launch of the Avengers (sarcasm). <a href="https://dev.to/geolffreym/watchit-2b88">Read More...</a>
+                    </Cite>
                 </Section>
+                <SectionWhite>
+                    <Title>A Huge Network</Title>
+                    <SectionContent>
+                        <SubSection>
+                            <ImageWrapper href="https://orbitdb.org/">
+                                <Image src={orbit2}/>
+                            </ImageWrapper>
+                            <ImageWrapper href="https://ipfs.io/">
+                                <Image src={ipfs}/>
+                            </ImageWrapper>
+                        </SubSection>
+                        <SubSection>
+                            <TextContent>
+                                We are part of <a href="https://awesome.ipfs.io/">Awesome ipfs</a> and <a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a> collections of really cool projects!
+                                You can be part of watchit also collaborating with the community, you can check our <a href="https://github.com/ZorrillosDev/watchit-desktop">github</a> page for more information
+                            </TextContent>
+                        </SubSection>
+                    </SectionContent>
+                </SectionWhite>
                 <Section>
                     <Title>Stack</Title>
                     <ImagesContainer>
-                        <ImageWrapper>
+                        <ImageWrapper href="https://orbitdb.org/">
                             <Image src={orbit}/>
-                            <ImageTitle>
-                                orbit db
-                            </ImageTitle>
                         </ImageWrapper>
-                        <ImageWrapper>
+                        <ImageWrapper href="https://ipfs.io/">
                             <Image src={ipfs}/>
-                            <ImageTitle>
-                                ipfs
-                            </ImageTitle>
                         </ImageWrapper>
-                        <ImageWrapper>
+                        <ImageWrapper href="https://es.reactjs.org/">
                             <Image src={react}/>
-                            <ImageTitle>
-                                React
-                            </ImageTitle>
                         </ImageWrapper>
-                        <ImageWrapper>
+                        <ImageWrapper href="https://www.electronjs.org/">
                             <Image src={electron}/>
-                            <ImageTitle>
-                                electron
-                            </ImageTitle>
                         </ImageWrapper>
                     </ImagesContainer>
                 </Section>
@@ -119,6 +102,7 @@ const DashboardContainer = styled.div`
 const Footer = styled.div`
   width: 100%;
   padding: 3rem 0 3rem;
+  margin-top: 3rem;
   text-align: center;
   color: #eee;
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
@@ -145,7 +129,7 @@ const ImagesContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,16 +141,6 @@ const Image = styled.img`
   width: auto;
   height: 6rem;
   margin: 1.5rem;
-`;
-
-const ImageTitle = styled.div`
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  color: #475e71;
-  text-transform: capitalize;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
-  margin: 1rem;
 `;
 
 const HashesContainer = styled.div`
@@ -184,7 +158,7 @@ const HashOption = styled.div`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0px 7px 0 rgba(0,0,0,0.2), 0 5px 22px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 0 7px 0 rgba(0,0,0,0.2), 0 5px 22px 0 rgba(0,0,0,0.19);
   margin: 1rem;
   border-radius: 1rem;
   width: 100% !important;
@@ -203,7 +177,6 @@ const HashTitle = styled.div`
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin: 1rem 2rem 1rem 1rem;
 `;
-
 
 const HashClipboard = styled.div`
   display: flex;
@@ -248,7 +221,58 @@ const Section = styled.div`
   }
 `;
 
-const Title = styled.div`
+const SectionContent = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 900px) {
+    width: 90%;
+  }
+`;
+
+const SubSection = styled.div`
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+  p {
+    min-width: auto;
+  }
+  
+  a {
+    color: #e58e26;
+    text-decoration: none;
+  }
+`;
+
+const SectionWhite = styled.div`
+  width: 100%;
+  padding: 7rem 0;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.9);
+  
+  span {
+    color: #444;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  @media (max-width: 900px) {
+    padding: 3rem 0;
+  }
+`;
+
+const Title = styled.span`
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -258,25 +282,55 @@ const Title = styled.div`
   margin-bottom: 2rem;
 `;
 
-const SubTitle = styled.div`
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
-  margin: 1.5rem 0 0.5rem;
-`;
-
-const TextContent = styled.div`
+const TextContent = styled.p`
   width: 80%;
   min-width: 36rem;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: justify;
-  color: #999;
+  color: #ddd;
   text-transform: none;
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  
+  @media (max-width: 650px) {
+    width: 90%;
+    min-width: auto;
+    font-size: 1rem;
+  }
+`;
+
+const Cite = styled.p`
+  width: 80%;
+  min-width: 36rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: justify;
+  color: #ddd;
+  text-transform: none;
+  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+
+  a {
+    color: #e58e26;
+    text-decoration: none;
+  }
+  
+  &:before {
+    color: #fff;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  
+  &:after {
+    color: #fff;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.6em;
+  }
   
   @media (max-width: 650px) {
     width: 90%;
