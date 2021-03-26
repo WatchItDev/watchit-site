@@ -21,7 +21,7 @@ export const Dashboard = () => {
             <Landing/>
             <Content>
                 <Section>
-                    <Title>Public Keys Available</Title>
+                    <Title>Public key available</Title>
                     <HashesContainer>
                         <HashOption>
                             <HashTitle>PDM</HashTitle>
@@ -35,16 +35,16 @@ export const Dashboard = () => {
                 <Section>
                     <Title>A movie platform with a decentralized network approach</Title>
                     <Cite>
-                        For a long time watching movies has overwhelmed me, I am simply limited by my time to go to the
+                        ... watching movies has overwhelmed me, I am simply limited by my time to go to the
                         cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket
                         and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
                         Somehow the internet today helps us to cope with some of these problems, the other problem is
                         that the internet offers very few resources to see good quality movies and those who offer it do
-                        so with movies that are definitely not the "last" launch of the Avengers (sarcasm). <a href="https://dev.to/geolffreym/watchit-2b88">Read More...</a>
+                        so with movies that are definitely not the "last" launch of the Avengers <a href="https://dev.to/geolffreym/watchit-2b88">read more...</a>
                     </Cite>
                 </Section>
                 <SectionWhite>
-                    <Title>A Huge Network</Title>
+                    <Title>We are awesome</Title>
                     <SectionContent>
                         <SubSection>
                             <ImageWrapper href="https://orbitdb.org/">
@@ -56,8 +56,8 @@ export const Dashboard = () => {
                         </SubSection>
                         <SubSection>
                             <TextContent>
-                                We are part of <a href="https://awesome.ipfs.io/">Awesome ipfs</a> and <a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a> collections of really cool projects!
-                                You can be part of watchit also collaborating with the community, you can check our <a href="https://github.com/ZorrillosDev/watchit-desktop">github</a> page for more information
+                                We are part of <a href="https://awesome.ipfs.io/">Awesome IPFS</a> and <a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a>.
+                                You can be part of watchit also collaborating with the community, you can check our <a href="https://github.com/ZorrillosDev/watchit-desktop">github</a> for more information.
                             </TextContent>
                         </SubSection>
                     </SectionContent>
@@ -277,7 +277,6 @@ const Title = styled.span`
   font-weight: 600;
   text-align: center;
   color: white;
-  text-transform: capitalize;
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
   margin-bottom: 2rem;
 `;

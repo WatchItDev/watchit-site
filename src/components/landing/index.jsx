@@ -11,7 +11,7 @@ export const Landing = () => {
             <HeaderContainer>
                 <Logo />
                 <HeaderSecondary>
-                    watch movies for free
+                    open movies everywhere
                 </HeaderSecondary>
             </HeaderContainer>
             <BtnContainer>
