@@ -7,6 +7,7 @@ import orbit2 from '../../assets/img/orbit2.png'
 import electron from '../../assets/img/electron.png'
 import react from '../../assets/img/react.png'
 import ipfs from '../../assets/img/ipfs.png'
+import contributors from './contributors'
 
 export const Dashboard = () => {
     let pdmRef = useRef(null);
@@ -79,6 +80,18 @@ export const Dashboard = () => {
                         </ImageWrapper>
                     </ImagesContainer>
                 </Section>
+                <Section>
+                    <Title>Contributors</Title>
+                    <ImagesContainer>
+                        {
+                            contributors.contributors.map(el => {
+                                return <ImageWrapper href={el.profile} key={el.login}>
+                                    <Image src={el.avatar_url} rounded={true}/>
+                                </ImageWrapper>
+                            })
+                        }
+                    </ImagesContainer>
+                </Section>
             </Content>
             <Footer>© 2021 ZorrillosDev Community.</Footer>
         </DashboardContainer>
@@ -125,7 +138,7 @@ const ImagesContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 `;
 
@@ -141,6 +154,8 @@ const Image = styled.img`
   width: auto;
   height: 6rem;
   margin: 1.5rem;
+  border-radius: ${props => props.rounded ? 50 : 0}%;
+  border: ${props => props.rounded ? 4 : 0}px solid #e58e26;
 `;
 
 const HashesContainer = styled.div`
