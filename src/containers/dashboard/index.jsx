@@ -2,10 +2,7 @@ import React, {useRef} from 'react';
 import {Landing} from '../../components/landing'
 import {CopyButton} from '../../components/button/copy'
 import styled from "styled-components";
-import orbit from '../../assets/img/orbit.png'
 import orbit2 from '../../assets/img/orbit2.png'
-import electron from '../../assets/img/electron.png'
-import react from '../../assets/img/react.png'
 import ipfs from '../../assets/img/ipfs.png'
 import contributors from './contributors'
 
@@ -22,10 +19,9 @@ export const Dashboard = () => {
             <Landing/>
             <Content>
                 <Section>
-                    <Title>Public key available</Title>
                     <HashesContainer>
+                        <Title>Public Domain Movies Key</Title>
                         <HashOption>
-                            <HashTitle>PDM</HashTitle>
                             <HashClipboard>
                                 <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
                                 <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
@@ -41,11 +37,11 @@ export const Dashboard = () => {
                         and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
                         Somehow the internet today helps us to cope with some of these problems, the other problem is
                         that the internet offers very few resources to see good quality movies and those who offer it do
-                        so with movies that are definitely not the "last" launch of the Avengers <a href="https://dev.to/geolffreym/watchit-2b88">read more...</a>
+                        so with movies that are definitely not the "last" launch of the Avengers <a
+                        href="https://dev.to/geolffreym/watchit-2b88">read more...</a>
                     </Cite>
                 </Section>
                 <SectionWhite>
-                    <Title>We are awesome</Title>
                     <SectionContent>
                         <SubSection>
                             <ImageWrapper href="https://orbitdb.org/">
@@ -57,29 +53,14 @@ export const Dashboard = () => {
                         </SubSection>
                         <SubSection>
                             <TextContent>
-                                We are part of <a href="https://awesome.ipfs.io/">Awesome IPFS</a> and <a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a>.
-                                You can be part of watchit also collaborating with the community, you can check our <a href="https://github.com/ZorrillosDev/watchit-desktop">github</a> for more information.
+                                We are part of <a href="https://awesome.ipfs.io/">Awesome IPFS</a> and <a
+                                href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a>.
+                                You can be part of watchit also collaborating with the community, you can check our <a
+                                href="https://github.com/ZorrillosDev/watchit-desktop">github</a> for more information.
                             </TextContent>
                         </SubSection>
                     </SectionContent>
                 </SectionWhite>
-                <Section>
-                    <Title>Stack</Title>
-                    <ImagesContainer>
-                        <ImageWrapper href="https://orbitdb.org/">
-                            <Image src={orbit}/>
-                        </ImageWrapper>
-                        <ImageWrapper href="https://ipfs.io/">
-                            <Image src={ipfs}/>
-                        </ImageWrapper>
-                        <ImageWrapper href="https://es.reactjs.org/">
-                            <Image src={react}/>
-                        </ImageWrapper>
-                        <ImageWrapper href="https://www.electronjs.org/">
-                            <Image src={electron}/>
-                        </ImageWrapper>
-                    </ImagesContainer>
-                </Section>
                 <Section>
                     <Title>Contributors</Title>
                     <ImagesContainer>
