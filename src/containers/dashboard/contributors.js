@@ -83,5 +83,27 @@ export default {
                 "review"
             ]
         },
+        {
+            "login": "danrobi11",
+            "name": "danrobi11",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48020114?v=4",
+            "profile": "https://ipfs.io/ipns/k2k4r8lfpjmmno61mp5ofso67vl4pfengzeigah9bz0rw60nzpzqua0i",
+            "contributions": [
+                "ideas",
+                "userTesting",
+                "bug"
+            ]
+        },
+        {
+            "login": "justicenode",
+            "name": "Ѵ∑1L",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26402137?v=4",
+            "profile": "https://github.com/justicenode",
+            "contributions": [
+                "ideas",
+                "bug",
+                "userTesting"
+            ]
+        }
     ]
 }
