@@ -62,7 +62,6 @@ export const Dashboard = () => {
                     </SectionContent>
                 </SectionWhite>
                 <Section>
-                    <Title>Contributors</Title>
                     <ImagesContainer>
                         {
                             contributors.contributors.map(el => {
@@ -99,7 +98,7 @@ const Footer = styled.div`
   margin-top: 3rem;
   text-align: center;
   color: #eee;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  font-family: 'Nunito Sans',sans-serif;
   box-shadow: 0 0px 17px 0 rgba(0,0,0,0.2), 0 36px 94px 0 rgba(0,0,0,0.19);
   font-size: 0.8rem;
   word-spacing: 2px;
@@ -165,14 +164,6 @@ const HashOption = styled.div`
   }
 `;
 
-const HashTitle = styled.div`
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #e58e26;
-  text-transform: uppercase;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
-  margin: 1rem 2rem 1rem 1rem;
-`;
 
 const HashClipboard = styled.div`
   display: flex;
@@ -191,7 +182,7 @@ const Hash = styled.input`
   font-weight: 600;
   text-align: center;
   color: white;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  font-family: 'Nunito Sans',sans-serif;
   margin: 1rem;
   padding: 0.5rem 4rem 0.5rem 0.5rem;
   border-radius: 0.5rem;
@@ -273,7 +264,7 @@ const Title = styled.span`
   font-weight: 600;
   text-align: center;
   color: white;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  font-family: 'Nunito Sans',sans-serif;
   margin-bottom: 2rem;
 `;
 
@@ -285,7 +276,7 @@ const TextContent = styled.p`
   text-align: justify;
   color: #ddd;
   text-transform: none;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  font-family:  'Nunito Sans',sans-serif;
   
   @media (max-width: 650px) {
     width: 90%;
@@ -302,7 +293,7 @@ const Cite = styled.p`
   text-align: justify;
   color: #ddd;
   text-transform: none;
-  font-family: 'Oswald', 'Nunito Sans',sans-serif;
+  font-family:  'Nunito Sans',sans-serif;
 
   a {
     color: #e58e26;

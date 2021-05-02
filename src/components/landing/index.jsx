@@ -67,7 +67,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Oswald', 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   padding: 6rem 0;
   color: white;
   cursor: default;
@@ -121,6 +121,6 @@ export const BtnText = styled.span`
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  font-family: 'Oswald', 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   user-select: none;
 `;

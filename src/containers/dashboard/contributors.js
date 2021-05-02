@@ -104,6 +104,15 @@ export default {
                 "bug",
                 "userTesting"
             ]
+        },
+        {
+            "login": "EchedeyLR",
+            "name": "Echedenyan",
+            "avatar_url": "https://avatars.githubusercontent.com/u/56733813?v=4",
+            "profile": "https://github.com/EchedeyLR",
+            "contributions": [
+                "infra"
+            ]
         }
     ]
 }
