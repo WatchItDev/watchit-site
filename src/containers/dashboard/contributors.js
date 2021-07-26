@@ -113,6 +113,36 @@ export default {
             "contributions": [
                 "infra"
             ]
+        },
+        {
+            "login": "Slender1808",
+            "name": "Jadson G. Matos",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50336793?v=4",
+            "profile": "https://github.com/Slender1808",
+            "contributions": [
+                "ideas"
+            ]
+        },
+        {
+            "login": "Farickmenacode73",
+            "name": "Farick Mena",
+            "avatar_url": "https://avatars.githubusercontent.com/u/31286606?v=4",
+            "profile": "https://github.com/Farickmenacode73",
+            "contributions": [
+                "ideas",
+                "platform",
+                "userTesting"
+            ]
+        },
+        {
+            "login": "mathiassond",
+            "name": "mathiassond",
+            "avatar_url": "https://avatars.githubusercontent.com/u/49319141?v=4",
+            "profile": "https://github.com/mathiassond",
+            "contributions": [
+                "userTesting",
+                "bug"
+            ]
         }
     ]
 }
