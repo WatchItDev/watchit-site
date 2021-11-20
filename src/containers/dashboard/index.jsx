@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useRef} from 'react';
 import {Landing} from '../../components/landing'
 import {CopyButton} from '../../components/button/copy'
