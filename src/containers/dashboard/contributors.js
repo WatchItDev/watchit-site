@@ -143,6 +143,15 @@ export default {
                 "userTesting",
                 "bug"
             ]
+        },
+        {
+            "login": "YosephKS",
+            "name": "Yoseph Kurnia Soenggoro",
+            "avatar_url": "https://avatars.githubusercontent.com/u/48710170?v=4",
+            "profile": "https://yosephks.github.io/personal_website.github.io",
+            "contributions": [
+                "ideas"
+            ]
         }
     ]
 }
