@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Dashboard } from './containers/dashboard';
+import {Dashboard} from './containers/dashboard';
 
-const root = document.getElementById('root');
+ReactDOM.render(<Dashboard/>,
+    document.getElementById('root'));
 
-if (root) {
-  ReactDOM.render(<Dashboard />, root);
-}
