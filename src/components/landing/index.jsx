@@ -25,6 +25,11 @@ export const Landing = () => {
                         Github
                     </BtnText>
                 </LandingBtn>
+                <LandingBtn href="https://web.watchitapp.site/#/">
+                    <BtnText>
+                        Web Version
+                    </BtnText>
+                </LandingBtn>
             </BtnContainer>
         </LandingContent>
     </LandingContainer>;

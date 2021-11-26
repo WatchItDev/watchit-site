@@ -21,10 +21,17 @@ export const Dashboard = () => {
             <Content>
                 <Section>
                     <HashesContainer>
-                        <Title>Public Domain Movies Key</Title>
+                        <Title>Desktop App Key</Title>
                         <HashOption>
                             <HashClipboard>
                                 <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
+                                <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
+                            </HashClipboard>
+                        </HashOption>
+                        <Title>Web App Key</Title>
+                        <HashOption>
+                            <HashClipboard>
+                                <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_WEB_PDM_HASH} readOnly/>
                                 <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
                             </HashClipboard>
                         </HashOption>
@@ -158,7 +165,7 @@ const HashOption = styled.div`
   margin: 1rem;
   border-radius: 1rem;
   width: 100% !important;
-  padding: 1rem;
+  padding: 0.1rem;
   
   @media (max-width: 500px) {
     width: 100%;
@@ -266,7 +273,7 @@ const Title = styled.span`
   text-align: center;
   color: white;
   font-family: 'Nunito Sans',sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 0.1rem;
 `;
 
 const TextContent = styled.p`
