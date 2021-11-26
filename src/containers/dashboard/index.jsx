@@ -21,15 +21,15 @@ export const Dashboard = () => {
             <Content>
                 <Section>
                     <HashesContainer>
-                        <Title>Desktop App Key</Title>
                         <HashOption>
+                            <Title>Desktop App Key</Title>
                             <HashClipboard>
                                 <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
                                 <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
                             </HashClipboard>
                         </HashOption>
-                        <Title>Web App Key</Title>
                         <HashOption>
+                            <Title>Web App Key</Title>
                             <HashClipboard>
                                 <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_WEB_PDM_HASH} readOnly/>
                                 <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/>
@@ -157,17 +157,17 @@ const HashesContainer = styled.div`
 
 const HashOption = styled.div`
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 7px 0 rgba(0,0,0,0.2), 0 5px 22px 0 rgba(0,0,0,0.19);
   margin: 1rem;
   border-radius: 1rem;
-  width: 100% !important;
+  //width: 100% !important;
   padding: 0.1rem;
   
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 100%;
   }
 `;
@@ -181,7 +181,7 @@ const HashClipboard = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-right: 1rem
+  width: 100%;
 `;
 
 
