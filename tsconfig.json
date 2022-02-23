@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es2017",
+    "module": "es2015",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "preserve",
+    "incremental": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/"
+  ]
+}

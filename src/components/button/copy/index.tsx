@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-export const CopyButton = (props) => {
+export const CopyButton = (props: { copy: () => void; }) => {
     let [copied, setCopied] = useState(false);
 
     function handleClick() {
@@ -43,7 +43,7 @@ const ClipboardButton = styled.button`
 const ButtonText = styled.span`
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${props => !props.copied ? "#fff" : "#43d35d"};
+  color: ${(props: { copied: any; }) => !props.copied ? "#fff" : "#43d35d"};
   font-family: 'Oswald', 'Nunito Sans',sans-serif;
   transition: all 1s ease-in-out
 `;

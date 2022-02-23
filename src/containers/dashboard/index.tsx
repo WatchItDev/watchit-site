@@ -10,7 +10,7 @@ import contributors from './contributors'
 export const Dashboard = () => {
     let pdmRef = useRef(null);
 
-    function copyCodeToClipboard(ref) {
+    function copyCodeToClipboard(ref:any) {
         ref.current.select();
         document.execCommand("copy")
     }
@@ -131,11 +131,12 @@ const ImageWrapper = styled.a`
   flex-direction: column;
 `;
 
-const Image = styled.img`
+
+const Image = styled.img<any>`
   width: auto;
   height: 6rem;
   margin: 1.5rem;
-  border-radius: ${props => props.rounded ? 50 : 0}%;
+  border-radius: ${(props) => props.rounded ? 50 : 0}%;
   border: ${props => props.rounded ? 4 : 0}px solid #e58e26;
 `;
 

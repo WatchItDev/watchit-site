@@ -6,7 +6,7 @@ import logo from '../../assets/img/watchitlogo.png'
 export const Logo = () => {
     let [color, setColor] = useState("#fff");
     let colors = ["#43b2f8","#f07a39","#bf357b","#abd462","#409890","#944fc3"];
-    let interval = null;
+    let interval:any = null;
 
     function getRandomMedia() {
         let length = colors.length;
@@ -64,6 +64,6 @@ const LogoText = styled.span`
 `;
 
 const LogoIt = styled.span`
-  color: ${props => props.color};
+  color: ${(props: { color: any; }) => props.color};
   user-select: none;
 `;
