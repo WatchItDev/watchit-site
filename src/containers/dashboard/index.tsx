@@ -5,7 +5,7 @@ import {CopyButton} from '../../components/button/copy'
 import styled from "styled-components";
 import orbit2 from '../../assets/img/orbit2.png'
 import ipfs from '../../assets/img/ipfs.png'
-import contributors from './contributors'
+//import contributors from '../../config/contributors'
 
 export const Dashboard = () => {
     let pdmRef = useRef(null);
@@ -64,13 +64,13 @@ export const Dashboard = () => {
                 </SectionWhite>
                 <Section>
                     <ImagesContainer>
-                        {
+                       {/*  {
                             contributors.contributors.map(el => {
                                 return <ImageWrapper href={el.profile} key={el.login}>
                                     <Image src={el.avatar_url} rounded={true}/>
                                 </ImageWrapper>
                             })
-                        }
+                        } */}
                     </ImagesContainer>
                 </Section>
             </Content>

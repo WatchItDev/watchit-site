@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default {
+export const CONTRIBUTIONS = {
     "contributors": [
         {
             "login": "geolffreym",

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Dashboard} from './containers/dashboard';
+import DashboardPage from '../src/pages/DashboardPage'
 
-ReactDOM.render(<Dashboard/>,
+ReactDOM.render(<DashboardPage/>,
     document.getElementById('root'));
 
