@@ -1,19 +1,19 @@
-import IconBackground from './background.jpg'
-import IconElectron from './electron.png'
-import IconIpfs from './ipfs.png'
-import IconOrbit from './orbit.png'
-import IconOrbit2 from './orbit2.png'
-import IconReact from './react.png'
-import IconWatchit from './watchitlogo.png'
+import ImgBackground from './background.jpg'
+import ImgElectron from './electron.png'
+import ImgIpfs from './ipfs.png'
+import ImgOrbit from './orbit.png'
+import ImgOrbit2 from './orbit2.png'
+import ImgReact from './react.png'
+import ImgWatchit from './watchitlogo.png'
 
-const ICONS = {
-    IconBackground, 
-    IconElectron, 
-    IconIpfs, 
-    IconOrbit, 
-    IconOrbit2, 
-    IconReact, 
-    IconWatchit 
+const IMG = {
+    ImgBackground, 
+    ImgElectron, 
+    ImgIpfs, 
+    ImgOrbit, 
+    ImgOrbit2, 
+    ImgReact, 
+    ImgWatchit 
 }
 
-export default ICONS
+export default IMG

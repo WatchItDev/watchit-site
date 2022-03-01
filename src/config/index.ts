@@ -1,1 +1,1 @@
-export { CONTRIBUTIONS } from './contributors'
+export { CONTRIBUTIONS } from '@src/config/contributors'

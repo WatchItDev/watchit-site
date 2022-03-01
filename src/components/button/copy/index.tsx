@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState ,FC} from 'react';
 import { Translation } from '@src/i18n'
 import {
-    styled
+    styled,Typography
   } from '@mui/material'
 
 
@@ -9,7 +9,7 @@ interface CopyButtonProps {
     copy:() => void,
 }
 
-export const CopyButton = ({copy}:CopyButtonProps) => {
+export const CopyButton:FC<CopyButtonProps> =({copy}): JSX.Element => {
     let [copied, setCopied] = useState(false);
 
     function handleClick() {
@@ -49,7 +49,7 @@ const ClipboardButton = styled('button')({
   })
   
 
-const ButtonText = styled('span')<{copied?:boolean}>(({copied})=>({
+const ButtonText = styled(Typography)<{copied?:boolean}>(({copied})=>({
   fontSize: '0.9rem',
   fontWeight: '600',
   color: `${!copied ? "#fff" : "#43d35d"}`,

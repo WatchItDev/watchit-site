@@ -8,7 +8,7 @@ import {
   Typography, BoxProps, Container,
 } from '@mui/material'
 
-const Footer: FC = (): JSX.Element => {
+const Footer:FC = (): JSX.Element => {
     return( 
           <FooterWrapper>
                 <Container>
@@ -25,7 +25,7 @@ const Footer: FC = (): JSX.Element => {
 
 export default Footer
 
-export const FooterWrapper = styled(Box)<BoxProps>(({ theme }) => ({
+export const FooterWrapper = styled(Box)<BoxProps>(() => ({
   width: '100%',
   background: '#14161b',
   padding:'3rem 0 3rem',

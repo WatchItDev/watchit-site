@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{FC} from 'react';
 import Particles from 'react-particles-js';
-import config from './particleConfig'
-import {Logo} from '../logo'
+import config from '@components/landing/particleConfig'
+import {Logo} from '@components/logo'
 import { Translation } from '@src/i18n'
 import {
   Box,
@@ -10,7 +10,7 @@ import {
   BoxProps, Container,
 } from '@mui/material'
 
-export const Landing = () => {
+export const Landing:FC = (): JSX.Element => {
     return (
       <>
         <LandingContainer>
@@ -43,7 +43,7 @@ export const Landing = () => {
     )
 };
 
-export const HeaderContainer  = styled(Box)<BoxProps>(({ theme }) => ({
+export const HeaderContainer  = styled(Box)<BoxProps>(() => ({
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -55,7 +55,7 @@ export const HeaderContainer  = styled(Box)<BoxProps>(({ theme }) => ({
     cursor: 'default',
 }))
 
-export const LandingContent = styled(Box)<BoxProps>(({ theme }) => ({
+export const LandingContent = styled(Box)<BoxProps>(() => ({
     zIndex:'10',
     position:'absolute',
     display:'flex',
@@ -65,7 +65,7 @@ export const LandingContent = styled(Box)<BoxProps>(({ theme }) => ({
     top:"20%"
 }))
 
-export const LandingContainer = styled(Box)<BoxProps>(({ theme }) => ({
+export const LandingContainer = styled(Box)<BoxProps>(() => ({
   width: '100vw',
   height: '100vh',
   backgroundColor: '#141518',
@@ -80,7 +80,7 @@ export const LandingContainer = styled(Box)<BoxProps>(({ theme }) => ({
   justifyContent: 'center'
 }))
 
-export const HeaderSecondary  = styled(Box)<BoxProps>(({ theme }) => ({
+export const HeaderSecondary  = styled(Box)<BoxProps>(() => ({
   fontWeight: '200',
   fontSize: '2rem',
   letterSpacing: '3px',
@@ -92,7 +92,7 @@ export const HeaderSecondary  = styled(Box)<BoxProps>(({ theme }) => ({
   } 
   }))
 
-export const BtnContainer  = styled(Box)<BoxProps>(({ theme }) => ({
+export const BtnContainer  = styled(Box)<BoxProps>(() => ({
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -126,7 +126,7 @@ export const LandingBtn = styled('a')({
 })
 
 
- export const BtnText = styled(Box)<BoxProps>(({ theme }) => ({
+ export const BtnText = styled(Box)<BoxProps>(() => ({
   fontSize: '1rem',
   fontWeight: '600',
   color: 'white',

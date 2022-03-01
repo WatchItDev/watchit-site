@@ -1,19 +1,21 @@
-import React,{useRef} from "react";
+import React,{useRef,FC} from "react";
 import {Landing} from "@components/landing"
 import Footer from "@components/footer"
 import Contributors from "@components/contributors"
-import { CONTRIBUTIONS } from "../../config/contributors"
+import { CONTRIBUTIONS } from "@src/config/contributors"
 import { CopyButton } from "@components/button/copy"
-import ICONS from "@assets/img";
+import IMG from "@assets/img";
 import { Translation } from '@src/i18n'
 
 import {
     Box,
     styled,
-    BoxProps
+    BoxProps,
+    Typography,
+    TypographyProps
   } from '@mui/material'
 
-const Dashboard =()=>{
+const Dashboard:FC = (): JSX.Element => {
     let pdmRef = useRef(null);
 
     const copyCodeToClipboard=(ref:any)=>{
@@ -38,45 +40,36 @@ const Dashboard =()=>{
                             </HashesContainer>
                         </Section>
                         <Section>
-                    <Title><Translation target="GLOBAL_TITLE_WATCH_MOVIE"/></Title>
-                   {/*  <Cite>
-                        ... watching movies has overwhelmed me, I am simply limited by my time to go to the
-                        cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket
-                        and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
-                        Somehow the internet today helps us to cope with some of these problems, the other problem is
-                        that the internet offers very few resources to see good quality movies and those who offer it do
-                        so with movies that are definitely not the "last" launch of the Avengers <a
-                        href="https://dev.to/geolffreym/watchit-2b88">read more...</a>
-                    </Cite> */}
-                     <Cite>
-                    <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE"/>
-                    <br/><br/>
-                    <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE2"/>
-                    <a
-                        href="https://dev.to/geolffreym/watchit-2b88"> <Translation target="GLOBAL_READ_MORE"/></a>
-                    </Cite>
-                </Section>
-                <SectionWhite>
-                    <SectionContent>
-                        <SubSection>
-                            <ImageWrapper href="https://orbitdb.org/">
-                                <Image src={ICONS.IconOrbit}/>
-                            </ImageWrapper>
-                            <ImageWrapper href="https://ipfs.io/">
-                                <Image src={ICONS.IconIpfs}/>
-                            </ImageWrapper> 
-                        </SubSection>
-                        <SubSection>
-                            <TextContent>
-                              <Translation target="GLOBAL_ABOUT_TEC_1"/><a href="https://awesome.ipfs.io/"> Awesome IPFS </a>
-                              <Translation target="GLOBAL_ABOUT_TEC_2"/><a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb. </a>
-                              <Translation target="GLOBAL_ABOUT_TEC_3"/>
-                              <a href="https://github.com/ZorrillosDev/watchit-desktop"> github </a>
-                              <Translation target="GLOBAL_ABOUT_TEC_4"/>
-                            </TextContent>
-                        </SubSection>
-                    </SectionContent>
-                </SectionWhite>
+                          <Title><Translation target="GLOBAL_TITLE_WATCH_MOVIE"/></Title>
+                          <Cite>
+                          <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE"/>
+                          <br/><br/>
+                          <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE2"/>
+                          <a
+                              href="https://dev.to/geolffreym/watchit-2b88"> <Translation target="GLOBAL_READ_MORE"/></a>
+                          </Cite>
+                        </Section>
+                        <SectionWhite>
+                            <SectionContent>
+                                <SubSection>
+                                    <ImageWrapper href="https://orbitdb.org/">
+                                        <Image src={IMG.ImgOrbit}/>
+                                    </ImageWrapper>
+                                    <ImageWrapper href="https://ipfs.io/">
+                                        <Image src={IMG.ImgIpfs}/>
+                                    </ImageWrapper> 
+                                </SubSection>
+                                <SubSection>
+                                    <TextContent>
+                                      <Translation target="GLOBAL_ABOUT_TEC_1"/><a href="https://awesome.ipfs.io/"> Awesome IPFS </a>
+                                      <Translation target="GLOBAL_ABOUT_TEC_2"/><a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb. </a>
+                                      <Translation target="GLOBAL_ABOUT_TEC_3"/>
+                                      <a href="https://github.com/ZorrillosDev/watchit-desktop"> github </a>
+                                      <Translation target="GLOBAL_ABOUT_TEC_4"/>
+                                    </TextContent>
+                                </SubSection>
+                            </SectionContent>
+                        </SectionWhite>
                         <Section>
                             <Contributors data={CONTRIBUTIONS.contributors}/>
                         </Section>
@@ -88,7 +81,7 @@ const Dashboard =()=>{
 }
 
 export default Dashboard
-const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
+const DashboardContainer = styled(Box)<BoxProps>(() => ({
     width: '100%',
     height: '100%',
     backgroundColor: '#141518',
@@ -100,7 +93,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
   }))
   
   
-  const Content = styled(Box)<BoxProps>(({ theme }) => ({
+  const Content = styled(Box)<BoxProps>(() => ({
     width: '100%',
     padding: '2rem 0',
     display: 'flex',
@@ -109,7 +102,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     justifyContent: 'center'
   }))
   
-  const HashesContainer = styled(Box)<BoxProps>(({ theme }) => ({
+  const HashesContainer = styled(Box)<BoxProps>(() => ({
     width: '100%',
     padding: '1rem 0',
     display: 'flex',
@@ -118,7 +111,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     flexWrap: 'wrap'
   }))
   
-  const HashOption = styled(Box)<BoxProps>(({ theme }) => ({
+  const HashOption = styled(Box)<BoxProps>(() => ({
     display: 'flex',
     flexGrow: '1',
     flexShrink: '0',
@@ -135,7 +128,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     }
   }))
   
-  const HashClipboard = styled(Box)<BoxProps>(({ theme }) => ({
+  const HashClipboard = styled(Box)<BoxProps>(() => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: '1',
@@ -163,7 +156,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     width: '100%'
   })
   
-  const Section = styled(Box)<BoxProps>(({ theme }) => ({
+  const Section = styled(Box)<BoxProps>(() => ({
     width: '60%',
     padding: '2rem 0',
     display: 'flex',
@@ -177,7 +170,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     }
   }))
   
-  const SectionContent = styled(Box)<BoxProps>(({ theme }) => ({
+  const SectionContent = styled(Box)<BoxProps>(() => ({
     width: '80%',
     display: 'flex',
     alignItems: 'center',
@@ -188,7 +181,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     } 
   }))
   
-  const SubSection = styled(Box)<BoxProps>(({ theme }) => ({
+  const SubSection = styled(Box)<BoxProps>(() => ({
     width: '50%',
     display:  'flex',
     flexWrap: 'wrap',
@@ -205,7 +198,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     } 
   }))
   
-  const SectionWhite = styled(Box)<BoxProps>(({ theme }) => ({
+  const SectionWhite = styled(Box)<BoxProps>(() => ({
     width: '100%',
     padding: '7rem 0',
     margin: '6rem 0',
@@ -228,16 +221,16 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     }  
   }))
   
- const Title = styled('span')({
+ const Title = styled(Typography)<TypographyProps>(() => ({
     fontSize: '2rem',
     fontWeight: '600',
     textAlign: 'center',
     color: 'white',
     fontFamily: `'Nunito Sans',sans-serif`,
     marginBottom: '2rem'
-   })
+   }))
   
-  const TextContent = styled('p')({
+  const TextContent = styled(Typography)<TypographyProps>(() => ({
     width: '80%',
     minWidth: '36rem',
     fontSize: '1.2rem',
@@ -252,15 +245,15 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
       minWidth: 'auto',
       fontSize: '1rem'
     } 
-})
+}))
   
-  const Cite = styled('p')({
+  const Cite = styled(Typography)<TypographyProps>(() => ({
     width:'80%',
     minWidth: '36rem',
     fontSize: '1.2rem',
     fontWeight: '600',
     textAlign: 'justify',
-    color: '#ddd',
+    color:'#ddd',
     textTransform: 'none',
     fontFamily:  `'Nunito Sans',sans-serif`,
   
@@ -292,7 +285,7 @@ const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
       minWidth: 'auto',
       fontSize: '1rem',
     } 
-})
+}))
 
 const ImageWrapper = styled('a')({
   display: 'flex',

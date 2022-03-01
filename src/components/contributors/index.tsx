@@ -6,17 +6,17 @@ import {
   BoxProps,
 } from '@mui/material'
 
-export class Contributor {
-    profile:string = ''
-    login:string = ''
-    avatar_url:string = ''
+interface Contributor {
+    profile:string 
+    login:string
+    avatar_url:string 
 }
 
 interface ContributorsProps{
   data:Contributor[]
 }
 
-const Contributors :FC<ContributorsProps> =(props): JSX.Element => {
+const Contributors:FC<ContributorsProps> =(props): JSX.Element => {
     return(
         <>
           <ImagesContainer>
@@ -34,7 +34,7 @@ const Contributors :FC<ContributorsProps> =(props): JSX.Element => {
 
 export default Contributors
 
-const ImagesContainer = styled(Box)<BoxProps>(({ theme }) => ({
+const ImagesContainer = styled(Box)<BoxProps>(() => ({
   width: '100%',
   display: 'flex',
   alignItems: 'center',

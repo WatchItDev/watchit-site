@@ -1,11 +1,11 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
-import ICONS from '@assets/img'
+import React, { useState, useEffect ,FC} from 'react';
+import IMG from '@assets/img'
 import {
-  styled,
+  styled,Box,BoxProps,Typography,TypographyProps
 } from '@mui/material'
 
-export const Logo = () => {
+export const Logo:FC = (): JSX.Element => {
     let [color, setColor] = useState("#fff");
     let colors = ["#43b2f8","#f07a39","#bf357b","#abd462","#409890","#944fc3"];
     let interval: NodeJS.Timeout;
@@ -24,9 +24,9 @@ export const Logo = () => {
     }, []);
 
     return <Container>
-        <LogoImg src={ICONS.IconWatchit} />
+        <LogoImg src={IMG.ImgWatchit} />
         <LogoText>
-            ATCH
+            ATCH 
             <LogoIt color={color}>
                 IT
             </LogoIt>
@@ -34,13 +34,13 @@ export const Logo = () => {
     </Container>;
 };
 
-const Container = styled('div')({
+const Container = styled(Box)<BoxProps>(() => ({
   display:'flex',
   justifyContent: 'center',
   alignItems: 'flex-end',
   padding: '1rem 0',
   transform: 'translateX(-5px)'
-})
+}))
 
 const LogoImg = styled('img')({
     width: '9rem',
@@ -51,19 +51,27 @@ const LogoImg = styled('img')({
     }
   })
 
-const LogoText = styled('span')({
+const LogoText = styled(Typography)<TypographyProps>(() => ({
   fontWeight: '600',
   fontSize: '4rem',
   fontFamily: `'Oswald', 'Cantarell', Arial, sans-serif`,
   lineHeight: '1',
   marginLeft: '-0.5rem',
   userSelect: 'none',
+  display:'flex',
   '@media (max-width: 500px)': {
     fontsize:  '2.5rem'
   }
-})
+}))
 
-const LogoIt = styled('span')<{color?:String}>(({color})=>({
+const LogoIt = styled(Typography)<{color?:String}>(({color})=>({
   color: `${color}`,
-  userSelect: 'none'
+  userSelect: 'none',
+  fontWeight: '600',
+  fontSize: '4rem',
+  fontFamily: `'Oswald', 'Cantarell', Arial, sans-serif`,
+  lineHeight: '1',
+  '@media (max-width: 500px)': {
+    fontsize:  '2.5rem'
+  }
 }))
