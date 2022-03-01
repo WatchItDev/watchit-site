@@ -1,12 +1,14 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import logo from '../../assets/img/watchitlogo.png'
+import ICONS from '@assets/img'
+import {
+  styled,
+} from '@mui/material'
 
 export const Logo = () => {
     let [color, setColor] = useState("#fff");
     let colors = ["#43b2f8","#f07a39","#bf357b","#abd462","#409890","#944fc3"];
-    let interval:any = null;
+    let interval: NodeJS.Timeout;
 
     function getRandomMedia() {
         let length = colors.length;
@@ -22,7 +24,7 @@ export const Logo = () => {
     }, []);
 
     return <Container>
-        <LogoImg src={logo} />
+        <LogoImg src={ICONS.IconWatchit} />
         <LogoText>
             ATCH
             <LogoIt color={color}>
@@ -32,38 +34,36 @@ export const Logo = () => {
     </Container>;
 };
 
-const Container = styled.div`
-  display:flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 1rem 0;
-  transform: translateX(-5px);
-`;
+const Container = styled('div')({
+  display:'flex',
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+  padding: '1rem 0',
+  transform: 'translateX(-5px)'
+})
 
-const LogoImg = styled.img`
-    width: 9rem;
-    height: auto;
-    user-select: none;
-    
-    @media (max-width: 500px) {
-     width: 6rem;
+const LogoImg = styled('img')({
+    width: '9rem',
+    height: 'auto',
+    userSelect: 'none',
+    '@media (max-width: 500px)': {
+     width: '6rem'
     }
-`;
+  })
 
-const LogoText = styled.span`
-  font-weight: 600;
-  font-size: 4rem;
-  font-family: 'Oswald', 'Cantarell', Arial, sans-serif;
-  line-height: 1;
-  margin-left: -0.5rem;
-  user-select: none;
-  
-  @media (max-width: 500px) {
-    font-size: 2.5rem;
+const LogoText = styled('span')({
+  fontWeight: '600',
+  fontSize: '4rem',
+  fontFamily: `'Oswald', 'Cantarell', Arial, sans-serif`,
+  lineHeight: '1',
+  marginLeft: '-0.5rem',
+  userSelect: 'none',
+  '@media (max-width: 500px)': {
+    fontsize:  '2.5rem'
   }
-`;
+})
 
-const LogoIt = styled.span`
-  color: ${(props: { color: any; }) => props.color};
-  user-select: none;
-`;
+const LogoIt = styled('span')<{color?:String}>(({color})=>({
+  color: `${color}`,
+  userSelect: 'none'
+}))

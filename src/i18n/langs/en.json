@@ -1,13 +1,15 @@
 {
+    "GLOBAL_SLOGAN":"open movies everywhere",
     "GLOBAL_DOWNLOAD":"Download",
     "GLOBAL_PUBLIC_KEY":"Public Domain Movies Key",
     "GLOBAL_COPY":"Copy",
     "GLOBAL_COPYED":"Copied",
     "GLOBAL_TITLE_WATCH_MOVIE":"A movie platform with a decentralized network approach",
     "GLOBAL_READ_MORE":"read more",
-    "GLOBAL_ABOUT_PLATAFORM_MOVIE": "... watching movies has overwhelmed me, I am simply limited by my time to go to the cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket and see the \"latest\" release of the Avengers (plus pandemic factors).\nSomehow the internet today helps us to cope with some of these problems, the other problem is that the internet offers very few resources to see good quality movies and those who offer it do so with movies that are definitely not the \"last\" launch of the Avengers",
+    "GLOBAL_ABOUT_PLATAFORM_MOVIE": "... watching movies has overwhelmed me, I am simply limited by my time to go to the cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket and see the \"latest\" release of the Avengers (plus pandemic factors). ",
+    "GLOBAL_ABOUT_PLATAFORM_MOVIE2":" Somehow the internet today helps us to cope with some of these problems, the other problem is that the internet offers very few resources to see good quality movies and those who offer it do so with movies that are definitely not the \"last\" launch of the Avengers",
     "GLOBAL_ABOUT_TEC_1":"We are part of",
-    "GLOBAL_ABOUT_TEC_2":"and",
+    "GLOBAL_ABOUT_TEC_2":" and ",
     "GLOBAL_ABOUT_TEC_3":"You can be part of watchit also collaborating with the community, you can check our ",
     "GLOBAL_ABOUT_TEC_4":"for more information."
 }

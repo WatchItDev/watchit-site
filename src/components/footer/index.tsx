@@ -5,7 +5,7 @@ import {
   Box,
   Grid,
   styled,
-  Typography, BoxProps, darken, Container, TextField, Button, Link, Divider
+  Typography, BoxProps, Container,
 } from '@mui/material'
 
 const Footer: FC = (): JSX.Element => {
@@ -15,7 +15,7 @@ const Footer: FC = (): JSX.Element => {
                     <Grid container spacing={1} justifyContent='center' alignItems='center'>
                         <Grid item xs={12} md={5} sx={{ flexDirection: { xs: 'column', sm: 'row' } }}
                               display='flex' justifyContent='center' alignItems='center' flexWrap='nowrap'>
-                                <h3>© 2021 ZorrillosDev Community.</h3>
+                                <Typography  variant="h3">© 2021 ZorrillosDev Community.</Typography>
                         </Grid>
                     </Grid>
                 </Container> 

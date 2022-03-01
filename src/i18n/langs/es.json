@@ -1,13 +1,15 @@
 {
+    "GLOBAL_SLOGAN":  "películas abiertas en todas partes",
     "GLOBAL_DOWNLOAD":"Descargar",
     "GLOBAL_PUBLIC_KEY":"Clave publica de peliculas",
     "GLOBAL_COPY":"Copiar",
     "GLOBAL_COPYED":"Copiado",
     "GLOBAL_TITLE_WATCH_MOVIE":"Una plataforma de películas con un enfoque de red descentralizado",
     "GLOBAL_READ_MORE":"leer mas",
-    "GLOBAL_ABOUT_PLATAFORM_MOVIE": "... ver películas me ha abrumado, simplemente estoy limitado por mi tiempo para ir al cine. Soy un fanático de las películas pero un desarrollador con muy poco tiempo para viajar horas para comprar un boleto y ver el lanzamiento \"más reciente\" de los Vengadores (además de los factores pandémicos).\nDe alguna manera, Internet hoy nos ayuda a lidiar con algunos de estos problemas, el otro problema es que internet ofrece muy pocos recursos para ver peliculas de buena calidad y quienes lo ofrecen lo hacen con peliculas que definitivamente no son el \"ultimo\" lanzamiento de los Vengadores",
+    "GLOBAL_ABOUT_PLATAFORM_MOVIE": "... ver películas me ha abrumado, simplemente estoy limitado por mi tiempo para ir al cine. Soy un fanático de las películas pero un desarrollador con muy poco tiempo para viajar horas para comprar un boleto y ver el lanzamiento \"más reciente\" de los Vengadores (además de los factores pandémicos).",
+    "GLOBAL_ABOUT_PLATAFORM_MOVIE2": "De alguna manera, Internet hoy nos ayuda a lidiar con algunos de estos problemas, el otro problema es que internet ofrece muy pocos recursos para ver peliculas de buena calidad y quienes lo ofrecen lo hacen con peliculas que definitivamente no son el \"ultimo\" lanzamiento de los Vengadores",
     "GLOBAL_ABOUT_TEC_1":"Nosotros somos parte de",
-    "GLOBAL_ABOUT_TEC_2":"y",
+    "GLOBAL_ABOUT_TEC_2":" y ",
     "GLOBAL_ABOUT_TEC_3":"Puedes ser parte de watchit colaborando también con la comunidad, puedes consultar nuestra ",
     "GLOBAL_ABOUT_TEC_4":"para mas informacion."
 }

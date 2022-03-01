@@ -16,16 +16,34 @@
     "baseUrl": "./",
     "rootDir": "./",
     "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@w3/*": [
+        "src/w3/*"
+      ],
+      "@i18n/*": [
+        "src/i18n/*"
+      ],
+    },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "preserve",
     "incremental": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/.*/"
-  ]
+  "include": ["src"],
+  "exclude": ["**/node_modules", "**/.*/"]
 }

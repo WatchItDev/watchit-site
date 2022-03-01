@@ -1,11 +1,11 @@
 import React,{useRef} from "react";
-import {Landing} from "../../components/landing"
-import Footer from "../../components/footer"
-import Contributors from "../../components/contributors"
-import { CONTRIBUTIONS } from "../../config/contributors"; 
-import { CopyButton } from "../../components/button/copy"
-import orbit2 from '../../assets/img/orbit2.png'
-import ipfs from '../../assets/img/ipfs.png'
+import {Landing} from "@components/landing"
+import Footer from "@components/footer"
+import Contributors from "@components/contributors"
+import { CONTRIBUTIONS } from "../../config/contributors"
+import { CopyButton } from "@components/button/copy"
+import ICONS from "@assets/img";
+import { Translation } from '@src/i18n'
 
 import {
     Box,
@@ -13,7 +13,7 @@ import {
     BoxProps
   } from '@mui/material'
 
-const DashboardPage =()=>{
+const Dashboard =()=>{
     let pdmRef = useRef(null);
 
     const copyCodeToClipboard=(ref:any)=>{
@@ -28,20 +28,18 @@ const DashboardPage =()=>{
                     <Content>
                         <Section>
                                 <HashesContainer>
-                                <Title>Public Domain Movies Key</Title>
+                                <Title><Translation target="GLOBAL_PUBLIC_KEY"/></Title>
                                 <HashOption>
                                     <HashClipboard>
                                         <InputElement ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
-                                        {/* <Hash type='text' ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
-                                        <CopyButton copy={() => copyCodeToClipboard(pdmRef)}/> */}
                                         <CopyButton copy={()=>copyCodeToClipboard(pdmRef)}/>
                                     </HashClipboard>
                                 </HashOption>
                             </HashesContainer>
                         </Section>
                         <Section>
-                    <Title>A movie platform with a decentralized network approach</Title>
-                    <Cite>
+                    <Title><Translation target="GLOBAL_TITLE_WATCH_MOVIE"/></Title>
+                   {/*  <Cite>
                         ... watching movies has overwhelmed me, I am simply limited by my time to go to the
                         cinema. I am a movie fan but a developer with very little time to travel hours to buy a ticket
                         and see the "latest" release of the Avengers (plus pandemic factors). <br/><br/>
@@ -49,24 +47,32 @@ const DashboardPage =()=>{
                         that the internet offers very few resources to see good quality movies and those who offer it do
                         so with movies that are definitely not the "last" launch of the Avengers <a
                         href="https://dev.to/geolffreym/watchit-2b88">read more...</a>
+                    </Cite> */}
+                     <Cite>
+                    <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE"/>
+                    <br/><br/>
+                    <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE2"/>
+                    <a
+                        href="https://dev.to/geolffreym/watchit-2b88"> <Translation target="GLOBAL_READ_MORE"/></a>
                     </Cite>
                 </Section>
                 <SectionWhite>
                     <SectionContent>
                         <SubSection>
                             <ImageWrapper href="https://orbitdb.org/">
-                                <Image src={orbit2}/>
+                                <Image src={ICONS.IconOrbit}/>
                             </ImageWrapper>
                             <ImageWrapper href="https://ipfs.io/">
-                                <Image src={ipfs}/>
+                                <Image src={ICONS.IconIpfs}/>
                             </ImageWrapper> 
                         </SubSection>
                         <SubSection>
                             <TextContent>
-                                We are part of <a href="https://awesome.ipfs.io/">Awesome IPFS</a> and <a
-                                href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb</a>.
-                                You can be part of watchit also collaborating with the community, you can check our <a
-                                href="https://github.com/ZorrillosDev/watchit-desktop">github</a> for more information.
+                              <Translation target="GLOBAL_ABOUT_TEC_1"/><a href="https://awesome.ipfs.io/"> Awesome IPFS </a>
+                              <Translation target="GLOBAL_ABOUT_TEC_2"/><a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb. </a>
+                              <Translation target="GLOBAL_ABOUT_TEC_3"/>
+                              <a href="https://github.com/ZorrillosDev/watchit-desktop"> github </a>
+                              <Translation target="GLOBAL_ABOUT_TEC_4"/>
                             </TextContent>
                         </SubSection>
                     </SectionContent>
@@ -81,7 +87,7 @@ const DashboardPage =()=>{
     )
 }
 
-export default DashboardPage
+export default Dashboard
 const DashboardContainer = styled(Box)<BoxProps>(({ theme }) => ({
     width: '100%',
     height: '100%',

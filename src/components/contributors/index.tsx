@@ -2,23 +2,27 @@ import React, { FC } from 'react'
 
 import {
   Box,
-  Grid,
   styled,
-  Typography, BoxProps, darken, Container, TextField, Button, Link, Divider,Avatar
+  BoxProps,
 } from '@mui/material'
 
-
-interface IProps{
-  data:any
+export class Contributor {
+    profile:string = ''
+    login:string = ''
+    avatar_url:string = ''
 }
 
-const Contributors :FC<IProps> =(props): JSX.Element => {
+interface ContributorsProps{
+  data:Contributor[]
+}
+
+const Contributors :FC<ContributorsProps> =(props): JSX.Element => {
     return(
         <>
           <ImagesContainer>
               {
-                props.data?.map((el:any) => {
-                    return <ImageWrapper href={el.profile} key={el.login}>
+                props.data?.map((el) => {
+                    return <ImageWrapper href={el?.profile} key={el?.login}>
                               <Image src={el?.avatar_url}/>
                             </ImageWrapper>
                 })
@@ -52,6 +56,4 @@ const Image =styled('img')({
   margin: '1.5rem',
   borderRadius: '50%',
   border: '4px solid #e58e26'
-  //borderRadius: `${(props:any) => props.rounded ? 50 : 0}%`,
-  //border: `${(props:any) => props.rounded ? 4 : 0}px solid #e58e26`
 })
