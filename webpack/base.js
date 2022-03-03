@@ -35,8 +35,7 @@ export default {
     plugins.providePlugin,
     plugins.definePlugin,
     plugins.forkTsCheckerWebpackPlugin,
-    plugins.copyPlugin,
-    plugins.workBoxSW
+    plugins.copyPlugin
   ]),
   resolve: {
     modules: [

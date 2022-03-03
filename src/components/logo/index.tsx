@@ -25,12 +25,14 @@ export const Logo:FC = (): JSX.Element => {
 
     return <Container>
         <LogoImg src={IMG.ImgWatchit} />
-        <LogoText>
-            ATCH 
-            <LogoIt color={color}>
-                IT
-            </LogoIt>
-        </LogoText>
+        <Box display='flex'>
+          <LogoText variant='body2'>
+            ATCH
+          </LogoText>
+          <LogoIt  color={color}>
+            IT
+          </LogoIt>
+        </Box>
     </Container>;
 };
 
