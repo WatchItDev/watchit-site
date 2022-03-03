@@ -22,58 +22,58 @@ const Dashboard:FC = (): JSX.Element => {
         ref.current.select();
         document.execCommand("copy")
     }
-        
+
     return(
         <>
             <DashboardContainer>
                 <Landing/>
-                    <Content>
-                        <Section>
-                                <HashesContainer>
-                                <Title><Translation target="GLOBAL_PUBLIC_KEY"/></Title>
-                                <HashOption>
-                                    <HashClipboard>
-                                        <InputElement ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
-                                        <CopyButton copy={()=>copyCodeToClipboard(pdmRef)}/>
-                                    </HashClipboard>
-                                </HashOption>
-                            </HashesContainer>
-                        </Section>
-                        <Section>
-                          <Title><Translation target="GLOBAL_TITLE_WATCH_MOVIE"/></Title>
-                          <Cite>
-                          <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE"/>
-                          <br/><br/>
-                          <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE2"/>
-                          <a
-                              href="https://dev.to/geolffreym/watchit-2b88"> <Translation target="GLOBAL_READ_MORE"/></a>
-                          </Cite>
-                        </Section>
-                        <SectionWhite>
-                            <SectionContent>
-                                <SubSection>
-                                    <ImageWrapper href="https://orbitdb.org/">
-                                        <Image src={IMG.ImgOrbit}/>
-                                    </ImageWrapper>
-                                    <ImageWrapper href="https://ipfs.io/">
-                                        <Image src={IMG.ImgIpfs}/>
-                                    </ImageWrapper> 
-                                </SubSection>
-                                <SubSection>
-                                    <TextContent>
-                                      <Translation target="GLOBAL_ABOUT_TEC_1"/><a href="https://awesome.ipfs.io/"> Awesome IPFS </a>
-                                      <Translation target="GLOBAL_ABOUT_TEC_2"/><a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb. </a>
-                                      <Translation target="GLOBAL_ABOUT_TEC_3"/>
-                                      <a href="https://github.com/ZorrillosDev/watchit-desktop"> github </a>
-                                      <Translation target="GLOBAL_ABOUT_TEC_4"/>
-                                    </TextContent>
-                                </SubSection>
-                            </SectionContent>
-                        </SectionWhite>
-                        <Section>
-                            <Contributors data={CONTRIBUTIONS.contributors}/>
-                        </Section>
-                    </Content>
+                <Content>
+                    <Section>
+                            <HashesContainer>
+                            <Title><Translation target="GLOBAL_PUBLIC_KEY"/></Title>
+                            <HashOption>
+                                <HashClipboard>
+                                    <InputElement ref={pdmRef} value={process.env.REACT_APP_PDM_HASH} readOnly/>
+                                    <CopyButton copy={()=>copyCodeToClipboard(pdmRef)}/>
+                                </HashClipboard>
+                            </HashOption>
+                        </HashesContainer>
+                    </Section>
+                    <Section>
+                      <Title><Translation target="GLOBAL_TITLE_WATCH_MOVIE"/></Title>
+                      <Cite>
+                      <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE"/>
+                      <br/><br/>
+                      <Translation target="GLOBAL_ABOUT_PLATAFORM_MOVIE2"/>
+                      <a
+                          href="https://dev.to/geolffreym/watchit-2b88"> <Translation target="GLOBAL_READ_MORE"/></a>
+                      </Cite>
+                    </Section>
+                    <SectionWhite>
+                        <SectionContent>
+                            <SubSection>
+                                <ImageWrapper href="https://orbitdb.org/">
+                                    <Image src={IMG.ImgOrbit}/>
+                                </ImageWrapper>
+                                <ImageWrapper href="https://ipfs.io/">
+                                    <Image src={IMG.ImgIpfs}/>
+                                </ImageWrapper>
+                            </SubSection>
+                            <SubSection>
+                                <TextContent>
+                                  <Translation target="GLOBAL_ABOUT_TEC_1"/><a href="https://awesome.ipfs.io/"> Awesome IPFS </a>
+                                  <Translation target="GLOBAL_ABOUT_TEC_2"/><a href="https://github.com/orbitdb/awesome-orbitdb">Awesome OrbitDb. </a>
+                                  <Translation target="GLOBAL_ABOUT_TEC_3"/>
+                                  <a href="https://github.com/ZorrillosDev/watchit-desktop"> github </a>
+                                  <Translation target="GLOBAL_ABOUT_TEC_4"/>
+                                </TextContent>
+                            </SubSection>
+                        </SectionContent>
+                    </SectionWhite>
+                    <Section>
+                        <Contributors data={CONTRIBUTIONS.contributors}/>
+                    </Section>
+                </Content>
                 <Footer/>
             </DashboardContainer>
         </>
@@ -203,7 +203,7 @@ const DashboardContainer = styled(Box)<BoxProps>(() => ({
     padding: '7rem 0',
     margin: '6rem 0',
     display: 'flex',
-    flexCirection: 'column',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.9)',
@@ -291,7 +291,7 @@ const ImageWrapper = styled('a')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  flexwrap: 'wrap',
+  flexWrap: 'wrap',
   flexDirection: 'column'
 })
 

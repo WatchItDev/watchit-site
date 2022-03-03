@@ -4,7 +4,6 @@ import {
     styled,Typography
   } from '@mui/material'
 
-
 interface CopyButtonProps {
     copy:() => void,
 }
@@ -49,7 +48,9 @@ const ClipboardButton = styled('button')({
   })
   
 
-const ButtonText = styled(Typography)<{copied?:boolean}>(({copied})=>({
+const ButtonText = styled(Typography, {
+  shouldForwardProp: (prop) => prop !== 'copied'
+})<{copied:boolean}>(({copied})=>({
   fontSize: '0.9rem',
   fontWeight: '600',
   color: `${!copied ? "#fff" : "#43d35d"}`,

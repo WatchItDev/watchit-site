@@ -4,12 +4,11 @@
  *     isProd: true
  * }
  */
-
-require('dotenv').config()
 import { DefinePlugin } from 'webpack'
 import { isDev, isDevServer, isProd, mode } from '../utils/env'
+require('dotenv').config()
 
-const W_APP = /^(MARKETPLACE_|KOVAN_|RINKEBY_)/i
+const W_APP = /^(MARKETPLACE_|KOVAN_|RINKEBY_|REACT_)/i
 
 const filteredKeys = Object.keys(process.env)
   .filter(key => W_APP.test(key))
