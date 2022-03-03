@@ -17,7 +17,8 @@
     "watch": "webpack  --watch ",
     "build": "cross-env NODE_ENV=production webpack",
     "start": "cross-env WEBPACK_IS_DEV_SERVER=true NODE_ENV=development webpack serve --config webpack.config.babel.js",
-    "hook": "npm run lint:fix & npm run check & npm run test"
+    "hook": "npm run lint:fix & npm run check & npm run test",
+    "publish": "ipfs-deploy -C build -d cloudflare -p pinata "
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
