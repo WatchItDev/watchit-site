@@ -1,5 +1,7 @@
+import { IParticlesParams } from 'react-particles-js';
+
 /* eslint-disable */
-export default {
+const config: IParticlesParams = {
     "particles": {
         "number": {
             "value": 150,
@@ -92,8 +94,7 @@ export default {
                 "distance": 400,
                 "size": 40,
                 "duration": 2,
-                "opacity": 8,
-                "speed": 3
+                "opacity": 8
             },
             "repulse": {
                 "distance": 80,
@@ -109,3 +110,5 @@ export default {
     },
     "retina_detect": true
 }
+
+export default config
