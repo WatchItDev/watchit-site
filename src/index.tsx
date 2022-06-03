@@ -1,6 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Dashboard from '@pages/dashboard'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-ReactDOM.render(<Dashboard/>,
-    document.getElementById('root'));
+/* eslint-disable  @typescript-eslint/no-floating-promises */
+ReactDOM.render(
+  <>
+    <App />
+  </>,
+  document.getElementById('root')
+)

@@ -40,6 +40,7 @@
     "^@public(.*)$": "<rootDir>/public/$1",
     "^@util(.*)$": "<rootDir>/src/util$1",
     "^@pages(.*)$": "<rootDir>/src/pages$1",
+    "^@state(.*)$": "<rootDir>/src/redux$1",
     "^@i18n(.*)$": "<rootDir>/src/i18n$1",
     "\\.(scss|sass|css)$": "identity-obj-proxy"
   },
