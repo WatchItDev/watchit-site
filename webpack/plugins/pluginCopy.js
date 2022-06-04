@@ -7,7 +7,7 @@ const config = {
     { from: join(rootDir, './src/assets'), to: 'assets' },
     { from: join(rootDir, './public/icon192.png'), to: '' },
     { from: join(rootDir, './public/icon512.png'), to: '' },
-    { from: join(rootDir, './public/favicon.ico'), to: '' },
+    { from: join(rootDir, './public/favicon.ico'), to: '' }
   ]
 }
 

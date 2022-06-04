@@ -17,17 +17,44 @@
     "rootDir": "./",
     "typeRoots": ["./node_modules/@types", "./src/@types"],
     "paths": {
+      "@public/*": [
+        "public/*"
+      ],
       "@src/*": [
         "src/*"
       ],
+      "@state/*": [
+        "src/redux/*"
+      ],
+      "@hoc/*": [
+        "src/hoc/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
       "@assets/*": [
         "src/assets/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@layouts/*": [
+        "src/pages/__layouts__/*"
       ],
       "@components/*": [
         "src/components/*"
       ],
       "@navigation/*": [
         "src/navigation/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@menu/*": [
+        "src/components/menu/*"
       ],
       "@pages/*": [
         "src/pages/*"

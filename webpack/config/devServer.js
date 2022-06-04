@@ -13,6 +13,5 @@ export const devServerConfig = {
   headers: { 'Access-Control-Allow-Origin': '*' },
   proxy: devServerProxyConfig,
   hot: true,
-  overlay: false,
   host: devServerHost
 }

@@ -10,8 +10,8 @@
   "keywords": [],
   "main": "webpack.config.babel.js",
   "scripts": {
-    "lint": "standard && ts-standard",
-    "lint:fix": "standard --fix && ts-standard --fix",
+    "lint": " ts-standard",
+    "lint:fix": "ts-standard --fix",
     "test": "jest -u --verbose --runInBand --detectOpenHandles --forceExit --coverage",
     "check": "dpdm  \"./src/**\" --exit-code circular:1 --tree=false --warning=false && jscpd \"src\" -r html --output ./jscpd/",
     "watch": "webpack  --watch ",
@@ -76,7 +76,6 @@
     "react-app-polyfill": "^2.0.0",
     "react-refresh": "^0.10.0",
     "resolve-url-loader": "^4.0.0",
-    "standard": "^16.0.3",
     "style-loader": "^3.2.1",
     "styled-jsx": "^3.4.4",
     "svg-url-loader": "^7.1.1",
@@ -97,6 +96,13 @@
     "crypto": false
   },
   "dependencies": {
+    "@dicebear/adventurer-neutral": "^4.10.0",
+    "@dicebear/avatars": "^4.10.0",
+    "@dicebear/avatars-bottts-sprites": "^4.10.0",
+    "@dicebear/avatars-identicon-sprites": "^4.10.0",
+    "@dicebear/big-ears-neutral": "^4.10.0",
+    "@dicebear/pixel-art": "^4.10.0",
+    "@dicebear/pixel-art-neutral": "^4.10.0",
     "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -109,6 +115,7 @@
     "@tabler/icons": "^1.44.0",
     "@testing-library/user-event": "^12.6.2",
     "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.5",
     "@types/react-redux": "^7.1.16",
     "@types/react-router": "^5.1.16",
     "@types/react-router-redux": "^5.0.18",
@@ -117,6 +124,7 @@
     "@types/swiper": "^5.4.3",
     "@usedapp/core": "^0.11.0",
     "acorn-import-assertions": "^1.7.6",
+    "animate.css": "^4.1.1",
     "big.js": "^6.1.1",
     "circular-dependency-plugin": "^5.2.2",
     "connected-react-router": "^6.9.1",
@@ -130,15 +138,15 @@
     "jest-environment-jsdom": "^27.0.6",
     "nanocolors": "^0.2.12",
     "react": "^17.0.2",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.4",
-    "react-particles-js": "^3.4.1",
     "react-perfect-scrollbar": "^1.5.8",
     "react-redux": "^7.2.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "4.0.1",
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
@@ -175,26 +183,6 @@
       "style": "module-and-prefix",
       "parser": "babylon"
     }
-  },
-  "standard": {
-    "ignore": [
-      "dist",
-      "webpack.config.babel.js",
-      "package.json",
-      "/src/**/*.tsx",
-      "/src/**/*.ts",
-      ".gitignore",
-      "/coverage/**",
-      "/jscpd/**",
-      "/webpack/**/*.js",
-      "/test/**/*.js",
-      "/deploy/*.js",
-      "/tasks/*.js",
-      "/utils/*.js"
-    ],
-    "env": [
-      "mocha"
-    ]
   },
   "ts-standard": {
     "project": "tsconfig.json",
