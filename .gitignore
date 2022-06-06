@@ -6,9 +6,11 @@
 .pnp.js
 .idea
 
+dist/*
 # testing
 /coverage
 
+dist/*
 # production
 /build
 
