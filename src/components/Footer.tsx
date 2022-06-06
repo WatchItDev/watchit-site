@@ -26,9 +26,16 @@ const Footer: FC = (): JSX.Element => {
     <FooterWrapper>
       <Container>
         <Grid container spacing={1} justifyContent='center' alignItems='center'>
-          <Grid item xs={12} md={5} display='flex' justifyContent='start' alignItems='start'>
+          <Grid
+            item xs={12} sm={5} display='flex'
+            sx={{
+              alignItems: { xs: 'center', sm: 'start' },
+              justifyContent: { xs: 'center', sm: 'start' },
+              mb: { xs: 3, sm: 0 }
+            }}
+          >
             <Box display='flex' justifyContent='center' alignItems='center' flexDirection='column' sx={{ mr: 4 }}>
-              <FooterLogoWrapper sx={{ mb: { xs: 3, md: 0 } }}>
+              <FooterLogoWrapper>
                 <Logo />
               </FooterLogoWrapper>
               <Box display='flex' justifyContent='center' alignItems='center' flexWrap='nowrap' sx={{ mt: 1 }}>
@@ -70,8 +77,8 @@ const Footer: FC = (): JSX.Element => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={2} sx={{ display: { xs: 'none', md: 'block' } }} />
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }} />
+          <Grid item xs={12} sm={5}>
             <Grid container spacing={1}>
               {
                 Object.keys(FooterSections).map((sectionKey) => {

@@ -37,7 +37,7 @@ describe('<LandingJoinUs />', () => {
     const component = mount(<LandingJoinUs />)
     const section = component.find(Typography).at(3)
 
-    expect(section.text()).toMatch('Be part of our growing community')
+    expect(section.text()).toMatch('Be part of our community')
   })
 
   it('should have landing join us info 2 subtitle with valid translation text', () => {

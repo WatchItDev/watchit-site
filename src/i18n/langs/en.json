@@ -5,13 +5,13 @@
     "LANDING_MENU_DISCORD":"Discord",
     "LANDING_MENU_DOCS":"Docs",
     "LANDING_MAIN_TITLE":"Sell, Buy and Watch!",
-    "LANDING_MAIN_SUBTITLE":"Watchit was built to revolutionize the film industry, connecting filmmakers, investors, and viewers.",
+    "LANDING_MAIN_SUBTITLE":"Watchit was built to revolutionize the film industry, connecting filmmakers, investors, and fans.",
     "LANDING_JOIN_US":"Join us!",
     "LANDING_JOIN_US_BUTTON":"Watchit Marketplace",
     "LANDING_JOIN_US_1_TITLE":"Make your new great investment!",
     "LANDING_JOIN_US_1_TITLE_2":" Invest in talent!",
     "LANDING_JOIN_US_1_SUBTITLE":"Don’t be left behind: invest in the revolution of decentralized cinema and have total control of your investments and their future.",
-    "LANDING_JOIN_US_2_TITLE":"Be part of our growing community",
+    "LANDING_JOIN_US_2_TITLE":"Be part of our community",
     "LANDING_JOIN_US_2_SUBTITLE":"In WatchIt, you'll have be able to sell your creations and make yourself known in a large, healthy community of viewers and collaborators. Get the credit you deserve!",
     "LANDING_APP_FILMS":"Films",
     "LANDING_APP_EXPLORE":"Explore All",
@@ -24,6 +24,6 @@
     "LANDING_PARTNERS_BUTTON":"You can be here, become our next partner!",
     "LANDING_TEAM_TITLE":"Meet The Team",
     "LANDING_TEAM_SUBTITLE":"THE BEST TEAM OF ALL!",
-    "LANDING_TOOLS_TITLE":"Our tools",
-    "LANDING_TOOLS_SUBTITLE":"Awesome tools we use to build Watchit"
+    "LANDING_TOOLS_TITLE":"We are Awesome!",
+    "LANDING_TOOLS_SUBTITLE":"We are part of Awesome IPFS and Awesome OrbitDb. You can be part of Watchit also collaborating with the community, you can check our github for more information."
 }

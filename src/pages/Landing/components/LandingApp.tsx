@@ -23,8 +23,11 @@ const LandingApp: FC = (): JSX.Element => {
 
   return (
     <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '50vh' }}>
-      <Grid container spacing={3} justifyContent='space-between' alignItems='start'>
-        <Grid item xs={12} sm={6} zIndex={10} sx={{ pt: { xs: '15rem !important', sm: '24px !important' } }}>
+      <Grid
+        container spacing={3} justifyContent='center' alignItems='center'
+        sx={{ flexWrap: { xs: 'nowrap', sm: 'wrap' }, flexDirection: { xs: 'column-reverse', sm: 'row' } }}
+      >
+        <Grid item xs={12} sm={6} zIndex={10}>
           <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut'>
             <LandingInfo
               title={<Translation target='LANDING_APP_TITLE' />}
@@ -33,7 +36,7 @@ const LandingApp: FC = (): JSX.Element => {
             >
               <Grid item xs={12} md={6} display='flex' sx={{ pt: 0, justifyContent: { xs: 'center', md: 'flex-start' } }}>
                 <Button
-                  color='primary' variant='outlined' size='large' disableElevation
+                  color='primary' variant='contained' size='large' disableElevation
                   sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP}
                 >
                   <Translation target='LANDING_APP' />
@@ -42,9 +45,12 @@ const LandingApp: FC = (): JSX.Element => {
             </LandingInfo>
           </AnimationOnScroll>
         </Grid>
-        <Grid item xs={12} sm={6} zIndex={10}>
-          <AnimationOnScroll animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
-            <LandingAppImage sx={{ top: { xs: '-4rem', sm: '20%', md: '10%' }, right: { xs: 'calc(50% - 8rem)', sm: '7%' }, width: { xs: '16rem', sm: '35%' }, zIndex: 3 }}>
+        <Grid item xs={12} sm={6} zIndex={10} width='100%'>
+          <AnimationOnScroll
+            animateIn='animate__fadeIn' animateOut='animate__fadeOut'
+            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <LandingAppImage sx={{ zIndex: 3 }}>
               {
                 isThemeLight ? <LandingAppLight /> : <LandingAppSvg />
               }
@@ -57,12 +63,16 @@ const LandingApp: FC = (): JSX.Element => {
   )
 }
 
-export const LandingAppImage = styled(Box)<BoxProps>(() => ({
-  position: 'absolute',
+export const LandingAppImage = styled(Box)<BoxProps>(({ theme }) => ({
+  width: '100%',
+  maxWidth: '30rem',
   zIndex: 2,
   svg: {
     width: '100%',
     height: 'auto'
+  },
+  [theme.breakpoints.down('sm')]: {
+    maxWidth: '19rem'
   }
 }))
 

@@ -41,7 +41,10 @@ const LandingPartners: FC = (): JSX.Element => {
               </AnimationOnScroll>
             </Grid>
             <Grid item xs={12} md={6} zIndex={10} display='flex' justifyContent='center' alignItems='center'>
-              <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
+              <AnimationOnScroll
+                animateIn='animate__bounceIn' animateOut='animate__fadeOut'
+                style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              >
                 <LandingPartnerButton>
                   <Typography
                     variant='h3' lineHeight={1.4} fontWeight={400}

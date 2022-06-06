@@ -20,7 +20,7 @@ import LandingApp from '@pages/Landing/components/LandingApp'
 import Footer from '@components/Footer'
 import LandingSection, { PointsSx } from '@pages/Landing/components/LandingSection'
 import LandingPopCorn from '@pages/Landing/components/LandingPopcorn'
-import LandingTools from '@pages/Landing/components/LandingTools'
+import LandingAwesome from '@pages/Landing/components/LandingAwesome'
 
 // ===========================|| LANDING - VIEW ||=========================== //
 
@@ -53,7 +53,7 @@ export const LandingView: FC = (props): JSX.Element => {
         <LandingCoin />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
-        <LandingTools />
+        <LandingAwesome />
       </LandingSection>
       <LandingSection sx={Background2Sx}>
         <LandingPartners />
