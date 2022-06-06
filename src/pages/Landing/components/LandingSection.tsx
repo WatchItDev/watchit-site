@@ -40,8 +40,8 @@ export const LandingSectionWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   justifyContent: 'center',
   ...PointsSx,
   [theme.breakpoints.down('sm')]: {
-    paddingTop: '60px',
-    paddingBottom: '60px'
+    paddingTop: '80px',
+    paddingBottom: '80px'
   }
 }))
 

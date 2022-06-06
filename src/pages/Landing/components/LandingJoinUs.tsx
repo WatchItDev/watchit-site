@@ -2,19 +2,19 @@
 import React, { FC } from 'react'
 
 // MUI IMPORTS
-import { Grid, Container, Box, Button, styled, BoxProps, useTheme } from '@mui/material'
+import { Grid, Container, Box, styled, BoxProps, useTheme } from '@mui/material'
 
 // THIRD PARTY IMPORTS
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 // PROJECT IMPORTS
-import { Translation } from '@src/i18n'
-import LandingInfo from '@pages/Landing/components/LandingInfo'
-import LandingInvest from '@assets/img/watchit_invest.svg'
+import LandingCommunityLight from '@assets/img/watchit_community_light.svg'
 import LandingInvestLight from '@assets/img/watchit_invest_light.svg'
 import LandingCommunity from '@assets/img/watchit_community.svg'
-import LandingCommunityLight from '@assets/img/watchit_community_light.svg'
-import { MARKETPLACE } from '@navigation/CONSTANTS'
+import LandingInfo from '@pages/Landing/components/LandingInfo'
+import LandingInvest from '@assets/img/watchit_invest.svg'
+import { Translation } from '@src/i18n'
+import LandingComingSoon from '@pages/Landing/components/LandingComingSoon'
 
 // ===========================|| LANDING - JOIN US ||=========================== //
 
@@ -24,14 +24,17 @@ const LandingJoinUs: FC = (): JSX.Element => {
 
   return (
     <Container sx={{ zIndex: 2 }}>
-      <AnimationOnScroll animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
-        <LandingJoinUsImage sx={{ top: { xs: '-5rem', sm: '-2%', md: '-5%' }, right: { xs: 'calc(50% - 8rem)', sm: '3%' }, width: { xs: '16rem', sm: '30%' }, zIndex: 3 }}>
-          {
-            isThemeLight ? <LandingInvestLight /> : <LandingInvest />
-          }
-        </LandingJoinUsImage>
-      </AnimationOnScroll>
-      <Grid container spacing={3} justifyContent='space-between' alignItems='center' sx={{ pt: { xs: '13rem', sm: 0 } }}>
+      {/* <AnimationOnScroll animateIn='animate__fadeIn' animateOut='animate__fadeOut'> */}
+      {/*  <LandingJoinUsImage sx={{ top: { xs: '-5rem', sm: '-2%', md: '-5%' }, right: { xs: 'calc(50% - 8rem)', sm: '3%' }, width: { xs: '16rem', sm: '30%' }, zIndex: 3 }}> */}
+      {/*    { */}
+      {/*      isThemeLight ? <LandingInvestLight /> : <LandingInvest /> */}
+      {/*    } */}
+      {/*  </LandingJoinUsImage> */}
+      {/* </AnimationOnScroll> */}
+      <Grid
+        container spacing={3} justifyContent='center' alignItems='center'
+        sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
+      >
         <Grid item xs={12} sm={6} zIndex={10}>
           <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut'>
             <LandingInfo
@@ -47,31 +50,46 @@ const LandingJoinUs: FC = (): JSX.Element => {
             />
           </AnimationOnScroll>
         </Grid>
-        <Grid item xs={12} sm={6} zIndex={10} />
+        <Grid item xs={12} sm={6} zIndex={10} width='100%'>
+          <AnimationOnScroll
+            animateIn='animate__fadeIn' animateOut='animate__fadeOut'
+            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <LandingJoinUsImage>
+              {
+                isThemeLight ? <LandingInvestLight /> : <LandingInvest />
+              }
+            </LandingJoinUsImage>
+          </AnimationOnScroll>
+        </Grid>
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={12} zIndex={10} display='flex' justifyContent='center' alignItems='center'>
           <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
             <LandingInfo
               title={<Translation target='LANDING_JOIN_US' />}
-              titleSx={{ textAlign: 'center', mt: { xs: '2rem', sm: '4rem' }, textTransform: 'uppercase' }}
-              contentSx={{ alignItems: 'center', justifyContent: 'center', mt: '-1rem', mb: '5rem' }}
+              titleSx={{ textAlign: 'center', mt: { xs: '6rem', sm: '4rem' }, mb: { xs: '2rem', sm: '1rem' }, textTransform: 'uppercase' }}
+              contentSx={{ padding: '0', margin: 0 }}
             >
-              <Grid item xs={12} md={4} display='flex' alignItems='center' justifyContent='center' sx={{ maxWidth: 'inherit !important', flexBasis: 'max-content !important' }}>
-                <Button
-                  variant='outlined' size='large' disableElevation fullWidth href={MARKETPLACE} color='secondary'
-                  sx={{ py: 1, px: 6, fontSize: '1.1rem', maxWidth: '17rem' }}
-                >
-                  <Translation target='LANDING_JOIN_US_BUTTON' />
-                </Button>
-              </Grid>
+              <LandingComingSoon sx={{ top: { xs: '3.5rem', sm: '1rem' }, right: '-1.5rem' }} />
             </LandingInfo>
           </AnimationOnScroll>
         </Grid>
       </Grid>
-      <Grid container spacing={3} justifyContent='space-between' alignItems='center' sx={{ pt: { xs: '13rem', sm: 0 } }}>
-        <Grid item xs={12} sm={6} zIndex={10} />
-        <Grid item xs={12} sm={6} zIndex={10}>
+      <Grid container spacing={3} justifyContent='center' alignItems='center'>
+        <Grid item xs={12} sm={6} zIndex={10} width='100%'>
+          <AnimationOnScroll
+            animateIn='animate__fadeIn' animateOut='animate__fadeOut'
+            style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <LandingJoinUsImage>
+              {
+                isThemeLight ? <LandingCommunityLight /> : <LandingCommunity />
+              }
+            </LandingJoinUsImage>
+          </AnimationOnScroll>
+        </Grid>
+        <Grid item xs={12} sm={6} zIndex={10} sx={{ position: 'relative' }}>
           <AnimationOnScroll animateIn='animate__bounceInRight' animateOut='animate__fadeOut'>
             <LandingInfo
               title={<Translation target='LANDING_JOIN_US_2_TITLE' />}
@@ -80,23 +98,20 @@ const LandingJoinUs: FC = (): JSX.Element => {
           </AnimationOnScroll>
         </Grid>
       </Grid>
-      <AnimationOnScroll animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
-        <LandingJoinUsImage sx={{ bottom: { xs: '13rem', sm: '0', md: '-5%' }, left: { xs: 'calc(50% - 8rem)', sm: '5%' }, width: { xs: '16rem', sm: '30%' }, zIndex: 3 }}>
-          {
-            isThemeLight ? <LandingCommunityLight /> : <LandingCommunity />
-          }
-        </LandingJoinUsImage>
-      </AnimationOnScroll>
     </Container>
   )
 }
 
-export const LandingJoinUsImage = styled(Box)<BoxProps>(() => ({
-  position: 'absolute',
+export const LandingJoinUsImage = styled(Box)<BoxProps>(({ theme }) => ({
   zIndex: 2,
+  width: '100%',
+  maxWidth: '30rem',
   svg: {
     width: '100%',
     height: 'auto'
+  },
+  [theme.breakpoints.down('sm')]: {
+    maxWidth: '19rem'
   }
 }))
 

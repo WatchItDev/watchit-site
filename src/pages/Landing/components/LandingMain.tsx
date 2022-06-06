@@ -13,7 +13,7 @@ import LandingBackgroundTriangles from '@assets/img/triangles.png'
 import LandingMainImage from '@assets/img/watchit_landing_main.svg'
 import LandingMainImageLight from '@assets/img/watchit_landing_main_light.svg'
 import LandingInfo from '@pages/Landing/components/LandingInfo'
-import { MARKETPLACE, APP } from '@navigation/CONSTANTS'
+import { APP } from '@navigation/CONSTANTS'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 // ===========================|| LANDING - MAIN ||=========================== //
@@ -27,18 +27,21 @@ const LandingMain: FC = (): JSX.Element => {
       <Container>
         <Grid
           container spacing={3} justifyContent='space-between' alignItems='center'
-          sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, mt: { xs: '40%', sm: '-24px' }, ml: { xs: '-12px', sm: '-24px' }, zIndex: 3 }}
+          sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, ml: { xs: '-12px', sm: '-24px' }, zIndex: 3 }}
         >
-          <Grid item xs={12} sm={6} zIndex={10} sx={{ minWidth: '24rem', mt: { xs: '7rem', sm: 0 } }}>
+          <Grid item xs={12} sm={6} zIndex={10} sx={{ mt: { xs: '4rem', sm: 0 } }}>
             <Grid container spacing={3} justifyContent='space-between' alignItems='center' sx={{ pr: { xs: 0, md: '80px' } }}>
               <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut'>
                 <LandingInfo
                   title={<Translation target='LANDING_MAIN_TITLE' />}
                   subTitle={<Translation target='LANDING_MAIN_SUBTITLE' />}
-                  titleSx={{ fontSize: { xs: '2.2rem', sm: '3rem', lg: '2.9rem', xl: '3.5rem' } }}
+                  titleSx={{
+                    fontSize: { xs: '2.2rem', sm: '3rem', lg: '2.9rem', xl: '3.5rem' },
+                    lineHeight: { xs: '2.4rem', sm: '3.2rem', lg: '3.1rem', xl: '3.7rem' }
+                  }}
                   contentSx={{ mt: 1, mb: 3 }}
                 >
-                  <Grid item xs={6} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  <Grid item xs={12} sm={6} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Button
                       color='primary' variant='contained' size='large' disableElevation
                       sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP}
@@ -46,20 +49,15 @@ const LandingMain: FC = (): JSX.Element => {
                       <Translation target='LANDING_APP' />
                     </Button>
                   </Grid>
-                  <Grid item xs={6} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                    <Button
-                      color='secondary' variant='outlined' size='large' disableElevation
-                      sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={MARKETPLACE}
-                    >
-                      <Translation target='LANDING_MARKETPLACE' />
-                    </Button>
-                  </Grid>
                 </LandingInfo>
               </AnimationOnScroll>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <AnimationOnScroll animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
+          <Grid item xs={12} sm={6} width='100%' display='flex' alignItems='center' justifyContent='center' sx={{ pr: '24px' }}>
+            <AnimationOnScroll
+              animateIn='animate__fadeIn' animateOut='animate__fadeOut'
+              style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
               <LandingMainImageContainer>
                 {
                   isThemeLight ? <LandingMainImageLight /> : <LandingMainImage />
@@ -79,22 +77,14 @@ const LandingMain: FC = (): JSX.Element => {
 }
 
 export const LandingMainImageContainer = styled(Box)<BoxProps>(({ theme }) => ({
-  position: 'absolute',
-  top: '30%',
-  right: '9%',
-  width: '40%',
+  width: '100%',
   zIndex: 4,
   svg: {
     width: '100%',
     height: 'auto'
   },
   [theme.breakpoints.down('sm')]: {
-    top: '10%',
-    right: '20%',
-    width: '65%'
-  },
-  [theme.breakpoints.up('lg')]: {
-    top: '25%'
+    maxWidth: '25rem'
   }
 }))
 

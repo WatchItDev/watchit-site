@@ -28,9 +28,9 @@ const LandingInfo: FC<PropsWithChildren<LandingInfoProps>> = (props): JSX.Elemen
           <Typography
             variant='h1' lineHeight={1.4} color={theme.palette.text.primary}
             sx={{
-              fontSize: { xs: '1.5rem', sm: '1.5rem', lg: '2.5rem' },
+              fontSize: { xs: '1.7rem', sm: '2rem', md: '2.2rem', lg: '2.5rem' },
+              lineHeight: { xs: '1.9rem', sm: '2.2rem', md: '2.4rem', lg: '2.7rem' },
               textAlign: { xs: 'center', sm: 'left' },
-              lineHeight: '2.8rem',
               ...props.titleSx
             }}
           >
