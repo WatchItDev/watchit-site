@@ -8,12 +8,12 @@ import { Grid, Container, Box, styled, BoxProps, Button, useTheme } from '@mui/m
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 // PROJECT IMPORTS
+import LandingBackgroundTriangles from '@assets/img/triangles.png'
 import LandingInfo from '@pages/Landing/components/LandingInfo'
 import LandingAppSvg from '@assets/img/watchit_app.svg'
 import LandingAppLight from '@assets/img/watchit_app_light.svg'
-import { APP } from '@navigation/CONSTANTS'
 import { Translation } from '@src/i18n'
-import LandingBackgroundTriangles from '@assets/img/triangles.png'
+import { APP, APP_DOWNLOAD } from '@navigation/CONSTANTS'
 
 // ===========================|| LANDING - APP ||=========================== //
 
@@ -40,6 +40,14 @@ const LandingApp: FC = (): JSX.Element => {
                   sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP}
                 >
                   <Translation target='LANDING_APP' />
+                </Button>
+              </Grid>
+              <Grid item xs={12} md={6} display='flex' sx={{ pt: 0, justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                <Button
+                  color='secondary' variant='contained' size='large' disableElevation
+                  sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP_DOWNLOAD}
+                >
+                  <Translation target='LANDING_APP_DOWNLOAD' />
                 </Button>
               </Grid>
             </LandingInfo>

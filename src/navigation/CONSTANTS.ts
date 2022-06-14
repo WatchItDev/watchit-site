@@ -1,6 +1,7 @@
 export const LANDING = '/'
 export const DOCS = 'https://github.com/ZorrillosDev/watchit-app'
-export const APP = 'https://web.watchitapp.site/'
+export const APP = 'https://web.watchit.movie/'
+export const APP_DOWNLOAD = 'https://github.com/ZorrillosDev/watchit-app/releases'
 export const MARKETPLACE = 'https://marketplace.watchitapp.site/'
 export const TWITTER = 'https://twitter.com/app_watchit'
 export const DISCORD = 'https://discord.gg/QJcSXedY'
