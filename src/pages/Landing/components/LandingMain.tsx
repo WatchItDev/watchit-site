@@ -16,6 +16,7 @@ import LandingInfo from '@pages/Landing/components/LandingInfo'
 import { APP } from '@navigation/CONSTANTS'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import LandingKey from '@pages/Landing/components/LandingKey'
+import { LandingKeyHash } from "@src/config";
 
 // ===========================|| LANDING - MAIN ||=========================== //
 
@@ -51,7 +52,7 @@ const LandingMain: FC = (): JSX.Element => {
                     </Button>
                   </Grid>
                   <Grid item xs={12} display='flex'>
-                    <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />
+                    <LandingKey text={LandingKeyHash} />
                   </Grid>
                 </LandingInfo>
               </AnimationOnScroll>
