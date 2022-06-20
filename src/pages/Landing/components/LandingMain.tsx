@@ -42,7 +42,7 @@ const LandingMain: FC = (): JSX.Element => {
                   }}
                   contentSx={{ mt: 1, mb: 3 }}
                 >
-                  <Grid item xs={12} sm={6} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  <Grid item xs={12} sm={12} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Button
                       color='primary' variant='contained' size='large' disableElevation
                       sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP}
