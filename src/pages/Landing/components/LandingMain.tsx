@@ -32,7 +32,7 @@ const LandingMain: FC = (): JSX.Element => {
         >
           <Grid item xs={12} sm={6} zIndex={10} sx={{ mt: { xs: '4rem', sm: 0 } }}>
             <Grid container spacing={3} justifyContent='space-between' alignItems='center' sx={{ pr: { xs: 0, md: '80px' } }}>
-              <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut'>
+              <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut' style={{ width: '100%' }}>
                 <LandingInfo
                   title={<Translation target='LANDING_MAIN_TITLE' />}
                   subTitle={<Translation target='LANDING_MAIN_SUBTITLE' />}
