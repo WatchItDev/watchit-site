@@ -51,7 +51,7 @@ const LandingMain: FC = (): JSX.Element => {
                     </Button>
                   </Grid>
                   <Grid item xs={12} display='flex'>
-                    <LandingKey text='zdpuAuvNJBu4VdW22QyBEvQDnuU4PVTNgQwBwJbyfmPwp9G7e' />
+                    <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />
                   </Grid>
                 </LandingInfo>
               </AnimationOnScroll>
