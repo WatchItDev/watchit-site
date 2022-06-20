@@ -2,7 +2,7 @@
 import React, { FC, useLayoutEffect, useState } from 'react'
 
 // MUI IMPORTS
-import { Box, styled, BoxProps, Typography } from '@mui/material'
+import {Box, styled, BoxProps, Typography, TypographyProps} from '@mui/material'
 import { IconCopy } from '@tabler/icons'
 
 // PROJECT IMPORTS
@@ -105,7 +105,7 @@ const LandingKey: FC<LandingKeyProps> = (props): JSX.Element => {
 
   return (
     <LandingKeyWrapper onClick={handleOnClick} color={(theme) => copied ? theme.palette.success.dark : 'inherit'}>
-      <Typography
+      <LandingKeyText
         variant='h5' color='inherit' id='landingKey'
         lineHeight={1.4} fontWeight={400}
       />
@@ -127,6 +127,13 @@ export const LandingKeyWrapper = styled(Box)<BoxProps>(() => ({
   '.dud': {
     opacity: 0.6
   }
+}))
+
+export const LandingKeyText = styled(Typography)<TypographyProps>(() => ({
+  maxWidth: 'calc(100% - 1.5rem)',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap'
 }))
 
 export const LandingKeyIcon = styled(Box)<BoxProps>(() => ({
