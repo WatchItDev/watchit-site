@@ -15,6 +15,7 @@ import LandingMainImageLight from '@assets/img/watchit_landing_main_light.svg'
 import LandingInfo from '@pages/Landing/components/LandingInfo'
 import { APP } from '@navigation/CONSTANTS'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import LandingKey from '@pages/Landing/components/LandingKey'
 
 // ===========================|| LANDING - MAIN ||=========================== //
 
@@ -48,6 +49,9 @@ const LandingMain: FC = (): JSX.Element => {
                     >
                       <Translation target='LANDING_APP' />
                     </Button>
+                  </Grid>
+                  <Grid item xs={12} display='flex'>
+                    <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />
                   </Grid>
                 </LandingInfo>
               </AnimationOnScroll>

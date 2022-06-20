@@ -14,7 +14,6 @@ import LandingCommunity from '@assets/img/watchit_community.svg'
 import LandingInfo from '@pages/Landing/components/LandingInfo'
 import LandingInvest from '@assets/img/watchit_invest.svg'
 import { Translation } from '@src/i18n'
-import LandingComingSoon from '@pages/Landing/components/LandingComingSoon'
 
 // ===========================|| LANDING - JOIN US ||=========================== //
 
@@ -68,7 +67,7 @@ const LandingJoinUs: FC = (): JSX.Element => {
           <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
             <LandingInfo
               title={<Translation target='LANDING_JOIN_US' />}
-              titleSx={{color: theme.palette.secondary.main, textAlign: 'center', mt: { xs: '6rem', sm: '4rem' }, mb: { xs: '2rem', sm: '1rem' }, textTransform: 'uppercase' }}
+              titleSx={{ color: theme.palette.secondary.main, textAlign: 'center', mt: { xs: '6rem', sm: '4rem' }, mb: { xs: '2rem', sm: '1rem' }, textTransform: 'uppercase' }}
               contentSx={{ padding: '0', margin: 0 }}
             />
           </AnimationOnScroll>
