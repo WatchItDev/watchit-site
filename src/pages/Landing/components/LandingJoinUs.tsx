@@ -68,11 +68,9 @@ const LandingJoinUs: FC = (): JSX.Element => {
           <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
             <LandingInfo
               title={<Translation target='LANDING_JOIN_US' />}
-              titleSx={{ textAlign: 'center', mt: { xs: '6rem', sm: '4rem' }, mb: { xs: '2rem', sm: '1rem' }, textTransform: 'uppercase' }}
+              titleSx={{color: theme.palette.secondary.main, textAlign: 'center', mt: { xs: '6rem', sm: '4rem' }, mb: { xs: '2rem', sm: '1rem' }, textTransform: 'uppercase' }}
               contentSx={{ padding: '0', margin: 0 }}
-            >
-              <LandingComingSoon sx={{ top: { xs: '3.5rem', sm: '1rem' }, right: '-1.5rem' }} />
-            </LandingInfo>
+            />
           </AnimationOnScroll>
         </Grid>
       </Grid>

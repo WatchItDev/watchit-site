@@ -1,6 +1,7 @@
 {
     "LANDING_MARKETPLACE":"Marketplace",
-    "LANDING_APP":"App",
+    "LANDING_APP":"Web App",
+    "LANDING_APP_DOWNLOAD":"Download",
     "LANDING_MENU_TWITTER":"Twitter",
     "LANDING_MENU_DISCORD":"Discord",
     "LANDING_MENU_DOCS":"Docs",
