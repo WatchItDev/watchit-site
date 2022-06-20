@@ -42,8 +42,8 @@ export const langKeys = Object.keys(en).reduce((o: any, e: string) => {
 
 export default i18n;
 
-export const Translation: FC<{ target: string }> = ({ target, children }) => {
+export const Translation: FC<{ target: string, options?: { [key: string]: any } }> = (props) => {
   const { t } = useTranslation();
 
-  return (<>{t(target)}{children}</>)
+  return (<>{t(props.target, props.options ?? {})}{props.children}</>)
 }
