@@ -1,6 +1,7 @@
 import i18Next from 'i18next';
 import {initReactI18next, useTranslation} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import parse from 'html-react-parser';
 
 // Languages
 import en from './langs/en.json';
@@ -46,4 +47,10 @@ export const Translation: FC<{ target: string, options?: { [key: string]: any } 
   const { t } = useTranslation();
 
   return (<>{t(props.target, props.options ?? {})}{props.children}</>)
+}
+
+export const translationString = (props: { target: string, options?: { [key: string]: any } }) => {
+  const { t } = useTranslation();
+
+  return parse(t(props.target, props.options ?? {}))
 }

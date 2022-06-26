@@ -7,6 +7,7 @@ import { Grid, Typography, Container, Box, styled, ButtonProps, Button, useTheme
 // PROJECT IMPORTS
 import LandingInfo from '@pages/Landing/components/LandingInfo'
 import zorrillos from '@assets/img/zorrillos_dev_logo.png'
+import zorrillosDark from '@assets/img/zorrillos_dev_logo_dark.png'
 import { Translation } from '@src/i18n'
 import LandingBackgroundCircle from '@assets/img/circle.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
@@ -37,7 +38,7 @@ const LandingPartners: FC = (): JSX.Element => {
           <Grid container spacing={6} alignItems='center' justifyContent='center'>
             <Grid item xs={12} md={6} zIndex={10} display='flex' justifyContent='center' alignItems='center'>
               <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
-                <LandingPartnerImage component='img' src={zorrillos} />
+                <LandingPartnerImage component='img' src={Object.is(theme.palette.mode, 'light') ? zorrillos : zorrillosDark} />
               </AnimationOnScroll>
             </Grid>
             <Grid item xs={12} md={6} zIndex={10} display='flex' justifyContent='center' alignItems='center'>
