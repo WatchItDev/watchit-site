@@ -17,7 +17,7 @@ import { DOCS } from '@navigation/CONSTANTS'
 const LandingAwesome: FC = (): JSX.Element => {
   return (
     <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Grid container spacing={10} justifyContent='center' alignItems='center'>
+      <Grid container justifyContent='center' alignItems='center' spacing={10}>
         <Grid item xs={12}>
           <Grid container justifyContent='center' alignItems='center'>
             <Grid item xs={12} md={6} zIndex={10}>
@@ -26,8 +26,8 @@ const LandingAwesome: FC = (): JSX.Element => {
                   title={<Translation target='LANDING_TOOLS_TITLE' />}
                   titleSx={{ textAlign: 'center' }}
                   subTitle={<Translation target='LANDING_TOOLS_SUBTITLE' />}
-                  subTitleSx={{ textAlign: 'center' }}
                   contentSx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  subTitleSx={{ textAlign: 'center' }}
                 >
                   <Grid item xs={12} sm={6} display='flex' sx={{ justifyContent: { xs: 'center', md: 'center' } }}>
                     <Button
@@ -42,7 +42,7 @@ const LandingAwesome: FC = (): JSX.Element => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Grid container spacing={6} justifyContent='center' alignItems='center'>
             <Grid item xs={12} md={6} zIndex={10} display='flex' justifyContent='center' alignItems='center'>
               <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>

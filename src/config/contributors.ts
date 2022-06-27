@@ -1,4 +1,3 @@
-import Alejandro from '@assets/img/alejandro.png'
 import Jadapema from '@assets/img/jadapema.png'
 import Phillip from '@assets/img/phillip.png'
 import Frank from '@assets/img/frank.png'
@@ -17,16 +16,16 @@ export const CONTRIBUTIONS = {
             "img": Geo
         },
         {
-            "name": "Mark Henderson",
-            "role": "Co-Founder / Strategy Advisor",
-            "profile": "http://mrh.io",
-            "img": Mark
-        },
-        {
             "name": "Jacob Peralta",
             "role": "Co-Founder / Front-End Lead",
             "profile": "https://github.com/Jadapema",
             "img": Jadapema
+        },
+        {
+            "name": "Mark Henderson",
+            "role": "Strategy Advisor",
+            "profile": "http://mrh.io",
+            "img": Mark
         },
         {
             "name": "Francisco Garcia",
@@ -36,15 +35,9 @@ export const CONTRIBUTIONS = {
         },
         {
             "name": "Phillip Mackintosh",
-            "role": "Architecture Advisor",
+            "role": "Infrastructure Advisor",
             "profile": "https://github.com/phillmac",
             "img": Phillip
-        },
-        {
-            "name": "Alejandro González",
-            "role": "Front-End Developer",
-            "profile": "https://github.com/JoseGonz98",
-            "img": Alejandro
         },
         {
             "name": "Dennis",
