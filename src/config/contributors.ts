@@ -1,6 +1,6 @@
 import Jadapema from '@assets/img/jadapema.png'
-// import Phillip from '@assets/img/phillip.png'
-// import Frank from '@assets/img/frank.png'
+import Phillip from '@assets/img/phillip.png'
+import Frank from '@assets/img/frank.png'
 import Mark from '@assets/img/mark.png'
 import Geo from '@assets/img/geo.png'
 import Denis from '@assets/img/denis.jpeg'
