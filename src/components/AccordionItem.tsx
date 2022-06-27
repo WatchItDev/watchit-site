@@ -27,14 +27,14 @@ const AccordionItem: FC<AccordionItemProps> = (props): JSX.Element => {
     <Accordion sx={{ width: 1, backgroundColor: 'transparent', '&::before': { backgroundColor: '#bdc8f033' } }}>
       <AccordionSummary expandIcon={<ExpandMore />}>
         <Typography variant='h4' sx={{ color: (theme) => theme.palette.grey[700] }}>
-          {props.question && props.question}
-          {props.questionTranslation && <Translation target={props.questionTranslation ?? ''} />}
+          { props.question ? props.question : <></> }
+          { <Translation target={props.questionTranslation ?? ''} /> }
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography variant='h4' sx={{ color: (theme) => theme.palette.grey[500] }}>
-          {props.answer && props.answer}
-          {props.answerTranslation && translationString({ target: props.answerTranslation ?? '' })}
+          { props.answer ? props.answer : <></> }
+          { translationString({ target: props.answerTranslation ?? '' }) }
         </Typography>
       </AccordionDetails>
     </Accordion>
