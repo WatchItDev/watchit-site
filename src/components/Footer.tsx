@@ -15,7 +15,8 @@ import {
   IconBrandTelegram,
   IconBrandTwitter
 } from '@tabler/icons'
-import { DISCORD, FACEBOOK, INSTAGRAM, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
+import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
+import { IconBrandMatrix } from '@components/Icons'
 
 // ===========================|| FOOTER ||=========================== //
 
@@ -72,6 +73,11 @@ const Footer: FC = (): JSX.Element => {
                 <Link href={MEDIUM} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandMedium stroke={1} />
+                  </FooterSocialItem>
+                </Link>
+                <Link href={MATRIX} target='_blank' rel='noreferrer'>
+                  <FooterSocialItem>
+                    <IconBrandMatrix sx={{ width: '1.8em' }} />
                   </FooterSocialItem>
                 </Link>
               </Box>

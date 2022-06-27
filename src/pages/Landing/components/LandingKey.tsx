@@ -2,7 +2,7 @@
 import React, { FC, useLayoutEffect, useState } from 'react'
 
 // MUI IMPORTS
-import {Box, styled, BoxProps, Typography, TypographyProps} from '@mui/material'
+import { Box, styled, BoxProps, Typography, TypographyProps } from '@mui/material'
 import { IconCopy } from '@tabler/icons'
 
 // PROJECT IMPORTS
@@ -22,7 +22,7 @@ interface KeyElement {
 }
 
 interface LandingKeyProps {
-  text: string,
+  text: string
   delay?: number
 }
 
@@ -36,7 +36,7 @@ const LandingKey: FC<LandingKeyProps> = (props): JSX.Element => {
 
   useLayoutEffect(() => {
     el = document.querySelector('#landingKey')
-    setTimeout(()=> {
+    setTimeout(() => {
       setText(props.text)
     }, props.delay ?? 500)
   }, [])

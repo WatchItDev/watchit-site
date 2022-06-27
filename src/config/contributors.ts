@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // import Alejandro from '@assets/img/alejandro.png'
+=======
+>>>>>>> 9fdd3f60fde06236ea9a558e2c8356dc327a0fe0
 import Jadapema from '@assets/img/jadapema.png'
 // import Phillip from '@assets/img/phillip.png'
 // import Frank from '@assets/img/frank.png'
@@ -29,6 +32,21 @@ export const CONTRIBUTIONS = {
             "img": Mark
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "Francisco Garcia",
+            "role": "Project Manager",
+            "profile": "https://github.com/xirapo",
+            "img": Frank
+        },
+        {
+            "name": "Phillip Mackintosh",
+            "role": "Infrastructure Advisor",
+            "profile": "https://github.com/phillmac",
+            "img": Phillip
+        },
+        {
+>>>>>>> 9fdd3f60fde06236ea9a558e2c8356dc327a0fe0
             "name": "Dennis",
             "role": "Community Manager",
             "profile": "https://github.com/mathiassond",
