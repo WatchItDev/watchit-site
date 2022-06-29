@@ -116,7 +116,7 @@ const LandingKey: FC<LandingKeyProps> = (props): JSX.Element => {
   )
 }
 
-export const LandingKeyWrapper = styled(Box)<BoxProps>(() => ({
+export const LandingKeyWrapper = styled(Box)<BoxProps>(({theme}) => ({
   width: '100%',
   display: 'flex',
   justifyContent: 'start',
@@ -126,6 +126,9 @@ export const LandingKeyWrapper = styled(Box)<BoxProps>(() => ({
   transition: 'all 0.5s ease-in-out',
   '.dud': {
     opacity: 0.6
+  },
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '0.5rem',
   }
 }))
 

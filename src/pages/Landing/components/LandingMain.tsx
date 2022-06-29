@@ -2,7 +2,7 @@
 import React, { FC } from 'react'
 
 // MUI IMPORTS
-import { Box, Grid, Container, Button, styled, BoxProps, useTheme } from '@mui/material'
+import {Box, Grid, Container, Button, styled, BoxProps, useTheme, useMediaQuery} from '@mui/material'
 
 // PROJECT IMPORTS
 import { Translation } from '@src/i18n'
@@ -22,16 +22,17 @@ import LandingKey from '@pages/Landing/components/LandingKey'
 const LandingMain: FC = (): JSX.Element => {
   const theme = useTheme()
   const isThemeLight = Object.is(theme.palette.mode, 'light')
+  const matchSm = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <>
-      <Container>
+      <Container sx={{ pt: { xs: '4rem', sm: 0 } }}>
         <Grid
-          container spacing={3} justifyContent='space-between' alignItems='center'
+          container spacing={matchSm ? 1 : 3} justifyContent='space-between' alignItems='center'
           sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, ml: { xs: '-12px', sm: '-24px' }, zIndex: 3 }}
         >
-          <Grid item xs={12} sm={6} zIndex={10} sx={{ mt: { xs: '4rem', sm: 0 } }}>
-            <Grid container spacing={3} justifyContent='space-between' alignItems='center' sx={{ pr: { xs: 0, md: '80px' } }}>
+          <Grid item xs={12} sm={6} zIndex={10} sx={{ mt: { xs: '2rem', sm: 0 } }}>
+            <Grid container justifyContent='space-between' alignItems='center' sx={{ pr: { xs: 0, md: '80px' } }}>
               <AnimationOnScroll animateIn='animate__bounceInLeft' animateOut='animate__fadeOut' style={{ width: '100%' }}>
                 <LandingInfo
                   title={<Translation target='LANDING_MAIN_TITLE' />}
@@ -41,6 +42,9 @@ const LandingMain: FC = (): JSX.Element => {
                     lineHeight: { xs: '2.4rem', sm: '3.2rem', lg: '3.1rem', xl: '3.7rem' }
                   }}
                   contentSx={{ mt: 1, mb: 3 }}
+                  sx={{
+                    '.MuiGrid-item': { paddingTop: { xs: '12px', sm: '16px' } }
+                  }}
                 >
                   <Grid item xs={12} sm={12} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Button
@@ -88,7 +92,7 @@ export const LandingMainImageContainer = styled(Box)<BoxProps>(({ theme }) => ({
     height: 'auto'
   },
   [theme.breakpoints.down('sm')]: {
-    maxWidth: '25rem'
+    maxWidth: '17rem'
   }
 }))
 
