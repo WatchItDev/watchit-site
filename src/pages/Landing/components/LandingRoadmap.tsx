@@ -15,6 +15,7 @@ import { RoadMapSections } from "@src/config";
 import { Translation } from '@src/i18n'
 import LandingRoadmapLight from "@assets/img/roadmap.svg";
 import LandingRoadmapDark from "@assets/img/roadmap_dark.svg";
+import { Random } from "@src/utils";
 
 // ===========================|| LANDING - ROADMAP ||=========================== //
 
@@ -44,7 +45,7 @@ const LandingRoadmap: FC = (): JSX.Element => {
             {
               RoadMapSections.map(el => {
                 return (
-                  <Grid item xs={12} sm={6} md={4} lg={3} zIndex={10} key={Math.random()}>
+                  <Grid item xs={12} sm={6} md={4} lg={3} zIndex={10} key={Random.getRandomNumberBetween(0,1000)}>
                     <AnimationOnScroll animateIn='animate__bounceIn' animateOut='animate__fadeOut'>
                       <Grid container spacing={5}>
                         <Grid item xs={12}>
@@ -62,7 +63,7 @@ const LandingRoadmap: FC = (): JSX.Element => {
                             {
                               el.items.map(obj => {
                                 return (
-                                  <Grid item xs={12} key={Math.random()}>
+                                  <Grid item xs={12} key={Random.getRandomNumberBetween(0,1000)}>
                                     <Typography
                                       variant='h3' lineHeight={1.4} fontWeight={400}
                                       sx={{ textDecoration: obj.done ? 'line-through' : 'none' }}

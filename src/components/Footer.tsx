@@ -17,6 +17,7 @@ import {
 } from '@tabler/icons'
 import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
 import { IconBrandMatrix } from '@components/Icons'
+import { Random } from "@src/utils";
 
 // ===========================|| FOOTER ||=========================== //
 
@@ -91,7 +92,7 @@ const Footer: FC = (): JSX.Element => {
                   const section = FooterSections[sectionKey]
 
                   return (
-                    <Grid item xs={4} key={Math.random()}>
+                    <Grid item xs={4} key={Random.getRandomNumberBetween(0,1000)}>
                       <Grid container spacing={0.3}>
                         <Grid item xs={12}>
                           <Typography
@@ -104,7 +105,7 @@ const Footer: FC = (): JSX.Element => {
                         {
                           section.map((item) => {
                             return (
-                              <Grid item xs={12} key={Math.random()}>
+                              <Grid item xs={12} key={Random.getRandomNumberBetween(0,1000)}>
                                 {
                                   item.obj ? (
                                     <Link
