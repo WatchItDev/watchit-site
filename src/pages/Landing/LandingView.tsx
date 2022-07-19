@@ -23,6 +23,7 @@ import LandingPopCorn from '@pages/Landing/components/LandingPopcorn'
 import LandingAwesome from '@pages/Landing/components/LandingAwesome'
 import LandingMission from '@pages/Landing/components/LandingMission'
 import LandingFAQ from '@pages/Landing/components/LandingFAQ'
+import LandingRoadmap from '@pages/Landing/components/LandingRoadmap'
 
 // ===========================|| LANDING - VIEW ||=========================== //
 
@@ -61,12 +62,15 @@ export const LandingView: FC = (props): JSX.Element => {
         <LandingAwesome />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
-        <LandingFAQ />
+        <LandingRoadmap />
       </LandingSection>
       <LandingSection sx={Background2Sx}>
-        <LandingPartners />
+        <LandingFAQ />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
+        <LandingPartners />
+      </LandingSection>
+      <LandingSection sx={Background2Sx}>
         <LandingTeam />
       </LandingSection>
       <LandingSection sx={{ py: '0px !important', '& > div': { maxWidth: 'none', width: '100%' } }}>

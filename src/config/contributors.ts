@@ -1,9 +1,9 @@
 import Jadapema from '@assets/img/jadapema.png'
-import Phillip from '@assets/img/phillip.png'
 import Frank from '@assets/img/frank.png'
 import Mark from '@assets/img/mark.png'
 import Geo from '@assets/img/geo.png'
 import Denis from '@assets/img/denis.jpeg'
+import Ahmed from '@assets/img/ahmed.jpg'
 
 /* eslint-disable */
 
@@ -34,16 +34,16 @@ export const CONTRIBUTIONS = {
             "img": Frank
         },
         {
-            "name": "Phillip Mackintosh",
-            "role": "Infrastructure Advisor",
-            "profile": "https://github.com/phillmac",
-            "img": Phillip
-        },
-        {
             "name": "Dennis",
             "role": "Community Manager",
             "profile": "https://github.com/mathiassond",
             "img": Denis
+        },
+        {
+            "name": "Ahmed Mohamed",
+            "role": "Infrastructure",
+            "profile": "https://github.com/AhmedARmohamed",
+            "img": Ahmed
         }
     ]
 }
