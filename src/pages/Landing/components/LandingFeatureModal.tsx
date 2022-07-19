@@ -9,11 +9,6 @@ import {
 
 // THIRD PARTY IMPORTS
 import { Octokit } from "octokit";
-import {APP_DOWNLOAD} from "@navigation/CONSTANTS";
-import {Translation} from "@src/i18n";
-
-// PROJECT IMPORTS
-
 
 // ===========================|| LANDING - FEATURE - MODAL ||=========================== //
 
@@ -51,11 +46,6 @@ const LandingFeatureModal: FC = (): JSX.Element => {
 
   const sendIssue = async () => {
     if (!repo || !title || !message) return
-    console.log("send issue")
-    console.log(repo)
-    console.log(title)
-    console.log(message)
-    console.log(process.env.REACT_APP_GIT_TOKEN)
     setIssueId('')
 
     await octokit.request(`POST /repos/ZorrillosDev/${repo}/issues`, {
@@ -65,8 +55,6 @@ const LandingFeatureModal: FC = (): JSX.Element => {
       title: title,
       labels: ['feature', 'user_request']
     }).then((res) => {
-      console.log("RESPONSE")
-      console.log(res)
       setIssueId(res.data.number ?? null)
     })
   }
