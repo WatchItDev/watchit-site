@@ -17,6 +17,7 @@ import {
 } from '@tabler/icons'
 import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
 import { IconBrandMatrix } from '@components/Icons'
+import { Random } from "@src/utils";
 
 // ===========================|| FOOTER ||=========================== //
 
@@ -85,13 +86,13 @@ const Footer: FC = (): JSX.Element => {
           </Grid>
           <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }} />
           <Grid item xs={12} sm={5}>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} justifyContent={'end'}>
               {
                 Object.keys(FooterSections).map((sectionKey) => {
                   const section = FooterSections[sectionKey]
 
                   return (
-                    <Grid item xs={4} key={sectionKey}>
+                    <Grid item xs={4} key={Random.getRandomNumberBetween(0,1000)}>
                       <Grid container spacing={0.3}>
                         <Grid item xs={12}>
                           <Typography
@@ -104,13 +105,17 @@ const Footer: FC = (): JSX.Element => {
                         {
                           section.map((item) => {
                             return (
-                              <Grid item xs={12} key={item.name}>
-                                <Link
-                                  color={Object.is(theme.palette.mode, 'light') ? 'primary.light' : 'text.primary'}
-                                  variant='body2' href={item.url}
-                                >
-                                  {item.name}
-                                </Link>
+                              <Grid item xs={12} key={Random.getRandomNumberBetween(0,1000)}>
+                                {
+                                  item.obj ? (
+                                    <Link
+                                      color={Object.is(theme.palette.mode, 'light') ? 'primary.light' : 'text.primary'}
+                                      variant='body2' href={item?.obj?.url} target='_blank'
+                                    >
+                                      {item?.obj?.name}
+                                    </Link>
+                                  ) : item.content
+                                }
                               </Grid>
                             )
                           })

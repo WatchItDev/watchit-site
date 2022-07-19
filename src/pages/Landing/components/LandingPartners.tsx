@@ -9,7 +9,7 @@ import LandingInfo from '@pages/Landing/components/LandingInfo'
 import zorrillos from '@assets/img/zorrillos_dev_logo.png'
 import zorrillosDark from '@assets/img/zorrillos_dev_logo_dark.png'
 import { Translation } from '@src/i18n'
-import LandingBackgroundCircle from '@assets/img/circle.png'
+import LandingBackgroundTriangles from '@assets/img/triangles.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 // ===========================|| LANDING - PARTNERS ||=========================== //
@@ -59,7 +59,7 @@ const LandingPartners: FC = (): JSX.Element => {
           </Grid>
         </Grid>
       </Grid>
-      <LandingPartnersBackgroundCircle component='img' src={LandingBackgroundCircle} />
+      <LandingPartnersBackgroundTriangles component='img' src={LandingBackgroundTriangles} />
     </Container>
   )
 }
@@ -84,11 +84,11 @@ export const LandingPartnerImage = styled(Box)<BoxProps & { src: string }>(() =>
   width: '12rem'
 }))
 
-export const LandingPartnersBackgroundCircle = styled(Box)<BoxProps & { src: string }>(({ theme }) => ({
+export const LandingPartnersBackgroundTriangles = styled(Box)<BoxProps & { src: string }>(({ theme }) => ({
   position: 'absolute',
-  width: '20%',
-  top: '-35%',
-  left: '5%',
+  width: '13%',
+  top: '-30%',
+  left: '0',
   height: 'auto',
   opacity: Object.is(theme.palette.mode, 'light') ? 0.3 : 0.15,
   filter: Object.is(theme.palette.mode, 'light')
