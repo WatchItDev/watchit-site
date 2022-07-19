@@ -4,6 +4,7 @@ import Frank from '@assets/img/frank.png'
 import Mark from '@assets/img/mark.png'
 import Geo from '@assets/img/geo.png'
 import Denis from '@assets/img/denis.jpeg'
+import Ahmed from '@assets/img/ahmed.jpg'
 
 /* eslint-disable */
 
@@ -44,6 +45,12 @@ export const CONTRIBUTIONS = {
             "role": "Community Manager",
             "profile": "https://github.com/mathiassond",
             "img": Denis
+        },
+        {
+            "name": "Ahmed Mohamed",
+            "role": "DevOps",
+            "profile": "https://github.com/AhmedARmohamed",
+            "img": Ahmed
         }
     ]
 }
