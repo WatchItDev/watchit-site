@@ -12,13 +12,13 @@ export const CONTRIBUTIONS = {
     "contributors": [
         {
             "name": "Geolffrey Mena",
-            "role": "Co-Founder / CEO",
+            "role": "Co-Founder",
             "profile": "https://github.com/geolffreym",
             "img": Geo
         },
         {
             "name": "Jacob Peralta",
-            "role": "Co-Founder / Front-End Lead",
+            "role": "Co-Founder",
             "profile": "https://github.com/Jadapema",
             "img": Jadapema
         },
@@ -29,28 +29,10 @@ export const CONTRIBUTIONS = {
             "img": Mark
         },
         {
-            "name": "Francisco Garcia",
-            "role": "Project Manager",
-            "profile": "https://github.com/xirapo",
-            "img": Frank
-        },
-        {
             "name": "Dennis",
             "role": "Community Manager",
             "profile": "https://github.com/mathiassond",
             "img": Denis
-        },
-        {
-            "name": "Ahmed Mohamed",
-            "role": "Infrastructure",
-            "profile": "https://github.com/AhmedARmohamed",
-            "img": Ahmed
-        },
-        {
-            "name": "Evelyn Smiles",
-            "role": "Marketing",
-            "profile": "https://evelynsmiles.life",
-            "img": Smiles
         }
     ]
 }
