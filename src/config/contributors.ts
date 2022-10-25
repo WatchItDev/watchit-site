@@ -1,10 +1,7 @@
 import Jadapema from '@assets/img/jadapema.png'
-import Frank from '@assets/img/frank.png'
 import Mark from '@assets/img/mark.png'
 import Geo from '@assets/img/geo.png'
 import Denis from '@assets/img/denis.jpeg'
-import Ahmed from '@assets/img/ahmed.jpg'
-import Smiles from '@assets/img/smiles.jpg'
 
 /* eslint-disable */
 
