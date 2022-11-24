@@ -6,6 +6,7 @@ import { Box, Grid, styled, Typography, BoxProps, darken, Container, Link, Divid
 
 // PROJECT IMPORTS
 import Logo from '@assets/img/watchit_logo.svg'
+import Mastodon from '@assets/img/mastodon.svg'
 import { FooterSections } from '@src/config'
 import {
   IconBrandDiscord,
@@ -15,7 +16,7 @@ import {
   IconBrandTelegram,
   IconBrandTwitter
 } from '@tabler/icons'
-import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
+import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MASTODON, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
 import { IconBrandMatrix } from '@components/Icons'
 import { Random } from "@src/utils";
 
@@ -79,6 +80,11 @@ const Footer: FC = (): JSX.Element => {
                 <Link href={MATRIX} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandMatrix sx={{ width: '1.8em' }} />
+                  </FooterSocialItem>
+                </Link>
+                <Link href={MASTODON} target='_blank' rel='noreferrer'>
+                  <FooterSocialItem>
+                    <Mastodon />
                   </FooterSocialItem>
                 </Link>
               </Box>
@@ -180,6 +186,7 @@ export const FooterLogoWrapper = styled(Box)<BoxProps>(() => ({
 
 export const FooterSocialItem = styled(Box)<BoxProps>(({ theme }) => ({
   color: Object.is(theme.palette.mode, 'light') ? theme.palette.primary.light : theme.palette.text.primary,
+  stroke: Object.is(theme.palette.mode, 'light') ? theme.palette.primary.light : theme.palette.text.primary,
   position: 'relative',
   listStyle: 'none',
   display: 'flex',
@@ -189,6 +196,12 @@ export const FooterSocialItem = styled(Box)<BoxProps>(({ theme }) => ({
   padding: '0.2rem',
   '&:hover': {
     color: Object.is(theme.palette.mode, 'light') ? theme.palette.primary.dark : theme.palette.primary.main,
+    stroke: Object.is(theme.palette.mode, 'light') ? theme.palette.primary.dark : theme.palette.primary.main,
     textDecoration: 'underline'
+  },
+  'svg': {
+    stroke: 'inherit',
+    minWidth: '1.2rem',
+    height: 'auto'
   }
 }))
