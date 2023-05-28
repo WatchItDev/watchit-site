@@ -8,7 +8,7 @@ export interface RoadmapSection {
 
 export const RoadMapSections: RoadmapSection[] = [
     {
-        title: '2022 Q3',
+        title: '2023 Q3',
         color: '#5EC363',
         items: [
             {
@@ -16,23 +16,20 @@ export const RoadMapSections: RoadmapSection[] = [
                 done: true
             },
             {
-                name: 'LANDING_ROADMAP_TOOLKIT',
-                done: false
-            },
-            {
                 name: 'LANDING_ROADMAP_DESKTOP_DESIGN',
-                done: false
-            },
+                done: true
+            }
+           
+        ]
+    },
+    {
+        title: '2024 Q1',
+        color: '#47BC9F',
+        items: [
             {
                 name: 'LANDING_ROADMAP_MOBILE_TV_DESIGN',
                 done: false
             },
-        ]
-    },
-    {
-        title: '2022 Q4',
-        color: '#47BC9F',
-        items: [
             {
                 name: 'LANDING_ROADMAP_ALPHA_WEB_APP',
                 done: false
@@ -44,7 +41,7 @@ export const RoadMapSections: RoadmapSection[] = [
         ]
     },
     {
-        title: '2023 Q1',
+        title: '2024 Q2',
         color: '#1E91CF',
         items: [
             {
@@ -58,17 +55,9 @@ export const RoadMapSections: RoadmapSection[] = [
         ]
     },
     {
-        title: '2023 Q2',
+        title: '2024 Q3',
         color: '#8B58C6',
         items: [
-            {
-                name: 'LANDING_ROADMAP_ONE_CLICK_DEPLOY',
-                done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_ALPHA_WORKER_NODE',
-                done: false
-            },
             {
                 name: 'LANDING_ROADMAP_DISTRIBUTION_CONTRACT',
                 done: false
@@ -80,7 +69,7 @@ export const RoadMapSections: RoadmapSection[] = [
         ]
     },
     {
-        title: '2023 Q3',
+        title: '2024 Q4',
         color: '#FE9900',
         items: [
             {
@@ -94,33 +83,11 @@ export const RoadMapSections: RoadmapSection[] = [
             {
                 name: 'LANDING_ROADMAP_BETA_MARKETPLACE',
                 done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_BETA_TOOLKIT',
-                done: false
             }
         ]
     },
     {
-        title: '2023 Q4',
-        color: '#FB7422',
-        items: [
-            {
-                name: 'LANDING_ROADMAP_BETA_WORKER_NODE',
-                done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_ORACLE',
-                done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_BITSWAP',
-                done: false
-            }
-        ]
-    },
-    {
-        title: '2024 +',
+        title: '2025 +',
         color: '#BF1461',
         items: [
             {
