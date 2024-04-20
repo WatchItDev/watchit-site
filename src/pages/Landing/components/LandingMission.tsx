@@ -27,7 +27,19 @@ const LandingMission: FC = (): JSX.Element => {
         sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
       >
         <Grid item xs={12} sm={6} zIndex={10}>
-          <AnimationOnScroll animateOut='animate__fadeOut' animateIn='animate__bounceInLeft'>
+          <AnimationOnScroll
+            style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            animateIn='animate__fadeIn' animateOut='animate__fadeOut'
+          >
+            <LandingMissionImage sx={{ zIndex: 3 }}>
+              {
+                isThemeLight ? <LandingMissionLight /> : <LandingMissionDark />
+              }
+            </LandingMissionImage>
+          </AnimationOnScroll>
+        </Grid>
+        <Grid item xs={12} sm={6} width='100%' zIndex={10}>
+          <AnimationOnScroll animateOut='animate__fadeOut' animateIn='animate__bounceInRight'>
             <LandingInfo
               title={<Translation target='LANDING_MISSION_TITLE' />}
               subTitle={<blockquote><Translation target='LANDING_MISSION_SUBTITLE' /></blockquote>}
@@ -38,18 +50,6 @@ const LandingMission: FC = (): JSX.Element => {
                 <cite><Translation target='LANDING_MISSION_TEAM' /></cite>
               </Grid>
             </LandingInfo>
-          </AnimationOnScroll>
-        </Grid>
-        <Grid item xs={12} sm={6} width='100%' zIndex={10}>
-          <AnimationOnScroll
-            style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-            animateIn='animate__fadeIn' animateOut='animate__fadeOut'
-          >
-            <LandingMissionImage sx={{ zIndex: 3 }}>
-              {
-                isThemeLight ? <LandingMissionLight /> : <LandingMissionDark />
-              }
-            </LandingMissionImage>
           </AnimationOnScroll>
         </Grid>
       </LandingMissionWrapper>

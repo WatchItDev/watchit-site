@@ -11,7 +11,7 @@ import 'animate.css/animate.min.css'
 
 // PROJECT IMPORTS
 import LandingPartners from '@pages/Landing/components/LandingPartners'
-import LandingJoinUs from '@pages/Landing/components/LandingJoinUs'
+import LandingDistribution from '@pages/Landing/components/LandingDistribution'
 import LandingHeader from '@pages/Landing/components/LandingHeader'
 import LandingCoin from '@pages/Landing/components/LandingCoin'
 import LandingMain from '@pages/Landing/components/LandingMain'
@@ -24,6 +24,7 @@ import LandingAwesome from '@pages/Landing/components/LandingAwesome'
 import LandingMission from '@pages/Landing/components/LandingMission'
 import LandingFAQ from '@pages/Landing/components/LandingFAQ'
 import LandingRoadmap from '@pages/Landing/components/LandingRoadmap'
+import LandingRenting from "@pages/Landing/components/LandingRenting";
 
 // ===========================|| LANDING - VIEW ||=========================== //
 
@@ -47,29 +48,26 @@ export const LandingView: FC = (props): JSX.Element => {
         </LandingSection>
       </LandingWrapper>
       <LandingSection sx={Background2Sx}>
-        <LandingJoinUs />
+        <LandingMission />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
         <LandingApp />
       </LandingSection>
       <LandingSection sx={Background2Sx}>
-        <LandingCoin />
+        <LandingRenting />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
-        <LandingMission />
+        <LandingDistribution />
       </LandingSection>
       <LandingSection sx={Background2Sx}>
-        <LandingAwesome />
+        <LandingCoin />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
         <LandingRoadmap />
       </LandingSection>
-      <LandingSection sx={Background2Sx}>
-        <LandingFAQ />
-      </LandingSection>
-      <LandingSection sx={Background1Sx}>
-        <LandingPartners />
-      </LandingSection>
+      {/*<LandingSection sx={Background2Sx}>*/}
+      {/*  <LandingFAQ />*/}
+      {/*</LandingSection>*/}
       <LandingSection sx={Background2Sx}>
         <LandingTeam />
       </LandingSection>
