@@ -14,6 +14,14 @@ import LandingAppSvg from '@assets/img/watchit_app.svg'
 import LandingAppLight from '@assets/img/watchit_app_light.svg'
 import { Translation } from '@src/i18n'
 import { APP, APP_DOWNLOAD } from '@navigation/CONSTANTS'
+import {
+  IconBrandAndroid,
+  IconBrandApple,
+  IconDeviceLaptop,
+  IconDeviceMobile,
+  IconDeviceTablet,
+  IconDeviceTv
+} from "@tabler/icons";
 
 // ===========================|| LANDING - APP ||=========================== //
 
@@ -47,7 +55,10 @@ const LandingApp: FC = (): JSX.Element => {
                   color='secondary' variant='contained' size='large' disableElevation
                   sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP_DOWNLOAD}
                 >
-                  <Translation target='LANDING_APP_DOWNLOAD' />
+                  <IconDeviceTv stroke={1.5} />
+                  <IconDeviceLaptop stroke={1.5} style={{ marginLeft: 5, marginRight: 5 }} />
+                  <IconDeviceTablet stroke={1.5} />
+                  <IconDeviceMobile stroke={1.5} />
                 </Button>
               </Grid>
             </LandingInfo>

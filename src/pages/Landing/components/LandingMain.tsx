@@ -2,7 +2,7 @@
 import React, { FC } from 'react'
 
 // MUI IMPORTS
-import {Box, Grid, Container, Button, styled, BoxProps, useTheme, useMediaQuery} from '@mui/material'
+import { Box, Grid, Container, Button, styled, BoxProps, useTheme, useMediaQuery } from '@mui/material'
 
 // PROJECT IMPORTS
 import { Translation } from '@src/i18n'
@@ -54,9 +54,9 @@ const LandingMain: FC = (): JSX.Element => {
                       <Translation target='LANDING_APP' />
                     </Button>
                   </Grid>
-                  <Grid item xs={12} display='flex'>
-                    <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />
-                  </Grid>
+                  {/*<Grid item xs={12} display='flex'>*/}
+                  {/*  <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />*/}
+                  {/*</Grid>*/}
                 </LandingInfo>
               </AnimationOnScroll>
             </Grid>
