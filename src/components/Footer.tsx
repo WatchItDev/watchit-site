@@ -42,7 +42,7 @@ const Footer: FC = (): JSX.Element => {
                 <Logo />
               </FooterLogoWrapper>
               <Box display='flex' justifyContent='center' alignItems='center' flexWrap='nowrap' sx={{ mt: 1 }}>
-                <Link href={FACEBOOK} target='_blank' rel='noreferrer'>
+                {/* <Link href={FACEBOOK} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandFacebook stroke={1} />
                   </FooterSocialItem>
@@ -56,7 +56,7 @@ const Footer: FC = (): JSX.Element => {
                   <FooterSocialItem>
                     <IconBrandInstagram stroke={1} />
                   </FooterSocialItem>
-                </Link>
+                </Link> */}
                 <Link href={TELEGRAM} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandTelegram stroke={1} />
@@ -67,16 +67,16 @@ const Footer: FC = (): JSX.Element => {
                     <IconBrandReddit stroke={1} />
                   </FooterSocialItem>
                 </Link>
-                <Link href={DISCORD} target='_blank' rel='noreferrer'>
+                {/* <Link href={DISCORD} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandDiscord stroke={1} />
                   </FooterSocialItem>
-                </Link>
-                <Link href={MEDIUM} target='_blank' rel='noreferrer'>
+                </Link> */}
+                {/* <Link href={MEDIUM} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandMedium stroke={1} />
                   </FooterSocialItem>
-                </Link>
+                </Link> */}
                 <Link href={MATRIX} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandMatrix sx={{ width: '1.8em' }} />
