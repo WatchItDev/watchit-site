@@ -24,9 +24,9 @@ const LandingMission: FC = (): JSX.Element => {
     <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '50vh' }}>
       <LandingMissionWrapper
         container spacing={3}
-        sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
+        sx={{ flexDirection: { xs: 'column', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
       >
-        <Grid item xs={12} sm={6} zIndex={10}>
+        <Grid item width='100%' xs={12} sm={6} zIndex={10}>
           <AnimationOnScroll
             style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             animateIn='animate__fadeIn' animateOut='animate__fadeOut'

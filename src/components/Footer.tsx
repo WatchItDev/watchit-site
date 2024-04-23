@@ -9,16 +9,19 @@ import Logo from '@assets/img/watchit_logo.svg'
 import Mastodon from '@assets/img/mastodon.svg'
 import { FooterSections } from '@src/config'
 import {
-  IconBrandDiscord,
-  IconBrandFacebook,
-  IconBrandInstagram, IconBrandMedium,
   IconBrandReddit,
-  IconBrandTelegram,
-  IconBrandTwitter
+  IconBrandTelegram
 } from '@tabler/icons'
-import { DISCORD, FACEBOOK, INSTAGRAM, MATRIX, MASTODON, MEDIUM, REDDIT, TELEGRAM, TWITTER } from '@navigation/CONSTANTS'
+import {
+  MATRIX,
+  MASTODON,
+  REDDIT,
+  TELEGRAM,
+  PEERTUBE
+} from '@navigation/CONSTANTS'
 import { IconBrandMatrix } from '@components/Icons'
 import { Random } from "@src/utils";
+import {IconPeertube} from "@components/Icons/custom/IconPeertube";
 
 // ===========================|| FOOTER ||=========================== //
 
@@ -37,26 +40,11 @@ const Footer: FC = (): JSX.Element => {
               mb: { xs: 3, sm: 0 }
             }}
           >
-            <Box display='flex' justifyContent='center' alignItems='center' flexDirection='column' sx={{ mr: 4 }}>
+            <Box display='flex' justifyContent='center' alignItems='center' flexDirection='column' sx={{ mr: { xs: 0, sm: 4 } }}>
               <FooterLogoWrapper>
                 <Logo />
               </FooterLogoWrapper>
               <Box display='flex' justifyContent='center' alignItems='center' flexWrap='nowrap' sx={{ mt: 1 }}>
-                {/* <Link href={FACEBOOK} target='_blank' rel='noreferrer'>
-                  <FooterSocialItem>
-                    <IconBrandFacebook stroke={1} />
-                  </FooterSocialItem>
-                </Link>
-                <Link href={TWITTER} target='_blank' rel='noreferrer'>
-                  <FooterSocialItem>
-                    <IconBrandTwitter stroke={1} />
-                  </FooterSocialItem>
-                </Link>
-                <Link href={INSTAGRAM} target='_blank' rel='noreferrer'>
-                  <FooterSocialItem>
-                    <IconBrandInstagram stroke={1} />
-                  </FooterSocialItem>
-                </Link> */}
                 <Link href={TELEGRAM} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandTelegram stroke={1} />
@@ -67,16 +55,6 @@ const Footer: FC = (): JSX.Element => {
                     <IconBrandReddit stroke={1} />
                   </FooterSocialItem>
                 </Link>
-                {/* <Link href={DISCORD} target='_blank' rel='noreferrer'>
-                  <FooterSocialItem>
-                    <IconBrandDiscord stroke={1} />
-                  </FooterSocialItem>
-                </Link> */}
-                {/* <Link href={MEDIUM} target='_blank' rel='noreferrer'>
-                  <FooterSocialItem>
-                    <IconBrandMedium stroke={1} />
-                  </FooterSocialItem>
-                </Link> */}
                 <Link href={MATRIX} target='_blank' rel='noreferrer'>
                   <FooterSocialItem>
                     <IconBrandMatrix sx={{ width: '1.8em' }} />
@@ -87,18 +65,23 @@ const Footer: FC = (): JSX.Element => {
                     <Mastodon />
                   </FooterSocialItem>
                 </Link>
+                <Link href={PEERTUBE} target='_blank' rel='noreferrer'>
+                  <FooterSocialItem>
+                    <IconPeertube />
+                  </FooterSocialItem>
+                </Link>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }} />
           <Grid item xs={12} sm={5}>
-            <Grid container spacing={1} justifyContent={'end'}>
+            <Grid container spacing={1} sx={{ justifyContent: { xs: 'center', sm: 'end' } }}>
               {
                 Object.keys(FooterSections).map((sectionKey) => {
                   const section = FooterSections[sectionKey]
 
                   return (
-                    <Grid item xs={4} key={Random.getRandomNumberBetween(0,1000)}>
+                    <Grid item xs={4} sm={4} key={Random.getRandomNumberBetween(0,1000)}>
                       <Grid container spacing={0.3}>
                         <Grid item xs={12}>
                           <Typography

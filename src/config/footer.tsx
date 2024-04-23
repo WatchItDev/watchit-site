@@ -28,7 +28,7 @@ export const FooterSections: FooterSection = {
     "Help": [
         {
             obj: {
-                "name": "Support",
+                "name": "Customer Support",
                 "url": "https://matrix.to/#/#watchitsupport:matrix.org",
             }
         }
