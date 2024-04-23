@@ -25,9 +25,9 @@ const LandingRenting: FC = (): JSX.Element => {
     <Container sx={{ zIndex: 2 }}>
       <Grid
         container spacing={3} justifyContent='center' alignItems='center'
-        sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
+        sx={{ flexDirection: { xs: 'column', sm: 'row' }, flexWrap: { xs: 'nowrap', sm: 'wrap' } }}
       >
-        <Grid item xs={12} sm={6} zIndex={10}>
+        <Grid item width='100%' xs={12} sm={6} zIndex={10}>
           <AnimationOnScroll
             animateIn='animate__fadeIn' animateOut='animate__fadeOut'
             style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
