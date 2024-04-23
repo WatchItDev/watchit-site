@@ -15,7 +15,7 @@ import LandingMainImageLight from '@assets/img/watchit_landing_main_light.svg'
 import LandingInfo from '@pages/Landing/components/LandingInfo'
 import { APP } from '@navigation/CONSTANTS'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-import LandingKey from '@pages/Landing/components/LandingKey'
+// import LandingKey from '@pages/Landing/components/LandingKey'
 
 // ===========================|| LANDING - MAIN ||=========================== //
 
@@ -46,14 +46,14 @@ const LandingMain: FC = (): JSX.Element => {
                     '.MuiGrid-item': { paddingTop: { xs: '12px', sm: '16px' } }
                   }}
                 >
-                  <Grid item xs={12} sm={12} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  {/* <Grid item xs={12} sm={12} display='flex' sx={{ justifyContent: { xs: 'center', md: 'flex-start' } }}>
                     <Button
                       color='primary' variant='contained' size='large' disableElevation
                       sx={{ py: 1, px: 8, fontSize: '1.1rem' }} fullWidth href={APP}
                     >
                       <Translation target='LANDING_APP' />
                     </Button>
-                  </Grid>
+                  </Grid> */}
                   {/*<Grid item xs={12} display='flex'>*/}
                   {/*  <LandingKey text={process.env.REACT_APP_PDM_HASH ?? ''} />*/}
                   {/*</Grid>*/}

@@ -35,7 +35,7 @@ export const RoadMapSections: RoadmapSection[] = [
                 done: false
             },
             {
-                name: 'LANDING_ROADMAP_ALPHA_MOBILE_APP_START',
+                name: 'LANDING_ROADMAP_ALPHA_MOBILE_APP',
                 done: false
             },
         ]
@@ -44,10 +44,6 @@ export const RoadMapSections: RoadmapSection[] = [
         title: '2024 Q3',
         color: '#1E91CF',
         items: [
-            {
-                name: 'LANDING_ROADMAP_ALPHA_MOBILE_APP_FINISH',
-                done: false
-            },
             {
                 name: 'LANDING_ROADMAP_ALPHA_TV_APP',
                 done: false
@@ -91,7 +87,7 @@ export const RoadMapSections: RoadmapSection[] = [
         ]
     },
     {
-        title: '2025 Q2',
+        title: '2025 Q2/Q3',
         color: '#BF1461',
         items: [
             {
