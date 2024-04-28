@@ -87,7 +87,7 @@ export const RoadMapSections: RoadmapSection[] = [
         ]
     },
     {
-        title: '2025 Q2/Q3',
+        title: '2025 Q2',
         color: '#BF1461',
         items: [
             {
@@ -99,7 +99,17 @@ export const RoadMapSections: RoadmapSection[] = [
                 done: false
             }
         ]
-    }
+    },
+    {
+        title: '2025 Q3',
+        color: '#BF1461',
+        items: [
+            {
+                name: 'LANDING_ROADMAP_SAAS',
+                done: false
+            }
+        ]
+    },
 ]
 
 
