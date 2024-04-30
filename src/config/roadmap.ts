@@ -53,7 +53,7 @@ export const RoadMapSections: RoadmapSection[] = [
                 done: false
             },
             {
-                name: 'LANDING_ROADMAP_NFT_CONTRACT',
+                name: 'LANDING_ROADMAP_DRM_CONTRACT',
                 done: false
             }
         ]
@@ -68,6 +68,10 @@ export const RoadMapSections: RoadmapSection[] = [
             },
             {
                 name: 'LANDING_ROADMAP_DISTRIBUTION_NODE',
+                done: false
+            },
+            {
+                name: 'LANDING_ROADMAP_STATISTICS_DASHBOARD',
                 done: false
             }
         ]
