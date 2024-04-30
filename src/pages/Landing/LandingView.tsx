@@ -57,11 +57,11 @@ export const LandingView: FC = (props): JSX.Element => {
       <LandingSection sx={Background1Sx}>
         <LandingDistribution />
       </LandingSection>
-      <LandingSection sx={Background2Sx}>
-        <LandingCoin />
-      </LandingSection>
+        <LandingSection sx={Background2Sx}>
+            <LandingStatistics />
+        </LandingSection>
       <LandingSection sx={Background3Sx}>
-        <LandingStatistics />
+        <LandingCoin />
       </LandingSection>
       <LandingSection sx={Background1Sx}>
         <LandingRoadmap />
