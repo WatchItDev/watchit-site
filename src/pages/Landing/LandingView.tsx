@@ -10,7 +10,6 @@ import { Helmet } from 'react-helmet'
 import 'animate.css/animate.min.css'
 
 // PROJECT IMPORTS
-import LandingPartners from '@pages/Landing/components/LandingPartners'
 import LandingDistribution from '@pages/Landing/components/LandingDistribution'
 import LandingHeader from '@pages/Landing/components/LandingHeader'
 import LandingCoin from '@pages/Landing/components/LandingCoin'
@@ -20,11 +19,10 @@ import LandingApp from '@pages/Landing/components/LandingApp'
 import Footer from '@components/Footer'
 import LandingSection, { PointsSx } from '@pages/Landing/components/LandingSection'
 import LandingPopCorn from '@pages/Landing/components/LandingPopcorn'
-import LandingAwesome from '@pages/Landing/components/LandingAwesome'
 import LandingMission from '@pages/Landing/components/LandingMission'
-import LandingFAQ from '@pages/Landing/components/LandingFAQ'
 import LandingRoadmap from '@pages/Landing/components/LandingRoadmap'
 import LandingRenting from "@pages/Landing/components/LandingRenting";
+import LandingStatistics from "@pages/Landing/components/LandingStatistics";
 
 // ===========================|| LANDING - VIEW ||=========================== //
 
@@ -62,12 +60,12 @@ export const LandingView: FC = (props): JSX.Element => {
       <LandingSection sx={Background2Sx}>
         <LandingCoin />
       </LandingSection>
+      <LandingSection sx={Background3Sx}>
+        <LandingStatistics />
+      </LandingSection>
       <LandingSection sx={Background1Sx}>
         <LandingRoadmap />
       </LandingSection>
-      {/*<LandingSection sx={Background2Sx}>*/}
-      {/*  <LandingFAQ />*/}
-      {/*</LandingSection>*/}
       <LandingSection sx={Background2Sx}>
         <LandingTeam />
       </LandingSection>
@@ -77,6 +75,15 @@ export const LandingView: FC = (props): JSX.Element => {
       <LandingPopCorn length={30} />
     </Box>
   )
+}
+
+const Background3Sx: SxProps<Theme> = {
+  backgroundColor: (theme) => Object.is(theme.palette.mode, 'light')
+    ? theme.palette.background.paper
+    : theme.palette.background.default,
+  backgroundImage: (theme) => Object.is(theme.palette.mode, 'light')
+    ? 'linear-gradient(0deg, #fff 0%, #b8d2e4 0%)'
+    : 'linear-gradient(0deg, rgba(0,25,44,1) 0%, #070113 0%)'
 }
 
 const Background1Sx: SxProps<Theme> = {
