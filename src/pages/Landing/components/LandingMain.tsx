@@ -26,7 +26,7 @@ const LandingMain: FC = (): JSX.Element => {
 
   return (
     <>
-      <Container sx={{ pt: { xs: '2rem', sm: 0 } }}>
+      <Container sx={{ pt: { xs: 0, sm: 0 } }}>
         <Grid
           container spacing={matchSm ? 1 : 3} justifyContent='space-between' alignItems='center'
           sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' }, ml: { xs: '-12px', sm: '-24px' }, zIndex: 3 }}

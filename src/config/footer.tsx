@@ -21,7 +21,7 @@ export const FooterSections: FooterSection = {
         {
             obj: {
                 "name": "Development",
-                "url": "https://github.com/ZorrillosDev",
+                "url": "https://github.com/WatchItDev",
             }
         }
     ],

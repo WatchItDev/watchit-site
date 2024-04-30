@@ -37,7 +37,7 @@ export const LandingView: FC = (props): JSX.Element => {
         <meta name='description' content='Open movies Everywhere' />
         <meta
           name='keywords'
-          content='Watch,WatchIt,Watchit,Movie,Pelicula,NFT,ver pelicula,watch movie'
+          content='Watch,WatchIt,Watchit,Movie,Pelicula,DRM,ver pelicula,watch movie'
         />
         <meta http-equiv='X-UA-Compatible' content='IE=edge' />
       </Helmet>

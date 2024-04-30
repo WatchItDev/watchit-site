@@ -48,8 +48,8 @@ const LandingFeatureModal: FC = (): JSX.Element => {
     if (!repo || !title || !message) return
     setIssueId('')
 
-    await octokit.request(`POST /repos/ZorrillosDev/${repo}/issues`, {
-      owner: 'ZorrillosDev',
+    await octokit.request(`POST /repos/WatchItDev/${repo}/issues`, {
+      owner: 'WatchItDev',
       repo: repo,
       body: message,
       title: title,

@@ -124,7 +124,7 @@ const Footer: FC = (): JSX.Element => {
               variant='body1' color={Object.is(theme.palette.mode, 'light') ? 'primary.light' : 'text.primary'} textAlign='center'
               fontWeight={400} width={1} sx={{ marginBottom: 2 }}
             >
-              © 2022 ZorrillosDev Comunity
+              © 2024 WatchIt Community
             </Typography>
           </Grid>
         </Grid>
