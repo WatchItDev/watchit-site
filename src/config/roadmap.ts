@@ -69,10 +69,6 @@ export const RoadMapSections: RoadmapSection[] = [
             {
                 name: 'LANDING_ROADMAP_DISTRIBUTION_NODE',
                 done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_STATISTICS_DASHBOARD',
-                done: false
             }
         ]
     },
@@ -88,12 +84,17 @@ export const RoadMapSections: RoadmapSection[] = [
                 name: 'LANDING_ROADMAP_BLOCKBUSTER_TESTNET',
                 done: false
             }
+            
         ]
     },
     {
         title: '2025 Q2',
         color: '#BF1461',
         items: [
+            {
+                name: 'LANDING_ROADMAP_STATISTICS_DASHBOARD',
+                done: false
+            },
             {
                 name: 'LANDING_ROADMAP_PRODUCTION_MULTI_PLATFORM_APPS',
                 done: false

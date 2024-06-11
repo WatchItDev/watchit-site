@@ -9,20 +9,20 @@ export const CONTRIBUTIONS = {
     "contributors": [
         {
             "name": "Geolffrey Mena",
-            "role": "Co-Founder",
+            "role": "Backend",
             "profile": "https://github.com/geolffreym",
             "img": Geo
         },
         {
             "name": "Jacob Peralta",
-            "role": "Co-Founder",
+            "role": "Frontend",
             "profile": "https://github.com/Jadapema",
             "img": Jadapema
         },
         {
             "name": "Mark Henderson",
             "role": "Strategy Advisor",
-            "profile": "http://mrh.io",
+            "profile": "https://github.com/aphelionz",
             "img": Mark
         },
         {
