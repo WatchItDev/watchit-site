@@ -28,15 +28,11 @@ export const RoadMapSections: RoadmapSection[] = [
         items: [
             {
                 name: 'LANDING_ROADMAP_ALPHA_WEB_APP',
-                done: false
+                done: true
             },
             {
                 name: 'LANDING_ROADMAP_ALPHA_DESKTOP_APP',
-                done: false
-            },
-            {
-                name: 'LANDING_ROADMAP_ALPHA_MOBILE_APP',
-                done: false
+                done: true
             },
         ]
     },
@@ -45,31 +41,37 @@ export const RoadMapSections: RoadmapSection[] = [
         color: '#1E91CF',
         items: [
             {
-                name: 'LANDING_ROADMAP_ALPHA_TV_APP',
+                name: 'LANDING_ROADMAP_DISTRIBUTION_CONTRACT',
                 done: false
             },
             {
-                name: 'LANDING_ROADMAP_DISTRIBUTION_CONTRACT',
+                name: 'LANDING_ROADMAP_WVC',
                 done: false
             },
             {
                 name: 'LANDING_ROADMAP_DRM_CONTRACT',
                 done: false
-            }
+            },
+            {
+                name: 'LANDING_ROADMAP_BLOCKBUSTER',
+                done: false
+            },
         ]
     },
     {
         title: '2024 Q4',
         color: '#8B58C6',
         items: [
-            {
-                name: 'LANDING_ROADMAP_BLOCKBUSTER',
-                done: false
-            },
+
             {
                 name: 'LANDING_ROADMAP_DISTRIBUTION_NODE',
                 done: false
-            }
+            },
+
+            {
+                name: 'LANDING_ROADMAP_ALPHA_TV_APP',
+                done: false
+            },
         ]
     },
     {
@@ -77,14 +79,14 @@ export const RoadMapSections: RoadmapSection[] = [
         color: '#FE9900',
         items: [
             {
-                name: 'LANDING_ROADMAP_WVC',
+                name: 'LANDING_ROADMAP_ALPHA_MOBILE_APP',
                 done: false
             },
             {
                 name: 'LANDING_ROADMAP_BLOCKBUSTER_TESTNET',
                 done: false
             }
-            
+
         ]
     },
     {
@@ -111,6 +113,10 @@ export const RoadMapSections: RoadmapSection[] = [
         items: [
             {
                 name: 'LANDING_ROADMAP_SAAS',
+                done: false
+            },
+            {
+                name: 'LANDING_ROADMAP_DAO',
                 done: false
             }
         ]

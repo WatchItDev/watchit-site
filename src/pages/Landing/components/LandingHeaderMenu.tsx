@@ -8,7 +8,7 @@ import {
 } from '@mui/material'
 
 // PROJECT IMPORTS
-import { DOCS, APP, TWITTER, OPENCOLLECTIVE } from '@navigation/CONSTANTS'
+import { DOCS, APP, OPENCOLLECTIVE } from '@navigation/CONSTANTS'
 import {
   Menu as MenuIcon,
   ChevronRight as ChevronRightIcon
@@ -96,11 +96,11 @@ const HeaderMenuContent: FC = (): JSX.Element => {
       {/*    <Translation target='LANDING_MARKETPLACE' /> */}
       {/*  </Item> */}
       {/* </Link> */}
-      <Link href={TWITTER} target='_blank' rel='noreferrer'>
+      {/* <Link href={TWITTER} target='_blank' rel='noreferrer'>
         <Item>
           <Translation target='LANDING_MENU_TWITTER' />
         </Item>
-      </Link>
+      </Link> */}
       <Link href={OPENCOLLECTIVE} target='_blank' rel='noreferrer'>
         <Item>
           <Translation target='LANDING_MENU_OPENCOLLECTIVE' />
