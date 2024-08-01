@@ -3,49 +3,44 @@ import { m } from 'framer-motion';
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import LinearProgress from '@mui/material/LinearProgress';
+
 // hooks
 import { useResponsive } from 'src/hooks/use-responsive';
-// utils
-import { fPercent } from 'src/utils/format-number';
 // components
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import {textGradient} from "../../theme/css";
 import ListItemButton from "@mui/material/ListItemButton";
-import { IconCurrencyEthereum } from "@tabler/icons-react";
 
 // ----------------------------------------------------------------------
 
 export const FEATURES = [
   {
     label: 'Blockchain-Agnostic',
-    value: 'Enables integration with various technologies and adoption of the best features of each blockchain, enhancing the protocol\'s adaptability and reach.',
+    value: 'Integrates seamlessly with a variety of technologies and adopts the best features of each chain, enhancing the adaptability and reach of our protocol.',
   },
   {
     label: 'Decentralization and Scalability',
-    value: 'This community-driven infrastructure fosters decentralization and allows for efficient scalability, ensuring the protocol can grow and adapt to an increasing user base.'
+    value: 'Community-driven infrastructure ensures true decentralization and efficient scalability, allowing our protocol to grow and adapt to an expanding user base.'
   },
   {
     label: 'Flexible Monetization',
-    value: 'Creators can maximize their earnings by selecting monetization methods that best suit their needs and audiences, ranging from pay-per-view to subscriptions and microtransactions.'
+    value: 'Creators can maximize their earnings by selecting monetization methods that best suit their needs and audiences, ranging from pay-per-view and purchase to subscriptions and microtransactions.'
   },
   {
     label: 'Community Governance',
-    value: 'Decisions on the platform are transparent and democratic, allowing participants to influence the platform\'s development and direction through referendums for content and distributor approval.'
+    value: 'Transparent and democratic decision-making process allows participants to influence the development and direction of our protocol through referendums for content and distributor approval.'
   },
   {
     label: 'Extensibility and Integration',
-    value: 'Easy integration with other protocols like Farcaster and Lens enhances interoperability and allows users to leverage additional features from other platforms, expanding Watchit\'s possibilities and functionalities.'
+    value: 'Easily integrates with other protocols like Farcaster and Lens, enhancing interoperability and allowing users to leverage additional features from other platforms, expanding the possibilities and functionalities of our protocol.'
   },
   {
     label: 'Multi-Currency Support',
-    value: 'Facilitates global accessibility and usability, allowing users to conduct transactions in their preferred currency'
+    value: 'Facilitates global accessibility and usability, allowing users to conduct transactions in their preferred currency.'
   }
 ]
 // ----------------------------------------------------------------------
@@ -145,10 +140,9 @@ export default function HomeWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
             >
-              With a blockchain-agnostic approach compatible with EVM, true decentralization,
-              community-driven innovation, flexible monetization strategies, seamless integration
-              with other protocols, and transparent governance, Watchit creates a dynamic and
-              secure ecosystem for diverse content.
+              With a blockchain-agnostic approach compatible with EVM, community-driven infrastructure, community-driven innovation, 
+              flexible monetization strategies, seamless integration with other protocols, and transparent governance, 
+              Watchit creates a dynamic and secure ecosystem for diverse content.
             </Typography>
           </m.div>
 
@@ -196,7 +190,7 @@ export default function HomeWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
             >
-              ...and more. Stay tuned for our documentation.
+              ...and more. Explore the full potential in our upcoming documentation. Stay tuned!
             </Typography>
           </m.div>
         </Grid>
