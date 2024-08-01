@@ -141,7 +141,7 @@ export default function Footer() {
               </Grid>
 
               <Typography variant="body2" sx={{ mt: 10, textAlign: 'center' }}>
-                  © 2021. All rights reserved
+                  © 2024. All rights reserved
               </Typography>
           </Container>
       </Box>
