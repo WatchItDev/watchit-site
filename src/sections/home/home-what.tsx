@@ -190,7 +190,7 @@ export default function HomeWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
             >
-              ...and more. Stay tuned for our documentation.
+              ...and more. Explore the full potential in our upcoming documentation. Stay tuned!
             </Typography>
           </m.div>
         </Grid>
