@@ -1,11 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import { Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+//
+import App from './App';
 
-/* eslint-disable  @typescript-eslint/no-floating-promises */
-ReactDOM.render(
-  <>
-    <App />
-  </>,
-  document.getElementById('root')
-)
+// ----------------------------------------------------------------------
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <HelmetProvider>
+    <BrowserRouter>
+      <Suspense>
+        <App />
+      </Suspense>
+    </BrowserRouter>
+  </HelmetProvider>
+);

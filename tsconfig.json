@@ -1,73 +1,36 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es2017",
-    "module": "es2015",
-    "lib": ["es6", "dom"],
-    "sourceMap": true,
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true,
+    "noEmit": true,
     "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
     "noImplicitAny": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "baseUrl": "./",
-    "rootDir": "./",
-    "typeRoots": ["./node_modules/@types", "./src/@types"],
-    "paths": {
-      "@public/*": [
-        "public/*"
-      ],
-      "@src/*": [
-        "src/*"
-      ],
-      "@state/*": [
-        "src/redux/*"
-      ],
-      "@hoc/*": [
-        "src/hoc/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@config/*": [
-        "src/config/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@layouts/*": [
-        "src/pages/__layouts__/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@navigation/*": [
-        "src/navigation/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@menu/*": [
-        "src/components/menu/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@i18n/*": [
-        "src/i18n/*"
-      ],
-    },
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "useUnknownInCatchVariables": false,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "importsNotUsedAsValues": "preserve",
-    "incremental": true
+    "forceConsistentCasingInFileNames": true,
   },
-  "include": ["src"],
-  "exclude": ["**/node_modules", "**/.*/"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*"
+  ]
 }

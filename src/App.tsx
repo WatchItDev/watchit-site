@@ -1,53 +1,98 @@
-import React, { FC, useEffect } from 'react'
-import { withRouter } from 'react-router'
-import { Routing } from '@src/navigation/Routing'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'connected-react-router/immutable'
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { darkTheme, defaultTheme, ColorModeContext } from '@styles/theme'
-import { store, history } from '@state/store'
+// i18n
+import 'src/locales/i18n';
 
-const ConnectedApp = withRouter(Routing)
+// scrollbar
+import 'simplebar-react/dist/simplebar.min.css';
 
-/* eslint-disable  @typescript-eslint/strict-boolean-expressions */
+// lightbox
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-const App: FC = (): JSX.Element => {
-  // saved local storage theme or default light theme
-  const defaultMode = (localStorage.getItem('theme') as 'light' | 'dark' || 'dark')
-  // theme control state
-  const [mode, setMode] = React.useState<'light' | 'dark'>(defaultMode)
-  const colorMode = React.useMemo(() => ({
-    toggleColorMode: () => {
-      setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
-    }
-  }), [])
+// map
+import 'mapbox-gl/dist/mapbox-gl.css';
 
-  const theme = React.useMemo(() => {
-    const config = Object.is(mode, 'light')
-      ? defaultTheme
-      : darkTheme
+// editor
+import 'react-quill/dist/quill.snow.css';
 
-    return responsiveFontSizes(createTheme(config))
-  }, [mode])
+// carousel
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-  // save in local storage theme changes
-  useEffect(() => {
-    localStorage.setItem('theme', mode)
-  }, [mode])
+// image
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+// ----------------------------------------------------------------------
+
+// @mui
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+// routes
+import Router from 'src/routes/sections';
+// theme
+import ThemeProvider from 'src/theme';
+// hooks
+import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
+// components
+import ProgressBar from 'src/components/progress-bar';
+import MotionLazy from 'src/components/animate/motion-lazy';
+import SnackbarProvider from 'src/components/snackbar/snackbar-provider';
+import { SettingsProvider, SettingsDrawer } from 'src/components/settings';
+// sections
+import { CheckoutProvider } from 'src/sections/checkout/context';
+// auth
+import { AuthProvider, AuthConsumer } from 'src/auth/context/jwt';
+// import { AuthProvider, AuthConsumer } from 'src/auth/context/auth0';
+// import { AuthProvider, AuthConsumer } from 'src/auth/context/amplify';
+// import { AuthProvider, AuthConsumer } from 'src/auth/context/firebase';
+
+// ----------------------------------------------------------------------
+
+export default function App() {
+    const charAt = `
+
+  ██        ██
+  ▓▓   ▓▓
+  ▒▒  ▒▒▒▒  ▒▒
+  ▒▒▒▒    ▒▒▒▒
+  ░░░      ░░░
+
+`;
+
+
+    console.info(`%c${charAt}`, 'color: #4A34B8');
+
+
+    useScrollToTop();
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Provider store={store}>
-          <ConnectedRouter history={history}>
-            <ConnectedApp />
-          </ConnectedRouter>
-        </Provider>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
-  )
+    <AuthProvider>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <SettingsProvider
+          defaultSettings={{
+            themeMode: 'dark', // 'light' | 'dark'
+            themeDirection: 'ltr', //  'rtl' | 'ltr'
+            themeContrast: 'default', // 'default' | 'bold'
+            themeLayout: 'vertical', // 'vertical' | 'horizontal' | 'mini'
+            themeColorPresets: 'default', // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
+            themeStretch: false,
+          }}
+        >
+          <ThemeProvider>
+            <MotionLazy>
+              <SnackbarProvider>
+                <CheckoutProvider>
+                  <SettingsDrawer />
+                  <ProgressBar />
+                  <AuthConsumer>
+                    <Router />
+                  </AuthConsumer>
+                </CheckoutProvider>
+              </SnackbarProvider>
+            </MotionLazy>
+          </ThemeProvider>
+        </SettingsProvider>
+      </LocalizationProvider>
+    </AuthProvider>
+  );
 }
-
-export default App
