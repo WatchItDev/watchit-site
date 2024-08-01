@@ -140,9 +140,9 @@ export default function HomeWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
             >
-              With a blockchain-agnostic approach compatible with EVM, community-driven infrastructure, community-driven innovation, 
-              flexible monetization strategies, seamless integration with other protocols, and transparent governance, 
-              Watchit creates a dynamic and secure ecosystem for diverse content.
+             With a blockchain-agnostic approach compatible with EVM, community-driven infrastructure, 
+             community-driven innovation, flexible monetization strategies, seamless integration with other protocols, 
+             and transparent governance, Watchit creates a dynamic and secure ecosystem for creators and audiences alike
             </Typography>
           </m.div>
 
