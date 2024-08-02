@@ -1,5 +1,3 @@
-import { CustomFile } from 'src/components/upload';
-
 // ----------------------------------------------------------------------
 
 export type IUserTableFilterValue = string | string[];
@@ -109,29 +107,9 @@ export type IUserItem = {
   isVerified: boolean;
 };
 
-export type IUserAccount = {
-  email: string;
-  isPublic: boolean;
-  displayName: string;
-  city: string | null;
-  state: string | null;
-  about: string | null;
-  country: string | null;
-  address: string | null;
-  zipCode: string | null;
-  phoneNumber: string | null;
-  photoURL: CustomFile | string | null;
-};
-
 export type IUserAccountBillingHistory = {
   id: string;
   price: number;
   createdAt: Date;
   invoiceNumber: string;
-};
-
-export type IUserAccountChangePassword = {
-  oldPassword: string;
-  newPassword: string;
-  confirmNewPassword: string;
 };
