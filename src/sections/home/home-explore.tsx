@@ -20,12 +20,12 @@ import Image from "../../components/image";
 
 const CARDS = [
   {
-    icon: ' /assets/icons/home/ic_distribution.svg',
+    icon: ' /assets/icons/home/ic_social.svg',
     label: 'Social-Fi Interaction',
     description: 'Enhanced community engagement.'
   },
   {
-    icon: ' /assets/icons/home/ic_community.svg',
+    icon: ' /assets/icons/home/ic_cinema.svg',
     label: 'Support Independent Cinema',
     description: 'Direct engagement with creators.'
   },
@@ -35,12 +35,12 @@ const CARDS = [
     description: 'Diverse revenue strategies.'
   },
   {
-    icon: ' /assets/icons/home/ic_token.svg',
+    icon: ' /assets/icons/home/ic_ad.svg',
     label: 'Effortless Promotion Tools',
     description: 'Community-driven promotion.'
   },
   {
-    icon: ' /assets/icons/home/ic_distribution.svg',
+    icon: ' /assets/icons/home/ic_lock.svg',
     label: 'Secure Digital Ownership',
     description: 'On-chain DRM and rights management.'
   },
@@ -50,17 +50,17 @@ const CARDS = [
     description: 'Open marketplace for distributors.'
   },
   {
-    icon: ' /assets/icons/home/ic_token.svg',
+    icon: ' /assets/icons/home/ic_coins.svg',
     label: 'Flexible Revenue Strategies',
     description: 'Creators set their own terms.'
   },
   {
-    icon: ' /assets/icons/home/ic_distribution.svg',
+    icon: ' /assets/icons/home/ic_filmMaker.svg',
     label: 'Creative Studio for Filmmakers',
     description: 'Empowering creative projects.'
   },
   {
-    icon: ' /assets/icons/home/ic_community.svg',
+    icon: ' /assets/icons/home/ic_distribution.svg',
     label: 'Film3 protocol',
     description: 'Decentralized film distribution.'
   }
@@ -95,38 +95,6 @@ export default function HomeBenefits() {
             py: { xs: 10, md: 15 },
           }}
       >
-        {/*<Stack*/}
-        {/*    spacing={3}*/}
-        {/*    sx={{*/}
-        {/*      textAlign: 'center',*/}
-        {/*      mb: {xs: 5, md: 10},*/}
-        {/*    }}*/}
-        {/*>*/}
-        {/*  <m.div variants={varFade().inUp}>*/}
-        {/*    <Typography component="div" variant="overline" sx={{color: 'text.disabled'}}>*/}
-        {/*      Benefits*/}
-        {/*    </Typography>*/}
-        {/*  </m.div>*/}
-
-        {/*  <m.div variants={varFade().inDown}>*/}
-        {/*    <Typography variant="h2">*/}
-        {/*      Explore WatchIT*/}
-        {/*    </Typography>*/}
-        {/*  </m.div>*/}
-
-        {/*  <m.div variants={varFade().inUp}>*/}
-        {/*    <Typography*/}
-        {/*        sx={{*/}
-        {/*          mx: 'auto',*/}
-        {/*          maxWidth: 640,*/}
-        {/*          color: 'text.secondary',*/}
-        {/*        }}*/}
-        {/*    >*/}
-        {/*      Discover the future of film distribution with Watchit, a cutting-edge Web3 platform designed to empower filmmakers, distributors, and viewers alike. Dive into the unique features and innovative solutions that set Watchit apart in the world of digital cinema. From secure digital ownership to flexible monetization models, explore how Watchit is reshaping the cinematic landscape and creating a thriving ecosystem for independent cinema.*/}
-        {/*    </Typography>*/}
-        {/*  </m.div>*/}
-        {/*</Stack>*/}
-
         <Grid container>
           <Grid xs={12} md={12}>
             <Box sx={{
@@ -180,14 +148,12 @@ function CardMobile({ label, description, icon }: CardDesktopProps) {
           key={label}
           sx={{
             py: 2,
-            // maxWidth: 140,
             borderRadius: 1,
             textAlign: 'left',
             alignItems: 'center',
             typography: 'subtitle2',
             flexDirection: 'row',
             justifyContent: 'center',
-            // height: '10rem',
             bgcolor: 'background.neutral',
             flexWrap: 'nowrap'
           }}
@@ -205,120 +171,3 @@ function CardMobile({ label, description, icon }: CardDesktopProps) {
       </ListItemButton>
   );
 }
-
-// import { m } from 'framer-motion';
-// // @mui
-// import { alpha } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-// import Card from '@mui/material/Card';
-// import Stack from '@mui/material/Stack';
-// import Container from '@mui/material/Container';
-// import Typography from '@mui/material/Typography';
-// // components
-// import { MotionViewport, varFade } from 'src/components/animate';
-// import Grid from "@mui/material/Unstable_Grid2";
-//
-// // ----------------------------------------------------------------------
-//
-// const CARDS = [
-//   {
-//     icon: ' /assets/icons/home/ic_distribution.svg',
-//     title: 'Film Distribution',
-//     description: 'Ensures transparency and security in the distribution of independent films using blockchain technology, protecting digital rights.',
-//   },
-//   {
-//     icon: ' /assets/icons/home/ic_community.svg',
-//     title: 'Community and Engagement',
-//     description: 'Connect with film enthusiasts, join discussions, participate in events and challenges, and enjoy movies with friends using the co-watching feature.',
-//   },
-//   {
-//     icon: ' /assets/icons/home/ic_token.svg',
-//     title: 'Rewards and Tokenized Economy',
-//     description: 'Earn WVC Coins and other incentives for watching, sharing, and rating movies. Creators can also earn rewards and recognition for their work.',
-//   },
-// ];
-//
-// // ----------------------------------------------------------------------
-//
-// export default function HomeBenefits() {
-//   return (
-//     <Container
-//       component={MotionViewport}
-//       sx={{
-//         py: { xs: 10, md: 15 },
-//       }}
-//     >
-//       <Stack
-//         spacing={3}
-//         sx={{
-//           textAlign: 'center',
-//           mb: { xs: 5, md: 10 },
-//         }}
-//       >
-//         <m.div variants={varFade().inUp}>
-//           <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-//             Benefits
-//           </Typography>
-//         </m.div>
-//
-//         <m.div variants={varFade().inDown}>
-//           <Typography variant="h2">
-//             Explore WatchIT
-//           </Typography>
-//         </m.div>
-//       </Stack>
-//
-//       <Grid container>
-//         <Grid xs={8}>
-//         {/*  Here goes the video */}
-//         </Grid>
-//         <Grid xs={4}>
-//           <Box
-//               gap={{ xs: 3, lg: 10 }}
-//               display="grid"
-//               alignItems="center"
-//               gridTemplateColumns={{
-//                 xs: 'repeat(1, 1fr)',
-//                 md: 'repeat(1, 1fr)',
-//               }}
-//           >
-//             {CARDS.map((card, index) => (
-//                 <m.div variants={varFade().inUp} key={card.title}>
-//                   <Card
-//                       sx={{
-//                         display: 'flex',
-//                         textAlign: 'left',
-//                         bgcolor: 'background.default',
-//                         p: 2,
-//                         boxShadow: (theme) => ({
-//                           md: `-10px 10px 20px ${
-//                               theme.palette.mode === 'light'
-//                                   ? alpha(theme.palette.grey[500], 0.16)
-//                                   : alpha(theme.palette.common.black, 0.4)
-//                           }`,
-//                         }),
-//                       }}
-//                   >
-//                     <Box
-//                         component="img"
-//                         src={card.icon}
-//                         alt={card.title}
-//                         sx={{ mr: 1, width: 50, height: 50 }}
-//                     />
-//
-//                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-//                       <Typography variant="h5" sx={{ mb: 1 }}>
-//                         {card.title}
-//                       </Typography>
-//
-//                       <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
-//                     </Box>
-//                   </Card>
-//                 </m.div>
-//             ))}
-//           </Box>
-//         </Grid>
-//       </Grid>
-//     </Container>
-//   );
-// }
