@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title> Watchit: The starting point for your next project</title>
+        <title> Watchit: Film3 distribution protocol</title>
       </Helmet>
 
       <HomeView />
