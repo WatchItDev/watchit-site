@@ -4,7 +4,6 @@ import Masonry from '@mui/lab/Masonry';
 import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -27,14 +26,7 @@ import { MotionViewport, varFade } from 'src/components/animate';
 
 export default function HomeTestimonials() {
   const theme = useTheme();
-
   const mdUp = useResponsive('up', 'md');
-
-  const renderLink = (
-    <Button color="primary" endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}>
-      Read more testimonials
-    </Button>
-  );
 
   const renderDescription = (
     <Box

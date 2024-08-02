@@ -1,21 +1,16 @@
 // @mui
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 // routes
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
-// _mock
-import { _socials } from 'src/_mock';
 // components
 import Logo from 'src/components/logo';
-import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 

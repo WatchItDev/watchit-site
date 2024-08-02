@@ -1,18 +1,13 @@
 import { m } from 'framer-motion';
 // @mui
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 // _mock
-import {_carouselsMembers, _mock, _socials} from 'src/_mock';
+import {_carouselsMembers} from 'src/_mock';
 // components
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
 
