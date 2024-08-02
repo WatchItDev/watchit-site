@@ -1,13 +1,3 @@
-// utils
-import { paramCase } from 'src/utils/change-case';
-import { _id, _postTitles } from 'src/_mock/assets';
-
-// ----------------------------------------------------------------------
-
-const MOCK_ID = _id[1];
-
-const MOCK_TITLE = _postTitles[2];
-
 const ROOTS = {
   AUTH: '/auth',
   AUTH_DEMO: '/auth-demo',
@@ -15,7 +5,6 @@ const ROOTS = {
 };
 
 // ----------------------------------------------------------------------
-
 export const paths = {
   comingSoon: '/coming-soon',
   maintenance: '/maintenance',
@@ -42,27 +31,8 @@ export const paths = {
   matrix: 'https://matrix.to/#/#watchit:matrix.org',
   fosstodon: 'https://fosstodon.org/@watchit',
   fediverse: 'https://fediverse.tv/c/watchit/videos',
-  freeUI: '#',
-  figma:
-    '#',
   // DASHBOARD
   dashboard: {
-    root: ROOTS.DASHBOARD,
-    mail: `${ROOTS.DASHBOARD}/mail`,
-    chat: `${ROOTS.DASHBOARD}/chat`,
-    blank: `${ROOTS.DASHBOARD}/blank`,
-    kanban: `${ROOTS.DASHBOARD}/kanban`,
-    calendar: `${ROOTS.DASHBOARD}/calendar`,
-    fileManager: `${ROOTS.DASHBOARD}/file-manager`,
-    permission: `${ROOTS.DASHBOARD}/permission`,
-    general: {
-      app: `${ROOTS.DASHBOARD}/app`,
-      ecommerce: `${ROOTS.DASHBOARD}/ecommerce`,
-      analytics: `${ROOTS.DASHBOARD}/analytics`,
-      banking: `${ROOTS.DASHBOARD}/banking`,
-      booking: `${ROOTS.DASHBOARD}/booking`,
-      file: `${ROOTS.DASHBOARD}/file`,
-    },
-  
+    root: ROOTS.DASHBOARD  
   },
 };
