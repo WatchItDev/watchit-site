@@ -41,7 +41,11 @@ export const FEATURES = [
   {
     label: 'Multi-Currency Support',
     value: 'Facilitates global accessibility and usability, allowing users to conduct transactions in their preferred currency.'
-  }
+  },
+  // {
+  //   label: 'Custom Access Control',
+  //   value: 'Content creators can establish and decide how users can access the content and under what conditions, offering a tailored experience to their audience.'
+  // }
 ]
 // ----------------------------------------------------------------------
 
@@ -140,9 +144,8 @@ export default function HomeWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
             >
-             With a blockchain-agnostic approach compatible with EVM, community-driven infrastructure, 
-             community-driven innovation, flexible monetization strategies, seamless integration with other protocols, 
-             and transparent governance, Watchit creates a dynamic and secure ecosystem for creators and audiences alike
+             With a blockchain-agnostic approach, community-driven innovation, flexible monetization, seamless integration, and transparent governance, 
+             Watchit creates a dynamic and secure ecosystem for creators and audiences.
             </Typography>
           </m.div>
 
