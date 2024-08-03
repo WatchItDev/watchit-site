@@ -24,7 +24,7 @@ export const FEATURES = [
   },
   {
     label: 'Decentralization and Scalability',
-    value: 'Community-driven infrastructure ensures true decentralization and efficient scalability, allowing our protocol to grow and adapt to an expanding user base.'
+    value: 'Community-driven infrastructure fosters decentralization and allows for efficient scalability, ensuring the protocol can grow and adapt to an increasing user base.'
   },
   {
     label: 'Flexible Monetization',
