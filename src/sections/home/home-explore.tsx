@@ -68,7 +68,7 @@ export default function HomeBenefits() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 6, md: 15 },
       }}
     >
       <Grid container>

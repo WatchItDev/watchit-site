@@ -50,7 +50,8 @@ export default function HomeForDesigner() {
                       color: 'text.primary',
                       mb: 4,
                       mx: 'auto',
-                      textAlign: 'center'
+                      textAlign: 'center',
+                      textWrap: 'balance'
                   }}
               >
                   For movie fans and cinema lovers, Watchit brings you an exceptional experience
@@ -108,12 +109,12 @@ export default function HomeForDesigner() {
         //   endColor: alpha(theme.palette.grey[900], 0),
         //   imgUrl: '/assets/images/home/app.webp',
         // }),
-        ...(upMd && {
+        // ...(upMd && {
           ...bgGradient({
             color: alpha(theme.palette.background.default, 0.8),
             imgUrl: '/assets/background/overlay_4.jpg',
           }),
-        }),
+        // }),
       }}
     >
       <Container component={MotionViewport}>
