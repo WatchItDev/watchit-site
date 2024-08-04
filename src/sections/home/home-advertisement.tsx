@@ -13,6 +13,7 @@ import { paths } from 'src/routes/paths';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import Typography from "@mui/material/Typography";
+import {IconBrandDiscordFilled} from "@tabler/icons-react";
 
 // ----------------------------------------------------------------------
 
@@ -26,13 +27,20 @@ export default function HomeAdvertisement() {
                   xs: 'center',
                   md: 'left',
               },
-              mb: 5
+              mb: {
+                  xs: 2,
+                  md: 5
+              },
+              p: {
+                  xs: 1,
+                  md: 0
+              }
           }}
       >
           <Box
               component={m.div}
               variants={varFade().inDown}
-              sx={{color: 'common.white', mb: 1, typography: 'h2'}}
+              sx={{color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' }}}
           >
               Join the Watchit
               <br/> Community on Discord
@@ -42,7 +50,7 @@ export default function HomeAdvertisement() {
                   sx={{
                       color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                       mb: 3,
-                      width: '85%'
+                      width: { xs: '100%', md: '85%' }
                   }}
               >
                   Experience the future of independent cinema with the Watchit community on Discord.
@@ -54,7 +62,7 @@ export default function HomeAdvertisement() {
           </m.div>
 
           <Stack
-              direction={{xs: 'column', md: 'row'}}
+              direction={'row'}
               justifyContent={{xs: 'center', md: 'flex-start'}}
               spacing={2}
           >
@@ -65,6 +73,7 @@ export default function HomeAdvertisement() {
                       variant="contained"
                       target="_blank"
                       rel="noopener"
+                      startIcon={<IconBrandDiscordFilled />}
                       href={paths.discord}
                       sx={{
                           color: 'grey.800',
@@ -106,7 +115,7 @@ export default function HomeAdvertisement() {
                 transition={{duration: 4, repeat: Infinity}}
                 alt="rocket"
                 src="/assets/images/home/rocket.webp"
-                sx={{maxWidth: 460}}
+                sx={{ maxWidth: { xs: 300, md: 460 } }}
             />
         </Stack>
     );
@@ -115,7 +124,7 @@ export default function HomeAdvertisement() {
         <Container component={MotionViewport}>
             <Stack
                 alignItems="center"
-                direction={{xs: 'column', md: 'row' }}
+                direction={{ xs: 'column', md: 'row' }}
         sx={{
           ...bgGradient({
             direction: '135deg',
@@ -123,7 +132,7 @@ export default function HomeAdvertisement() {
             endColor: theme.palette.primary.dark,
           }),
           borderRadius: 2,
-          pb: { xs: 5, md: 0 },
+          pb: { xs: 1, md: 0 },
           mb: 7
         }}
       >

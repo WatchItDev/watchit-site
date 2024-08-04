@@ -20,9 +20,9 @@ export default function HomeForDesigner() {
   const upMd = useResponsive('up', 'md');
 
   const renderDescription = (
-      <Box sx={{textAlign: {xs: 'center', md: 'unset'}, mt: {xs: 10, md: 12}}}>
+      <Box sx={{textAlign: 'center', mt: {xs: 10, md: 12}}}>
           <m.div variants={varFade().inUp}>
-              <Typography component="div" variant="overline" sx={{color: 'text.disabled'}}>
+              <Typography component="div" variant="overline" sx={{ color: 'text.disabled', textAlign: 'center' }}>
                   Platforms
               </Typography>
           </m.div>
@@ -36,6 +36,7 @@ export default function HomeForDesigner() {
                       ...textGradient(
                           `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
                       ),
+                      textAlign: 'center'
                   }}
               >
                   Explore our apps
@@ -45,9 +46,11 @@ export default function HomeForDesigner() {
           <m.div variants={varFade().inLeft}>
               <Typography
                   sx={{
-                      maxWidth: '80%',
+                      maxWidth: { xs: '100%', md: '80%' },
                       color: 'text.primary',
-                      mb: 4
+                      mb: 4,
+                      mx: 'auto',
+                      textAlign: 'center'
                   }}
               >
                   For movie fans and cinema lovers, Watchit brings you an exceptional experience
@@ -58,7 +61,7 @@ export default function HomeForDesigner() {
           </m.div>
 
           <m.div variants={varFade().inUp}>
-              <Stack spacing={2} direction="row" justifyContent="flex-start">
+              <Stack spacing={2} direction="row" justifyContent="center">
                   {['apple', 'android', 'desktop', 'web', 'tv'].map((platform) => (
                       <m.div key={platform} variants={varFade().in}>
                           <Box
@@ -79,9 +82,11 @@ export default function HomeForDesigner() {
             src="/assets/images/home/app.webp"
             variants={varFade().in}
             sx={{
-                height: 1,
-                width: 0.6,
+                height: { xs: '100%', md: '100%' },
+                width: { xs: '100%', md: 0.6 },
+                mt: { xs: '26px', md: '0' },
                 objectFit: 'cover',
+                left: { xs: 0, md: 'auto' },
                 position: 'absolute',
                 boxShadow: `-80px 80px 80px ${
                     theme.palette.mode === 'light'
@@ -98,11 +103,11 @@ export default function HomeForDesigner() {
                 minHeight: 560,
                 overflow: 'hidden',
         position: 'relative',
-        ...bgGradient({
-          startColor: `${theme.palette.grey[900]} 25%`,
-          endColor: alpha(theme.palette.grey[900], 0),
-          imgUrl: '/assets/images/home/for_designer.webp',
-        }),
+        // ...bgGradient({
+        //   startColor: `${theme.palette.grey[900]} 25%`,
+        //   endColor: alpha(theme.palette.grey[900], 0),
+        //   imgUrl: '/assets/images/home/app.webp',
+        // }),
         ...(upMd && {
           ...bgGradient({
             color: alpha(theme.palette.background.default, 0.8),
@@ -117,7 +122,10 @@ export default function HomeForDesigner() {
             {renderDescription}
           </Grid>
 
-          {upMd && <Grid md={6}>{renderImg}</Grid>}
+          {/*{upMd && <Grid md={6}>{renderImg}</Grid>}*/}
+          <Grid xs={12} md={6} sx={{ minHeight: '18rem' }}>
+              {renderImg}
+          </Grid>
         </Grid>
       </Container>
     </Box>

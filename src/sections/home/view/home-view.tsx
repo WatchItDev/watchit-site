@@ -9,8 +9,6 @@ import HomeHero from '../home-hero';
 import HomeExplore from '../home-explore';
 import HomeForDesigner from '../home-for-designer';
 import HomeAdvertisement from '../home-advertisement';
-// import HomeTestimonials from "../home-testimonials";
-// import HomeTeam from "../home-team";
 import HomeRoadmap from "../home-roadmap";
 import HomeWhat from "../home-what";
 
@@ -68,11 +66,7 @@ export default function HomeView() {
 
         <HomeWhat />
 
-        {/*<HomeTestimonials />*/}
-
         <HomeRoadmap />
-
-        {/*<HomeTeam />*/}
 
         <HomeAdvertisement />
       </Box>

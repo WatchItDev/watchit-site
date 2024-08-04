@@ -60,7 +60,6 @@ export default function Footer() {
                   textAlign: { xs: 'center', md: 'unset' },
               }}
           >
-              <Logo sx={{ mb: 3, ml: 5 }} extended={true} />
 
               <Grid
                   container
@@ -69,11 +68,13 @@ export default function Footer() {
                       md: 'space-between',
                   }}
               >
-                  <Grid xs={8} md={3}>
+                  <Grid xs={8} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', pb: { xs: 5, md: 0 } }}>
+                      <Logo sx={{ mb: 3, mx: 'auto' }} extended={true} />
                       <Typography
                           variant="body2"
                           sx={{
                               maxWidth: 270,
+                              textAlign: 'center',
                               mx: { xs: 'auto', md: 'unset' },
                           }}
                       >
@@ -81,38 +82,21 @@ export default function Footer() {
                           movie lover eager for new discoveries, Watchit is here for you. Join
                           our community and start exploring now!
                       </Typography>
-
-                      {/*<Stack*/}
-                      {/*    direction="row"*/}
-                      {/*    justifyContent={{ xs: 'center', md: 'flex-start' }}*/}
-                      {/*    sx={{*/}
-                      {/*        mt: 3,*/}
-                      {/*        mb: { xs: 5, md: 0 },*/}
-                      {/*    }}*/}
-                      {/*>*/}
-                      {/*    {_socials.map((social) => (*/}
-                      {/*        <IconButton*/}
-                      {/*            key={social.name}*/}
-                      {/*            sx={{*/}
-                      {/*                '&:hover': {*/}
-                      {/*                    bgcolor: alpha(social.color, 0.08),*/}
-                      {/*                },*/}
-                      {/*            }}*/}
-                      {/*        >*/}
-                      {/*            <Iconify color={social.color} icon={social.icon} />*/}
-                      {/*        </IconButton>*/}
-                      {/*    ))}*/}
-                      {/*</Stack>*/}
                   </Grid>
 
                   <Grid xs={12} md={6}>
-                      <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
+                      <Stack spacing={5} direction={'row'} flexWrap={{ xs: 'wrap', md: 'nowrap' }} alignItems={'flex-start'} justifyContent={'space-around'}>
                           {LINKS.map((list) => (
                               <Stack
                                   key={list.headline}
                                   spacing={2}
                                   alignItems={{ xs: 'center', md: 'flex-start' }}
-                                  sx={{ width: 1 }}
+                                  sx={{
+                                      width: {
+                                          xs: 0.4,
+                                          md: 1
+                                      }
+                                  }}
                               >
                                   <Typography component="div" variant="overline">
                                       {list.headline}
@@ -135,7 +119,7 @@ export default function Footer() {
                   </Grid>
               </Grid>
 
-              <Typography variant="body2" sx={{ mt: 10, textAlign: 'center' }}>
+              <Typography variant="body2" sx={{ mt: { xs: 5, md: 10 }, textAlign: 'center' }}>
                   © 2024. All rights reserved
               </Typography>
           </Container>

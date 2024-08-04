@@ -4,18 +4,18 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 // hooks
 import { useCountdownDate } from 'src/hooks/use-countdown';
 // _mock
-import { _socials } from 'src/_mock';
+// import { _socials } from 'src/_mock';
 // assets
 import { ComingSoonIllustration } from 'src/assets/illustrations';
 // components
-import Iconify from 'src/components/iconify';
+// import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
@@ -77,21 +77,21 @@ export default function ComingSoonView() {
         sx={{ my: 5 }}
       />
 
-      <Stack spacing={1} alignItems="center" justifyContent="center" direction="row">
-        {_socials.map((social) => (
-          <IconButton
-            key={social.name}
-            sx={{
-              color: social.color,
-              '&:hover': {
-                bgcolor: alpha(social.color, 0.08),
-              },
-            }}
-          >
-            <Iconify icon={social.icon} />
-          </IconButton>
-        ))}
-      </Stack>
+      {/*<Stack spacing={1} alignItems="center" justifyContent="center" direction="row">*/}
+      {/*  {_socials.map((social) => (*/}
+      {/*    <IconButton*/}
+      {/*      key={social.name}*/}
+      {/*      sx={{*/}
+      {/*        color: social.color,*/}
+      {/*        '&:hover': {*/}
+      {/*          bgcolor: alpha(social.color, 0.08),*/}
+      {/*        },*/}
+      {/*      }}*/}
+      {/*    >*/}
+      {/*      <Iconify icon={social.icon} />*/}
+      {/*    </IconButton>*/}
+      {/*  ))}*/}
+      {/*</Stack>*/}
     </>
   );
 }

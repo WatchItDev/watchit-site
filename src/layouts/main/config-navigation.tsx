@@ -1,29 +1,24 @@
 // routes
 import { paths } from 'src/routes/paths';
 // components
-import Iconify from 'src/components/iconify';
+import { IconBrandGithub, IconCoins, IconFileDescription } from "@tabler/icons-react";
 
 // ----------------------------------------------------------------------
 
 export const navConfig = [
-  // {
-  //   title: 'Home',
-  //   icon: <Iconify icon="solar:home-2-bold-duotone" />,
-  //   path: '/',
-  // },
   {
     title: 'Github',
-    icon: <Iconify icon="solar:atom-bold-duotone" />,
+    icon: <IconBrandGithub />,
     path: paths.github,
   },
   {
     title: 'Open collective',
-    icon: <Iconify icon="solar:atom-bold-duotone" />,
+    icon: <IconCoins />,
     path: paths.openCollective,
   },
   {
     title: 'Paper',
-    icon: <Iconify icon="solar:notebook-bold-duotone" />,
+    icon: <IconFileDescription />,
     path: paths.paper,
   },
 ];

@@ -266,7 +266,7 @@ export default function HomeWhat() {
             justifyContent: 'space-between'
           }}>
             {QUARTERS.map((quarter, index) => (
-                <Box component={m.div} key={quarter.label} variants={varFade().inRight} sx={{width: '30%', mb: 3}}>
+                <Box component={m.div} key={quarter.label} variants={varFade().inRight} sx={{width: { xs: '100%', md: '30%' }, mb: 3}}>
                   <Stack direction="row" alignItems="center" sx={{mb: 1}}>
                     <Typography variant="subtitle2" sx={{flexGrow: 1, textAlign: 'left'}}>
                       {quarter.label}
