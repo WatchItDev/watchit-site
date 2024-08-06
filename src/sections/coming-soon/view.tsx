@@ -20,7 +20,7 @@ import { ComingSoonIllustration } from 'src/assets/illustrations';
 // ----------------------------------------------------------------------
 
 export default function ComingSoonView() {
-  const { days, hours, minutes, seconds } = useCountdownDate(new Date('07/07/2024 21:30'));
+  const { days, hours, minutes, seconds } = useCountdownDate(new Date('10/01/2024 21:30'));
 
   return (
     <>
@@ -28,11 +28,9 @@ export default function ComingSoonView() {
         Coming Soon!
       </Typography>
 
-      <Typography sx={{ color: 'text.secondary' }}>
-        We are currently working hard on this page!
-      </Typography>
-
-      <ComingSoonIllustration sx={{ my: 10, height: 240 }} />
+      {/*<Typography sx={{ color: 'text.secondary', mb: 2 }}>*/}
+      {/*  We are currently working hard on this!*/}
+      {/*</Typography>*/}
 
       <Stack
         direction="row"
@@ -49,33 +47,35 @@ export default function ComingSoonView() {
         <TimeBlock label="Seconds" value={seconds} />
       </Stack>
 
-      <TextField
-        fullWidth
-        placeholder="Enter your email"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <Button variant="contained" size="large">
-                Notify Me
-              </Button>
-            </InputAdornment>
-          ),
-          sx: {
-            pr: 0.5,
-            [`&.${outlinedInputClasses.focused}`]: {
-              boxShadow: (theme) => theme.customShadows.z20,
-              transition: (theme) =>
-                theme.transitions.create(['box-shadow'], {
-                  duration: theme.transitions.duration.shorter,
-                }),
-              [`& .${outlinedInputClasses.notchedOutline}`]: {
-                border: (theme) => `solid 1px ${alpha(theme.palette.grey[500], 0.32)}`,
-              },
-            },
-          },
-        }}
-        sx={{ my: 5 }}
-      />
+      <ComingSoonIllustration sx={{ my: 10, height: 240, width: '40rem' }} />
+
+      {/*<TextField*/}
+      {/*  fullWidth*/}
+      {/*  placeholder="Enter your email"*/}
+      {/*  InputProps={{*/}
+      {/*    endAdornment: (*/}
+      {/*      <InputAdornment position="end">*/}
+      {/*        <Button variant="contained" size="large">*/}
+      {/*          Notify Me*/}
+      {/*        </Button>*/}
+      {/*      </InputAdornment>*/}
+      {/*    ),*/}
+      {/*    sx: {*/}
+      {/*      pr: 0.5,*/}
+      {/*      [`&.${outlinedInputClasses.focused}`]: {*/}
+      {/*        boxShadow: (theme) => theme.customShadows.z20,*/}
+      {/*        transition: (theme) =>*/}
+      {/*          theme.transitions.create(['box-shadow'], {*/}
+      {/*            duration: theme.transitions.duration.shorter,*/}
+      {/*          }),*/}
+      {/*        [`& .${outlinedInputClasses.notchedOutline}`]: {*/}
+      {/*          border: (theme) => `solid 1px ${alpha(theme.palette.grey[500], 0.32)}`,*/}
+      {/*        },*/}
+      {/*      },*/}
+      {/*    },*/}
+      {/*  }}*/}
+      {/*  sx={{ my: 5 }}*/}
+      {/*/>*/}
 
       {/*<Stack spacing={1} alignItems="center" justifyContent="center" direction="row">*/}
       {/*  {_socials.map((social) => (*/}
