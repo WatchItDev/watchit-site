@@ -22,7 +22,7 @@ export default function HomeForDesigner() {
   const renderDescription = (
       <Box sx={{textAlign: 'center', mt: {xs: 10, md: 12}}}>
           <m.div variants={varFade().inUp}>
-              <Typography component="div" variant="overline" sx={{ color: 'text.disabled', textAlign: 'center' }}>
+              <Typography component="div" variant="overline" sx={{ color: 'text.disabled', textAlign: { xs: 'center', md: 'left' } }}>
                   Platforms
               </Typography>
           </m.div>
@@ -36,7 +36,7 @@ export default function HomeForDesigner() {
                       ...textGradient(
                           `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
                       ),
-                      textAlign: 'center'
+                      textAlign: { xs: 'center', md: 'left' }
                   }}
               >
                   Explore our apps
@@ -49,8 +49,8 @@ export default function HomeForDesigner() {
                       maxWidth: { xs: '100%', md: '80%' },
                       color: 'text.primary',
                       mb: 4,
-                      mx: 'auto',
-                      textAlign: 'center',
+                      mx: { xs: 'auto', md: 0 },
+                      textAlign: { xs: 'center', md: 'left' },
                       textWrap: 'balance'
                   }}
               >
@@ -62,7 +62,7 @@ export default function HomeForDesigner() {
           </m.div>
 
           <m.div variants={varFade().inUp}>
-              <Stack spacing={2} direction="row" justifyContent="center">
+              <Stack spacing={2} direction="row" justifyContent={{ xs: "center", md: 'flex-start' }}>
                   {['apple', 'android', 'desktop', 'web', 'tv'].map((platform) => (
                       <m.div key={platform} variants={varFade().in}>
                           <Box
@@ -83,8 +83,8 @@ export default function HomeForDesigner() {
             src="/assets/images/home/app.webp"
             variants={varFade().in}
             sx={{
-                height: { xs: '100%', md: '100%' },
-                width: { xs: '100%', md: 0.6 },
+                height: 'auto',
+                width: { xs: '100%', md: 0.75 },
                 mt: { xs: '26px', md: '0' },
                 objectFit: 'cover',
                 left: { xs: 0, md: 'auto' },
@@ -104,17 +104,10 @@ export default function HomeForDesigner() {
                 minHeight: 560,
                 overflow: 'hidden',
         position: 'relative',
-        // ...bgGradient({
-        //   startColor: `${theme.palette.grey[900]} 25%`,
-        //   endColor: alpha(theme.palette.grey[900], 0),
-        //   imgUrl: '/assets/images/home/app.webp',
-        // }),
-        // ...(upMd && {
           ...bgGradient({
             color: alpha(theme.palette.background.default, 0.8),
             imgUrl: '/assets/background/overlay_4.jpg',
           }),
-        // }),
       }}
     >
       <Container component={MotionViewport}>
@@ -123,8 +116,7 @@ export default function HomeForDesigner() {
             {renderDescription}
           </Grid>
 
-          {/*{upMd && <Grid md={6}>{renderImg}</Grid>}*/}
-          <Grid xs={12} md={6} sx={{ minHeight: '18rem' }}>
+          <Grid xs={12} md={6} sx={{ minHeight: '14rem' }}>
               {renderImg}
           </Grid>
         </Grid>
