@@ -24,6 +24,7 @@ export default function CompactLayout({ children }: Props) {
             minHeight: '100vh',
             textAlign: 'center',
             justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
           {children}

@@ -50,18 +50,18 @@ export default function HeaderSimple() {
       >
         <Logo />
 
-        <Stack direction="row" alignItems="center" spacing={1}>
-          <SettingsButton />
+        {/*<Stack direction="row" alignItems="center" spacing={1}>*/}
+        {/*  <SettingsButton />*/}
 
-          <Link
-            href={paths.faqs}
-            component={RouterLink}
-            color="inherit"
-            sx={{ typography: 'subtitle2' }}
-          >
-            Need help?
-          </Link>
-        </Stack>
+        {/*  <Link*/}
+        {/*    href={paths.faqs}*/}
+        {/*    component={RouterLink}*/}
+        {/*    color="inherit"*/}
+        {/*    sx={{ typography: 'subtitle2' }}*/}
+        {/*  >*/}
+        {/*    Need help?*/}
+        {/*  </Link>*/}
+        {/*</Stack>*/}
       </Toolbar>
 
       {offsetTop && <HeaderShadow />}
