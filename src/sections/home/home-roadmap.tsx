@@ -21,7 +21,7 @@ export const QUARTERS = [
     color: 'success',
     value: [
       {
-        task: 'WatchIT Website',
+        task: 'Watchit Website',
         isDone: true
       },
       {
