@@ -20,23 +20,23 @@ import ListItemButton from "@mui/material/ListItemButton";
 export const FEATURES = [
   {
     label: 'Blockchain-Agnostic',
-    value: 'Integrates seamlessly with a variety of technologies and adopts the best features of each chain, enhancing the adaptability and reach of our protocol.',
+    value: 'Integrates seamlessly with multiple technologies and adopts the best features of each chain, enhancing the adaptability and reach of our protocol.',
   },
   {
     label: 'Decentralization and Scalability',
-    value: 'Community-driven infrastructure fosters decentralization and allows for efficient scalability, ensuring the protocol can grow and adapt to an increasing user base.'
+    value: 'Community-driven infrastructure fosters decentralization and enables efficient scalability, ensuring the ecosystem can grow and adapt to an increasing user base.'
   },
   {
     label: 'Flexible Monetization',
-    value: 'Creators can maximize their earnings by selecting monetization methods that best suit their needs and audiences, ranging from pay-per-view and purchase to subscriptions and microtransactions.'
+    value: 'Creators can maximize their earnings by selecting monetization methods that best suit their needs and audiences, adopting different strategies to cater to diverse preferences.'
   },
   {
     label: 'Community Governance',
-    value: 'Transparent and democratic decision-making process allows participants to influence the development and direction of our protocol through referendums for content and distributor approval.'
+    value: 'Transparent and democratic decision-making allows participants to influence the development and direction of our protocol through referendums for content and distributors\' approval, economic parameters, and more, ensuring that the community has the power to decide.'
   },
   {
     label: 'Extensibility and Integration',
-    value: 'Easily integrates with other protocols like Farcaster and Lens, enhancing interoperability and allowing users to leverage additional features from other platforms, expanding the possibilities and functionalities of our protocol.'
+    value: 'Easily integrates with various protocols, such as Farcaster and Lens, enhancing interoperability and allowing users to leverage additional features from other platforms, thereby expanding the possibilities and functionalities of our protocol.'
   },
   {
     label: 'Multi-Currency Support',
