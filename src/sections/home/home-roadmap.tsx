@@ -224,7 +224,7 @@ export default function HomeWhat() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 6, md: 15 },
         textAlign: 'center',
       }}
     >
@@ -248,6 +248,7 @@ export default function HomeWhat() {
                   mx: 'auto',
                   maxWidth: 640,
                   color: 'text.secondary',
+                  textWrap: 'balance'
                 }}
             >
               Our roadmap outlines our ambitious plans to enhance our ecosystem,

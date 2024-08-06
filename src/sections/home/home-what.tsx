@@ -65,7 +65,7 @@ export default function HomeWhat() {
     <Container
       component={MotionViewport}
       sx={{
-        py: { xs: 10, md: 15 },
+        py: { xs: 6, md: 15 },
         textAlign: { xs: 'center', md: 'unset' },
       }}
     >
@@ -142,6 +142,7 @@ export default function HomeWhat() {
             <Typography
                 sx={{
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
+                  textWrap: 'balance',
                 }}
             >
              With a blockchain-agnostic approach, community-driven innovation, flexible monetization, seamless integration, and transparent governance, 

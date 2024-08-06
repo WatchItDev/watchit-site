@@ -50,7 +50,8 @@ export default function HomeAdvertisement() {
                   sx={{
                       color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                       mb: 3,
-                      width: { xs: '100%', md: '85%' }
+                      width: { xs: '100%', md: '85%' },
+                      textWrap: 'balance'
                   }}
               >
                   Experience the future of independent cinema with the Watchit community on Discord.
