@@ -61,7 +61,7 @@ export const QUARTERS = [
         isDone: false
       },
       {
-        task: 'Protocol development',
+        task: 'Protocol First Steps',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
