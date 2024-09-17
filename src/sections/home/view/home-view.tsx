@@ -10,7 +10,8 @@ import HomeExplore from '../home-explore';
 import HomeForDesigner from '../home-for-designer';
 import HomeAdvertisement from '../home-advertisement';
 import HomeRoadmap from "../home-roadmap";
-import HomeWhat from "../home-what";
+import HomeProtocol from "../home-protocol";
+import HomeGovernance from "../home-governance";
 
 // ----------------------------------------------------------------------
 
@@ -58,15 +59,17 @@ export default function HomeView() {
       >
         <HomeExplore />
 
+        <HomeRoadmap />
+
         <Box sx={{ position: 'relative' }}>
           <StyledPolygon />
           <HomeForDesigner />
           <StyledPolygon anchor="bottom" />
         </Box>
 
-        <HomeWhat />
+        <HomeProtocol />
 
-        <HomeRoadmap />
+        <HomeGovernance />
 
         <HomeAdvertisement />
       </Box>

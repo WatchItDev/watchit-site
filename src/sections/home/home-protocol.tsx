@@ -49,7 +49,7 @@ export const FEATURES = [
 ]
 // ----------------------------------------------------------------------
 
-export default function HomeWhat() {
+export default function HomeProtocol() {
   const theme = useTheme();
 
   const mdUp = useResponsive('up', 'md');
@@ -166,7 +166,6 @@ export default function HomeWhat() {
                       }}
                   >
                     <Box display='flex'>
-                      {/*{feature.icon}*/}
                       <Typography
                           variant="body1"
                           fontWeight="bold"

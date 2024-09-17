@@ -185,7 +185,7 @@ export default function HomeHero() {
                   sx={{
                       textAlign: 'center',
                       lineHeight: 1.2,
-                      mb: 2
+                      mb: 1
                   }}
               >
                   Experience the<br/>
@@ -203,16 +203,15 @@ export default function HomeHero() {
                       repeat: Infinity,
                   }}
               >
-                  #Film3
+                  Web3xAI
               </StyledTextGradient>
           </m.div>
 
-          {/*<m.div variants={varFade().in}>*/}
-          {/*    <Typography variant="body2" sx={{textAlign: 'center', mb:3}}>*/}
-          {/*        A new era of cinema is here. Access unique films and enjoy a secure and transparent experience with*/}
-          {/*        blockchain technology.*/}
-          {/*    </Typography>*/}
-          {/*</m.div>*/}
+          <m.div variants={varFade().in}>
+              <Typography variant="body1" sx={{ textAlign: 'center', mb:3, mt: 0, color: 'text.secondaryz' }}>
+                  Integrating AI and blockchain for a personalized, interactive entertainment experience connecting movie lovers and creators.
+              </Typography>
+          </m.div>
 
           <m.div variants={varFade().in}>
               <Stack spacing={1.5} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 3}}>
