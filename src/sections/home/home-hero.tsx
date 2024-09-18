@@ -208,7 +208,7 @@ export default function HomeHero() {
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Typography variant="body1" sx={{ textAlign: 'center', mb:3, mt: 0, color: 'text.secondaryz' }}>
+              <Typography variant="body1" sx={{ textAlign: 'center', mb:3, mt: 0, color: 'text.secondary' }}>
                   Integrating AI and blockchain for a personalized, interactive entertainment experience connecting movie lovers and creators.
               </Typography>
           </m.div>
