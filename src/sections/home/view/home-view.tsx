@@ -59,13 +59,13 @@ export default function HomeView() {
       >
         <HomeExplore />
 
-        <HomeRoadmap />
-
         <Box sx={{ position: 'relative' }}>
           <StyledPolygon />
           <HomeForDesigner />
           <StyledPolygon anchor="bottom" />
         </Box>
+
+        <HomeRoadmap />
 
         <HomeProtocol />
 

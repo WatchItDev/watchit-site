@@ -25,6 +25,7 @@ export const paths = {
   github: 'https://github.com/WatchitDev',
   openCollective: 'https://opencollective.com/watchit',
   paper: 'https://watchit.notion.site/WatchIT-d8a242d26292414991ed1d8fc5e918d3',
+  mailchimp: 'https://movie.us13.list-manage.com/subscribe/post?u=095b0fb0ed98ad646c10cdeb9&amp;id=439954add4&amp;f_id=004295e2f0',
   // webapp: 'https://app.watchit.movie/',
   webapp: '/coming-soon',
   telegram: 'https://t.me/watchitofficial',

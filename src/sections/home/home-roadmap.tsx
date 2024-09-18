@@ -88,7 +88,7 @@ export const QUARTERS = [
         isDone: false
       },
       {
-        task: 'Integration with Farcaster Protocol',
+        task: 'Integration with Layer Zero',
         isDone: false
       }
     ],
@@ -237,7 +237,7 @@ export default function HomeWhat() {
           </m.div>
 
           <m.div variants={varFade().inRight}>
-            <Typography variant="h2" sx={{mb: 3}}>
+            <Typography variant="h2" sx={{ mb: 2 }}>
               Our Plan
             </Typography>
           </m.div>
@@ -246,9 +246,9 @@ export default function HomeWhat() {
             <Typography
                 sx={{
                   mx: 'auto',
-                  maxWidth: 640,
+                  maxWidth: '80%',
                   color: 'text.secondary',
-                  textWrap: 'balance'
+                  textWrap: 'balance',
                 }}
             >
               Our roadmap outlines our ambitious plans to enhance our ecosystem,

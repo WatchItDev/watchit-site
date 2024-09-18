@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { m } from 'framer-motion';
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -6,7 +7,8 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
-import { useState } from 'react';
+import Typography from '@mui/material/Typography';
+import { IconBrandDiscordFilled } from '@tabler/icons-react';
 // theme
 import { bgGradient } from 'src/theme/css';
 // routes
@@ -14,23 +16,77 @@ import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
-import Typography from "@mui/material/Typography";
-import {IconBrandDiscordFilled} from "@tabler/icons-react";
+
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import { LoadingButton } from '@mui/lab'
 
 // ----------------------------------------------------------------------
 
 export default function HomeAdvertisement() {
     const theme = useTheme();
-    const [email, setEmail] = useState('');
-    const [submitted, setSubmitted] = useState(false);
 
-    const handleEmailChange = (event: any) => {
-        setEmail(event.target.value);
-    };
+    const CustomForm = ({ status, message, onValidated }: any) => {
+        const [email, setEmail] = useState('');
 
-    const handleSubmit = () => {
-        console.log('Email submitted:', email);
-        setSubmitted(true);
+        const handleSubmit = () => {
+            email &&
+            email.indexOf('@') > -1 &&
+            onValidated({
+                EMAIL: email,
+            });
+        };
+
+        return (
+            <>
+                {status === 'error' && (
+                    <Typography sx={{ color: 'error.main', mt: 2 }} dangerouslySetInnerHTML={{ __html: message }} />
+                )}
+                {status === 'success' && (
+                    <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
+                        Thank you for subscribing! You will receive updates and rewards soon.
+                    </Typography>
+                )}
+                {status !== 'success' && (
+                    <Stack
+                        component={m.div}
+                        variants={varFade().inRight}
+                        direction={'row'}
+                        justifyContent={{ xs: 'center', md: 'flex-start' }}
+                        spacing={2}
+                        alignItems="center"
+                    >
+                        <TextField
+                            variant="outlined"
+                            label="Ingresa tu email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            InputLabelProps={{
+                                style: {
+                                    color: '#fff',
+                                },
+                            }}
+                            sx={{
+                                bgcolor: 'transparent',
+                                borderRadius: 1,
+                            }}
+                        />
+                        <LoadingButton
+                            color="inherit"
+                            size="large"
+                            variant="contained"
+                            onClick={handleSubmit}
+                            sx={{
+                                color: 'grey.800',
+                                bgcolor: 'common.white',
+                            }}
+                            loading={status === 'sending'}
+                        >
+                            Get Updates & Rewards
+                        </LoadingButton>
+                    </Stack>
+                )}
+            </>
+        );
     };
 
     const renderDescription = (
@@ -42,18 +98,18 @@ export default function HomeAdvertisement() {
                 },
                 mb: {
                     xs: 2,
-                    md: 5
+                    md: 5,
                 },
                 p: {
                     xs: 1,
-                    md: 0
-                }
+                    md: 0,
+                },
             }}
         >
             <Box
                 component={m.div}
                 variants={varFade().inDown}
-                sx={{color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' }}}
+                sx={{ color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' } }}
             >
                 Stay Updated and Earn Rewards with Watchit
             </Box>
@@ -63,7 +119,7 @@ export default function HomeAdvertisement() {
                         color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                         mb: 3,
                         width: { xs: '100%', md: '85%' },
-                        textWrap: 'balance'
+                        textWrap: 'balance',
                     }}
                 >
                     Don’t miss out on the latest news, updates, and exclusive releases from Watchit. By subscribing with your email,
@@ -72,58 +128,14 @@ export default function HomeAdvertisement() {
                 </Typography>
             </m.div>
 
-            {!submitted ? (
-                <Stack
-                    component={m.div}
-                    variants={varFade().inRight}
-                    direction={'row'}
-                    justifyContent={{ xs: 'center', md: 'flex-start' }}
-                    spacing={2}
-                    alignItems="center"
-                >
-                    <TextField
-                        variant="outlined"
-                        label="Enter your email"
-                        value={email}
-                        onChange={handleEmailChange}
-                        InputLabelProps={{
-                            style: {
-                                color: '#fff'
-                            }
-                        }}
-                        sx={{
-                            bgcolor: 'transparent',
-                            borderWidth: 1,
-                            borderColor: '#fff',
-                            borderStyle: 'solid',
-                            borderRadius: 1
-                        }}
-                    />
-                    <Button
-                        color="inherit"
-                        size="large"
-                        variant="contained"
-                        onClick={handleSubmit}
-                        sx={{
-                            color: 'grey.800',
-                            bgcolor: 'common.white',
-                        }}
-                    >
-                        Get Updates & Rewards
-                    </Button>
-                </Stack>
-            ) : (
-                <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
-                    Thank you for subscribing! You will receive updates and rewards soon.
-                </Typography>
-            )}
+            <MailchimpSubscribe
+                url={paths.mailchimp}
+                render={({ subscribe, status, message }) => (
+                    <CustomForm status={status} message={message} onValidated={(formData: any) => subscribe(formData)} />
+                )}
+            />
 
-            <Stack
-                direction={'row'}
-                justifyContent={{xs: 'center', md: 'flex-start'}}
-                spacing={2}
-                mt={5}
-            >
+            <Stack direction={'row'} justifyContent={{ xs: 'center', md: 'flex-start' }} spacing={2} mt={5}>
                 <m.div variants={varFade().inRight}>
                     <Button
                         color="inherit"
@@ -150,10 +162,10 @@ export default function HomeAdvertisement() {
                         target="_blank"
                         rel="noopener"
                         href={paths.webapp}
-                        endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{mr: 0.5}}/>}
+                        endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
                         sx={{
                             color: 'common.white',
-                            '&:hover': {borderColor: 'currentColor'},
+                            '&:hover': { borderColor: 'currentColor' },
                         }}
                     >
                         Launch app
@@ -170,7 +182,7 @@ export default function HomeAdvertisement() {
                 animate={{
                     y: [-20, 0, -20],
                 }}
-                transition={{duration: 4, repeat: Infinity}}
+                transition={{ duration: 4, repeat: Infinity }}
                 alt="rocket"
                 src="/assets/images/home/rocket.webp"
                 sx={{ maxWidth: { xs: 300, md: 460 } }}
@@ -193,7 +205,7 @@ export default function HomeAdvertisement() {
                     pt: 5,
                     pb: 3,
                     mt: 7,
-                    mb: 7
+                    mb: 7,
                 }}
             >
                 {renderImg}
