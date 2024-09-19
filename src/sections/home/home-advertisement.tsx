@@ -107,7 +107,7 @@ export default function HomeAdvertisement() {
                     borderRadius: 2,
                     pt: 5,
                     pb: 3,
-                    p: 5,
+                    p: { xs: 2, md: 5 },
                     mt: 7,
                     mb: 4,
                 }}
