@@ -73,7 +73,7 @@ const CARDS = [
     description: 'AI tags content for faster search.'
   },
   {
-    icon: '/assets/icons/home/ic_warning.svg',
+    icon: '/assets/icons/home/ic_brain.svg',
     label: 'AI-Powered Anomaly Detection',
     description: 'Detects unusual activity and alerts in real-time.'
   },
