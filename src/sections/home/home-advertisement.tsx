@@ -122,7 +122,7 @@ export default function HomeAdvertisement() {
                         mb: 3,
                         mx: { xs: 'auto', md: 0 },
                         textAlign: 'justify',
-                        width: { xs: '90%', md: '85%' },
+                        width: { xs: '85%', md: '85%' },
                         textWrap: 'wrap',
                     }}
                 >
