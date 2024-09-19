@@ -68,12 +68,12 @@ export default function Footer() {
                       md: 'space-between',
                   }}
               >
-                  <Grid xs={8} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', pb: { xs: 5, md: 0 } }}>
+                  <Grid xs={10} md={5} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', pb: { xs: 5, md: 0 } }}>
                       <Logo sx={{ mb: 3, mx: 'auto' }} extended={true} />
                       <Typography
                           variant="body2"
                           sx={{
-                              maxWidth: 270,
+                              maxWidth: '100%',
                               textAlign: 'justify',
                               mx: { xs: 'auto', md: 'unset' },
                               textWrap: 'wrap'
