@@ -139,43 +139,6 @@ export default function HomeAdvertisement() {
                 )}
             />
 
-            <Stack direction={'row'} justifyContent={{ xs: 'center', md: 'flex-start' }} spacing={2} mt={5}>
-                <m.div variants={varFade().inRight}>
-                    <Button
-                        color="inherit"
-                        size="large"
-                        variant="contained"
-                        target="_blank"
-                        rel="noopener"
-                        startIcon={<IconBrandDiscordFilled />}
-                        href={paths.discord}
-                        sx={{
-                            color: 'grey.800',
-                            bgcolor: 'common.white',
-                        }}
-                    >
-                        Join discord
-                    </Button>
-                </m.div>
-
-                <m.div variants={varFade().inRight}>
-                    <Button
-                        color="inherit"
-                        size="large"
-                        variant="outlined"
-                        target="_blank"
-                        rel="noopener"
-                        href={paths.webapp}
-                        endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
-                        sx={{
-                            color: 'common.white',
-                            '&:hover': { borderColor: 'currentColor' },
-                        }}
-                    >
-                        Launch app
-                    </Button>
-                </m.div>
-            </Stack>
         </Box>
     );
 
@@ -189,7 +152,7 @@ export default function HomeAdvertisement() {
                 transition={{ duration: 4, repeat: Infinity }}
                 alt="rocket"
                 src="/assets/images/home/rocket.webp"
-                sx={{ maxWidth: { xs: 300, md: 460 } }}
+                sx={{ maxWidth: { xs: 300, md: 360 } }}
             />
         </Stack>
     );
