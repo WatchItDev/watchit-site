@@ -74,9 +74,9 @@ export default function Footer() {
                           variant="body2"
                           sx={{
                               maxWidth: 270,
-                              textAlign: 'center',
+                              textAlign: 'justify',
                               mx: { xs: 'auto', md: 'unset' },
-                              textWrap: 'balance'
+                              textWrap: 'wrap'
                           }}
                       >
                           Whether you're a filmmaker ready to showcase your latest work or a

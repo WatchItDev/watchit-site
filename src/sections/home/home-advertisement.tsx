@@ -30,10 +30,10 @@ export default function HomeAdvertisement() {
 
         const handleSubmit = () => {
             email &&
-            email.indexOf('@') > -1 &&
-            onValidated({
-                EMAIL: email,
-            });
+                email.indexOf('@') > -1 &&
+                onValidated({
+                    EMAIL: email,
+                });
         };
 
         return (
@@ -57,7 +57,7 @@ export default function HomeAdvertisement() {
                     >
                         <TextField
                             variant="outlined"
-                            label="Ingresa tu email"
+                            label="Write your email.."
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             InputLabelProps={{
@@ -81,7 +81,7 @@ export default function HomeAdvertisement() {
                             }}
                             loading={status === 'sending'}
                         >
-                            Get Updates & Rewards
+                            Subscribe
                         </LoadingButton>
                     </Stack>
                 )}
@@ -109,17 +109,21 @@ export default function HomeAdvertisement() {
             <Box
                 component={m.div}
                 variants={varFade().inDown}
-                sx={{ color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' } }}
+                sx={{
+                    color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' }
+                }}
             >
-                Stay Updated and Earn Rewards with Watchit
+                Subscribe and Earn Rewards
             </Box>
             <m.div variants={varFade().inRight}>
                 <Typography
                     sx={{
                         color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                         mb: 3,
-                        width: { xs: '100%', md: '85%' },
-                        textWrap: 'balance',
+                        mx: { xs: 'auto', md: 0 },
+                        textAlign: 'justify',
+                        width: { xs: '90%', md: '85%' },
+                        textWrap: 'wrap',
                     }}
                 >
                     Don’t miss out on the latest news, updates, and exclusive releases from Watchit. By subscribing with your email,

@@ -12,7 +12,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // components
 import Image from 'src/components/image';
 import { MotionViewport, varFade } from 'src/components/animate';
-import {textGradient} from "../../theme/css";
+import { textGradient } from "../../theme/css";
 import ListItemButton from "@mui/material/ListItemButton";
 
 // ----------------------------------------------------------------------
@@ -77,10 +77,10 @@ export default function HomeProtocol() {
                 <Grid xs={6}>
                   <m.div variants={varFade().inUp}>
                     <Image
-                        alt="our office 2"
-                        src="/assets/images/home/protocol_1.png"
-                        ratio="1/1"
-                        sx={{ borderRadius: 3, boxShadow: shadow }}
+                      alt="our office 2"
+                      src="/assets/images/home/protocol_1.png"
+                      ratio="1/1"
+                      sx={{ borderRadius: 3, boxShadow: shadow }}
                     />
                   </m.div>
                 </Grid>
@@ -88,10 +88,10 @@ export default function HomeProtocol() {
                 <Grid xs={6}>
                   <m.div variants={varFade().inUp}>
                     <Image
-                        alt="our office 1"
-                        src="/assets/images/home/protocol_2.png"
-                        ratio="3/4"
-                        sx={{ borderRadius: 3, boxShadow: shadow }}
+                      alt="our office 1"
+                      src="/assets/images/home/protocol_2.png"
+                      ratio="3/4"
+                      sx={{ borderRadius: 3, boxShadow: shadow }}
                     />
                   </m.div>
                 </Grid>
@@ -100,20 +100,20 @@ export default function HomeProtocol() {
                 <Grid xs={6}>
                   <m.div variants={varFade().inUp}>
                     <Image
-                        alt="our office 1"
-                        src="/assets/images/home/protocol_3.png"
-                        ratio="3/4"
-                        sx={{ borderRadius: 3, boxShadow: shadow }}
+                      alt="our office 1"
+                      src="/assets/images/home/protocol_3.png"
+                      ratio="3/4"
+                      sx={{ borderRadius: 3, boxShadow: shadow }}
                     />
                   </m.div>
                 </Grid>
                 <Grid xs={6}>
                   <m.div variants={varFade().inUp}>
                     <Image
-                        alt="our office 2"
-                        src="/assets/images/home/protocol_4.png"
-                        ratio="1/1"
-                        sx={{ borderRadius: 3, boxShadow: shadow }}
+                      alt="our office 2"
+                      src="/assets/images/home/protocol_4.png"
+                      ratio="1/1"
+                      sx={{ borderRadius: 3, boxShadow: shadow }}
                     />
                   </m.div>
                 </Grid>
@@ -125,14 +125,14 @@ export default function HomeProtocol() {
         <Grid md={6}>
           <m.div variants={varFade().inUp}>
             <Typography
-                variant="h2"
-                sx={{
-                  mt: 3,
-                  mb: 1,
-                  ...textGradient(
-                      `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
-                  ),
-                }}
+              variant="h2"
+              sx={{
+                mt: 1,
+                mb: 2,
+                ...textGradient(
+                  `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
+                ),
+              }}
             >
               Our Protocol
             </Typography>
@@ -140,58 +140,62 @@ export default function HomeProtocol() {
 
           <m.div variants={varFade().inRight}>
             <Typography
-                sx={{
-                  color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
-                  textWrap: 'balance',
-                }}
+              sx={{
+                color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
+                textWrap: 'wrap',
+                textAlign: 'justify',
+                mx: { xs: 'auto', md: 0 },
+
+                maxWidth: { xs: '95%' }
+              }}
             >
-             With a blockchain-agnostic approach, community-driven innovation, flexible monetization, seamless integration, and transparent governance, 
-             Watchit creates a dynamic and secure ecosystem for creators and audiences.
+              With a blockchain-agnostic approach, community-driven innovation, flexible monetization, seamless integration, and transparent governance,
+              Watchit creates a dynamic and secure ecosystem for creators and audiences.
             </Typography>
           </m.div>
 
-          <Stack spacing={1} sx={{my: 2}}>
+          <Stack spacing={1} sx={{ my: 2, mt: { xs: 3 }, }}>
             {FEATURES.map((feature, index) => (
-                <Box component={m.div} key={feature.label} variants={varFade().inRight}>
-                  <ListItemButton
+              <Box component={m.div} key={feature.label} variants={varFade().inRight}>
+                <ListItemButton
+                  sx={{
+                    p: 2,
+                    mb: 0,
+                    borderRadius: '10px',
+                    alignItems: 'flex-start',
+                    typography: 'subtitle2',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    bgcolor: 'background.neutral',
+                  }}
+                >
+                  <Box display='flex'>
+                    <Typography
+                      variant="body1"
+                      fontWeight="bold"
                       sx={{
-                        p: 2,
-                        mb: 0,
-                        borderRadius: '10px',
-                        alignItems: 'flex-start',
-                        typography: 'subtitle2',
-                        flexDirection: 'column',
-                        justifyContent: 'flex-start',
-                        bgcolor: 'background.neutral',
-                      }}
-                  >
-                    <Box display='flex'>
-                      <Typography
-                          variant="body1"
-                          fontWeight="bold"
-                          sx={{
-                            flexGrow: 1,
-                            textAlign: 'left',
-                            mb: 0.5,
-                            ...textGradient(
-                                `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
-                            ),
-                          }}>
-                        {feature.label}
-                      </Typography>
-                    </Box>
-                    <Typography variant="subtitle2" sx={{color: 'text.secondary'}}>
-                      {feature.value}
+                        flexGrow: 1,
+                        textAlign: 'left',
+                        mb: 0.5,
+                        ...textGradient(
+                          `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
+                        ),
+                      }}>
+                      {feature.label}
                     </Typography>
-                  </ListItemButton>
-                </Box>
+                  </Box>
+                  <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>
+                    {feature.value}
+                  </Typography>
+                </ListItemButton>
+              </Box>
             ))}
           </Stack>
           <m.div variants={varFade().inRight}>
             <Typography
-                sx={{
-                  color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
-                }}
+              sx={{
+                color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
+              }}
             >
               Explore the full potential in our upcoming documentation. Stay tuned!
             </Typography>
@@ -199,6 +203,6 @@ export default function HomeProtocol() {
         </Grid>
       </Grid>
     </Container>
-      // </Box>
+    // </Box>
   );
 }

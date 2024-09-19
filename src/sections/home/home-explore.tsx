@@ -22,65 +22,70 @@ const MAIN_CARDS = [
   {
     icon: ' /assets/icons/home/ic_social.svg',
     label: 'Social-Fi Interaction',
-    description: 'Foster deeper engagement by connecting audiences, allowing them to share and collaborate around their favorite films.'
+    description: 'Build deeper connections between audiences, enabling them to share and collaborate around their favorite films.'
   },
   {
     icon: ' /assets/icons/home/ic_token.svg',
     label: 'Monetization Models',
-    description: 'Empower creators with flexible revenue streams and complete control over how their content is monetized.'
+    description: 'Give creators flexible revenue options and full control over how they monetize their content.'
   },
   {
     icon: ' /assets/icons/home/ic_ad.svg',
     label: 'Effortless Promotion Tools',
-    description: 'Enable audiences to organically promote content with simple, community-driven tools, bypassing costly traditional advertising.'
+    description: 'Let audiences organically promote content with simple, community-driven tools, eliminating the need for costly traditional advertising.'
   },
   {
     icon: ' /assets/icons/home/ic_community.svg',
-    label: 'Marketplace for Providers',
-    description: 'Infrastructure providers offer services in an open marketplace, enabling filmmakers and distributors to negotiate and collaborate seamlessly.'
+    label: 'Distribution Marketplace',
+    description: 'Infrastructure providers offer services in an open marketplace, allowing filmmakers and distributors to easily negotiate and collaborate.'
   },
   {
     icon: ' /assets/icons/home/ic_cinema.svg',
     label: 'Support Indie Cinema',
-    description: 'Directly connect independent filmmakers with their audience for valuable feedback and support, fostering a vibrant creative ecosystem.'
+    description: 'Directly connect independent filmmakers with their audience for valuable feedback and support, nurturing a vibrant creative ecosystem.'
   },
   {
     icon: ' /assets/icons/home/ic_lock.svg',
-    label: 'Right Management',
-    description: 'Guarantee fair and open management of intellectual property rights, with every transaction and agreement securely recorded on the blockchain.'
+    label: 'Rights Management',
+    description: 'Ensure fair and transparent management of intellectual property rights, with every transaction and agreement securely recorded on the blockchain.'
   },
 ];
 
 const CARDS = [
   {
-    icon: ' /assets/icons/home/ic_tools.svg',
+    icon: '/assets/icons/home/ic_tools.svg',
     label: 'AI Creative Studio',
     description: 'AI tools for editing, scriptwriting, and VFX.'
   },
   {
-    icon: ' /assets/icons/home/ic_subtitles.svg',
+    icon: '/assets/icons/home/ic_subtitles.svg',
     label: 'AI-Powered Subtitle and Translation',
-    description: 'Generate subtitles and live translations for global accessibility.'
+    description: 'Auto-generate subtitles and live translations.'
   },
   {
-    icon: ' /assets/icons/home/ic_cinema.svg',
-    label: 'Audience Sentiment & Popularity Analysis',
-    description: 'Analyze viewer feedback and predict popular films in real-time.'
+    icon: '/assets/icons/home/ic_cinema.svg',
+    label: 'Audience Popularity Analysis',
+    description: 'Analyze feedback and predict trends.'
   },
   {
-    icon: ' /assets/icons/home/ic_search.svg',
+    icon: '/assets/icons/home/ic_search.svg',
     label: 'AI-Powered Movie Search',
-    description: 'AI tags content for easier search and categorization.'
+    description: 'AI tags content for faster search.'
   },
   {
-    icon: ' /assets/icons/home/ic_warning.svg',
+    icon: '/assets/icons/home/ic_warning.svg',
+    label: 'AI-Powered Anomaly Detection',
+    description: 'Detects unusual activity and alerts in real-time.'
+  },
+  {
+    icon: '/assets/icons/home/ic_warning.svg',
     label: 'AI-Powered Content Moderation',
     description: 'Detect harmful content in uploads and comments.'
   },
   {
-    icon: ' /assets/icons/home/ic_user.svg',
+    icon: '/assets/icons/home/ic_user.svg',
     label: 'AI-Driven Recommendations',
-    description: 'Personalized film suggestions based on user preferences and habits.'
+    description: 'Personalized film suggestions based on user habits.'
   },
 ];
 
@@ -116,56 +121,56 @@ export default function HomeBenefits() {
       }}
     >
       <Stack
-          spacing={3}
-          sx={{
-            textAlign: 'center',
-            mb: {xs: 5, md: 5},
-          }}
+        spacing={3}
+        sx={{
+          textAlign: 'center',
+          mb: { xs: 5, md: 5 },
+        }}
       >
         <m.div variants={varFade().inUp}>
-          <Typography component="div" variant="overline" sx={{color: 'text.disabled'}}>
+          <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
             Cool Tools & Perks
           </Typography>
         </m.div>
       </Stack>
 
       <Box
-          sx={{
-            position: 'relative',
-            '& .slick-center .card-slide': {
-              boxShadow: `-40px 40px 80px ${
-                  theme.palette.mode === 'light'
-                      ? alpha(theme.palette.grey[500], 0.16)
-                      : alpha(theme.palette.common.black, 0.4)
+        sx={{
+          position: 'relative',
+          '& .slick-center .card-slide': {
+            boxShadow: `-40px 40px 80px ${theme.palette.mode === 'light'
+                ? alpha(theme.palette.grey[500], 0.16)
+                : alpha(theme.palette.common.black, 0.4)
               }`,
-            }
-          }}
+          }
+        }}
       >
         <CarouselArrows
-            filled
-            shape="rounded"
-            onNext={carousel.onNext}
-            onPrev={carousel.onPrev}
+          filled
+          shape="rounded"
+          onNext={carousel.onNext}
+          onPrev={carousel.onPrev}
         >
           <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
             {MAIN_CARDS.map((card, index) => (
-                <Box key={card.label} component={m.div} variants={varFade().in} sx={{ px: 2, mb: 10 }}>
-                  <Card
-                      className={'card-slide'}
-                      sx={{
-                        textAlign: 'center',
-                        boxShadow: { md: 'none' },
-                        bgcolor: 'background.default',
-                        p: 5,
-                      }}
-                  >
-                    <Box component="img" src={card.icon} alt={card.label} sx={{ mx: 'auto', width: 60, height: 60 }} />
-                    <Typography variant="h5" sx={{ mt: 4, mb: 2, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      {card.label}
-                    </Typography>
-                    <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
-                  </Card>
-                </Box>
+              <Box key={card.label} component={m.div} variants={varFade().in} sx={{ px: 2, mb: 10 }}>
+                <Card
+                  className={'card-slide'}
+                  sx={{
+                    textAlign: 'center',
+                    textWrap: 'wrap',
+                    boxShadow: { md: 'none' },
+                    bgcolor: 'background.default',
+                    p: 5,
+                  }}
+                >
+                  <Box component="img" src={card.icon} alt={card.label} sx={{ mx: 'auto', width: 60, height: 60 }} />
+                  <Typography variant="h5" sx={{ mt: 4, mb: 2, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {card.label}
+                  </Typography>
+                  <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
+                </Card>
+              </Box>
             ))}
           </Carousel>
         </CarouselArrows>
@@ -179,6 +184,7 @@ export default function HomeBenefits() {
           </Box>
         </Grid>
       </Grid>
+
     </Container>
   );
 }

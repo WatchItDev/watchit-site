@@ -209,12 +209,12 @@ export default function HomeHero() {
 
           <m.div variants={varFade().in}>
               <Typography variant="body1" sx={{ textAlign: 'center', mb:3, mt: 0, color: 'text.secondary' }}>
-                  Integrating AI and blockchain for a personalized, interactive entertainment experience connecting movie lovers and creators.
+              Where AI meets blockchain to revolutionize entertainment—connecting movie lovers and creators in a personalized space.
               </Typography>
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Stack spacing={1.5} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 3}}>
+              <Stack spacing={1.5} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 1}}>
                   <Stack alignItems="center" spacing={2}>
                       <Button
                           component={RouterLink}
