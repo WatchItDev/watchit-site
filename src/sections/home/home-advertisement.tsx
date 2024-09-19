@@ -137,52 +137,9 @@ const CustomForm = ({ status, message, onValidated }: any) => {
                 <Typography sx={{ color: 'error.main', mt: 2 }} dangerouslySetInnerHTML={{ __html: message }} />
             )}
             {status === 'success' && (
-                <Stack
-                    component={m.div}
-                    variants={varFade().inRight}
-                    direction={'row'}
-                    justifyContent={{ xs: 'center', md: 'flex-start' }}
-                    spacing={2}
-                    alignItems="center"
-                >
-                    <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
-                        Thank you for subscribing! You will receive updates and rewards soon.
-                    </Typography>
-                    <Stack spacing={2} direction={'row'} flexWrap={'wrap'}>
-                        <Button
-                            color="inherit"
-                            size="large"
-                            variant="contained"
-                            target="_blank"
-                            rel="noopener"
-                            startIcon={<IconBrandDiscordFilled/>}
-                            href={paths.discord}
-                            sx={{
-                                color: 'grey.800',
-                                bgcolor: 'common.white',
-                                ml: 2
-                            }}
-                        >
-                            Join discord
-                        </Button>
-
-                        <Button
-                            color="inherit"
-                            size="large"
-                            variant="outlined"
-                            target="_blank"
-                            rel="noopener"
-                            href={paths.webapp}
-                            endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{mr: 0.5}}/>}
-                            sx={{
-                                color: 'common.white',
-                                '&:hover': {borderColor: 'currentColor'},
-                            }}
-                        >
-                            Launch app
-                        </Button>
-                    </Stack>
-                </Stack>
+                <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
+                    Thank you for subscribing! You will receive updates and rewards soon.
+                </Typography>
             )}
             {status !== 'success' && (
                 <Stack
@@ -227,46 +184,6 @@ const CustomForm = ({ status, message, onValidated }: any) => {
                         >
                             Subscribe
                         </LoadingButton>
-                    </Stack>
-                    <Stack
-                        spacing={2} direction={'row'} flexWrap={{ xs: 'wrap', md: 'nowrap' }} alignItems="center"
-                        justifyContent={{ xs: 'space-between', md: 'flex-start' }} width={'100%'}
-                        sx={{ mt: { xs: 1, md: 0 } }}
-                    >
-                        <Button
-                            color="inherit"
-                            size="large"
-                            variant="contained"
-                            target="_blank"
-                            rel="noopener"
-                            startIcon={<IconBrandDiscordFilled/>}
-                            href={paths.discord}
-                            sx={{
-                                color: 'grey.800',
-                                bgcolor: 'common.white',
-                                ml: { xs: 0, md: 2 },
-                                flexGrow: { xs: 1, md: 0 }
-                            }}
-                        >
-                            Join discord
-                        </Button>
-
-                        <Button
-                            color="inherit"
-                            size="large"
-                            variant="outlined"
-                            target="_blank"
-                            rel="noopener"
-                            href={paths.webapp}
-                            endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{mr: 0.5}}/>}
-                            sx={{
-                                color: 'common.white',
-                                '&:hover': {borderColor: 'currentColor'},
-                                flexGrow: { xs: 1, md: 0 }
-                            }}
-                        >
-                            Launch app
-                        </Button>
                     </Stack>
                 </Stack>
             )}
