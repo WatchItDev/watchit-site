@@ -16,9 +16,9 @@ export const navConfig = [
     icon: <IconCoins />,
     path: paths.openCollective,
   },
-  {
-    title: 'Paper',
-    icon: <IconFileDescription />,
-    path: paths.paper,
-  },
+  // {
+  //   title: 'Paper',
+  //   icon: <IconFileDescription />,
+  //   path: paths.paper,
+  // },
 ];

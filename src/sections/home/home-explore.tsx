@@ -42,12 +42,12 @@ const MAIN_CARDS = [
   {
     icon: ' /assets/icons/home/ic_cinema.svg',
     label: 'Support Indie Cinema',
-    description: 'Directly connect independent filmmakers with their audience for valuable feedback and support, nurturing a vibrant creative ecosystem.'
+    description: 'Connect independent filmmakers with their audience for valuable feedback and support, fostering a vibrant creative ecosystem.'
   },
   {
     icon: ' /assets/icons/home/ic_lock.svg',
     label: 'Rights Management',
-    description: 'Ensure fair and transparent management of intellectual property rights, with every transaction and agreement securely recorded on the blockchain.'
+    description: 'Ensure fair and transparent IP management, with every transaction securely recorded on the blockchain."'
   },
 ];
 
@@ -138,34 +138,31 @@ export default function HomeBenefits() {
         sx={{
           position: 'relative',
           '& .slick-center .card-slide': {
-            boxShadow: `-40px 40px 80px ${theme.palette.mode === 'light'
-                ? alpha(theme.palette.grey[500], 0.16)
-                : alpha(theme.palette.common.black, 0.4)
-              }`,
+            boxShadow: `-40px 40px 80px transparent`,
           }
         }}
       >
         <CarouselArrows
-          filled
+          // filled
           shape="rounded"
           onNext={carousel.onNext}
           onPrev={carousel.onPrev}
         >
           <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
             {MAIN_CARDS.map((card, index) => (
-              <Box key={card.label} component={m.div} variants={varFade().in} sx={{ px: 2, mb: 10 }}>
+              <Box key={card.label} component={m.div} variants={varFade().in}>
                 <Card
                   className={'card-slide'}
                   sx={{
                     textAlign: 'center',
                     textWrap: 'wrap',
                     boxShadow: { md: 'none' },
-                    bgcolor: 'background.default',
+                    bgcolor: 'transparent',
                     p: 5,
                   }}
                 >
                   <Box component="img" src={card.icon} alt={card.label} sx={{ mx: 'auto', width: 60, height: 60 }} />
-                  <Typography variant="h5" sx={{ mt: 4, mb: 2, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Typography variant="h5" sx={{ mt: 1, mb: 1, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {card.label}
                   </Typography>
                   <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>

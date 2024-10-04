@@ -25,6 +25,70 @@ import { LoadingButton } from '@mui/lab'
 export default function HomeAdvertisement() {
     const theme = useTheme();
 
+    const CustomForm = ({ status, message, onValidated }: any) => {
+        const [email, setEmail] = useState('');
+
+        const handleSubmit = () => {
+            email &&
+                email.indexOf('@') > -1 &&
+                onValidated({
+                    EMAIL: email,
+                });
+        };
+
+        return (
+            <>
+                {status === 'error' && (
+                    <Typography sx={{ color: 'error.main', mt: 2 }} dangerouslySetInnerHTML={{ __html: message }} />
+                )}
+                {status === 'success' && (
+                    <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
+                        Thank you for subscribing! You will receive updates and rewards soon.
+                    </Typography>
+                )}
+                {status !== 'success' && (
+                    <Stack
+                        component={m.div}
+                        variants={varFade().inRight}
+                        direction={'row'}
+                        justifyContent={{ xs: 'center', md: 'flex-start' }}
+                        spacing={2}
+                        alignItems="center"
+                    >
+                        <TextField
+                            variant="outlined"
+                            label="Write your email.."
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            InputLabelProps={{
+                                style: {
+                                    color: '#fff',
+                                },
+                            }}
+                            sx={{
+                                bgcolor: 'transparent',
+                                borderRadius: 1,
+                            }}
+                        />
+                        <LoadingButton
+                            color="inherit"
+                            size="large"
+                            variant="contained"
+                            onClick={handleSubmit}
+                            sx={{
+                                color: 'grey.800',
+                                bgcolor: 'common.white',
+                            }}
+                            loading={status === 'sending'}
+                        >
+                            Subscribe
+                        </LoadingButton>
+                    </Stack>
+                )}
+            </>
+        );
+    };
+
     const renderDescription = (
         <Box
             sx={{
@@ -46,7 +110,7 @@ export default function HomeAdvertisement() {
                 component={m.div}
                 variants={varFade().inDown}
                 sx={{
-                    color: 'common.white', mb: 2, typography: {xs: 'h3', md: 'h2'}
+                    color: 'common.white', mb: 2, typography: { xs: 'h3', md: 'h2' }
                 }}
             >
                 Subscribe and Earn Rewards
@@ -56,14 +120,13 @@ export default function HomeAdvertisement() {
                     sx={{
                         color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                         mb: 3,
-                        mx: {xs: 0, md: 0},
+                        mx: { xs: 'auto', md: 0 },
                         textAlign: 'justify',
-                        width: '100%',
-                        p: 0
+                        width: { xs: '85%', md: '85%' },
+                        textWrap: 'wrap',
                     }}
                 >
-                    Don’t miss out on the latest news, updates, and exclusive releases from Watchit. By subscribing with
-                    your email,
+                    Don’t miss out on the latest news, updates, and exclusive releases from Watchit. By subscribing with your email,
                     you'll not only stay informed about everything happening in the world of independent cinema, but you'll also earn special rewards!
                     Be part of our growing community and get rewarded for being an early supporter. Just enter your email below to get started!
                 </Typography>
@@ -75,6 +138,7 @@ export default function HomeAdvertisement() {
                     <CustomForm status={status} message={message} onValidated={(formData: any) => subscribe(formData)} />
                 )}
             />
+
         </Box>
     );
 
@@ -88,7 +152,7 @@ export default function HomeAdvertisement() {
                 transition={{ duration: 4, repeat: Infinity }}
                 alt="rocket"
                 src="/assets/images/home/rocket.webp"
-                sx={{ maxWidth: { xs: 300, md: 400 } }}
+                sx={{ maxWidth: { xs: 300, md: 360 } }}
             />
         </Stack>
     );
@@ -107,9 +171,8 @@ export default function HomeAdvertisement() {
                     borderRadius: 2,
                     pt: 5,
                     pb: 3,
-                    p: { xs: 2, md: 5 },
                     mt: 7,
-                    mb: 4,
+                    mb: 7,
                 }}
             >
                 {renderImg}
@@ -119,74 +182,3 @@ export default function HomeAdvertisement() {
         </Container>
     );
 }
-
-const CustomForm = ({ status, message, onValidated }: any) => {
-    const [email, setEmail] = useState('');
-
-    const handleSubmit = () => {
-        email &&
-        email.indexOf('@') > -1 &&
-        onValidated({
-            EMAIL: email,
-        });
-    };
-
-    return (
-        <>
-            {status === 'error' && (
-                <Typography sx={{ color: 'error.main', mt: 2 }} dangerouslySetInnerHTML={{ __html: message }} />
-            )}
-            {status === 'success' && (
-                <Typography variant="h6" sx={{ color: 'common.white', mt: 2 }}>
-                    Thank you for subscribing! You will receive updates and rewards soon.
-                </Typography>
-            )}
-            {status !== 'success' && (
-                <Stack
-                    component={m.div}
-                    variants={varFade().inRight}
-                    direction={{ xs: 'column', md: 'row' }}
-                    justifyContent={{ xs: 'center', md: 'flex-start' }}
-                    flexWrap={{ xs: 'wrap', md: 'nowrap' }}
-                    spacing={2}
-                    alignItems="center"
-                >
-                    <Stack
-                        spacing={2} direction={'row'} flexWrap={'nowrap'} alignItems="center"
-                        justifyContent={{ xs: 'space-between', md: 'flex-start' }} width={'100%'}
-                    >
-                        <TextField
-                            variant="outlined"
-                            label="Write your email.."
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            InputLabelProps={{
-                                style: {
-                                    color: '#fff',
-                                },
-                            }}
-                            sx={{
-                                bgcolor: 'transparent',
-                                borderRadius: 1,
-                                flexGrow: { xs: 1, md: 0 }
-                            }}
-                        />
-                        <LoadingButton
-                            color="inherit"
-                            size="large"
-                            variant="contained"
-                            onClick={handleSubmit}
-                            sx={{
-                                color: 'grey.800',
-                                bgcolor: 'common.white',
-                            }}
-                            loading={status === 'sending'}
-                        >
-                            Subscribe
-                        </LoadingButton>
-                    </Stack>
-                </Stack>
-            )}
-        </>
-    );
-};

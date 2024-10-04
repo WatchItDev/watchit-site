@@ -64,7 +64,7 @@ export default function HomeView() {
           <HomeForDesigner />
           <StyledPolygon anchor="bottom" />
         </Box>
-
+        
         <HomeRoadmap />
         <HomeGovernance />
         <HomeProtocol />

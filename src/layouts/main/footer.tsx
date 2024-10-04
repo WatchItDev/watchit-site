@@ -20,7 +20,7 @@ const LINKS = [
     children: [
       { name: 'Open Collective', href: paths.openCollective },
       { name: 'Development', href: paths.github },
-      { name: 'Documentation', href: paths.paper },
+    //   { name: 'Documentation', href: paths.paper },
       { name: 'Support', href: paths.discord }
     ],
   },

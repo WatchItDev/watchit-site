@@ -250,10 +250,9 @@ export default function HomeWhat() {
                 textWrap: 'wrap',
               }}
             >
-              Our roadmap outlines our ambitious plans to enhance our ecosystem,
-              support filmmakers, incentivize community infrastructures, and
-              create an engaging experience for viewers. <b>Together, we're
-              shaping the future of cinema.</b>
+              Our roadmap lays out bold plans to strengthen our ecosystem, empower filmmakers, and foster community-driven infrastructures.
+              We are committed to delivering an immersive, engaging experience for fans. 
+              <b>Together, we're shaping the future of cinema.</b>
             </Typography>
           </m.div>
 
