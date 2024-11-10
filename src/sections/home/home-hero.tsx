@@ -53,14 +53,14 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   padding: 0,
   marginTop: 8,
   lineHeight: 1,
-  marginBottom: 24,
-  letterSpacing: 8,
+  marginBottom: 20,
+  letterSpacing: 6,
   textAlign: 'center',
   backgroundSize: '400%',
-  fontSize: `${64 / 16}rem`,
+  fontSize: `${64 / 13.5}rem`,
   fontFamily: "'Barlow', sans-serif",
   [theme.breakpoints.up('md')]: {
-    fontSize: `${96 / 16}rem`,
+    fontSize: `${96 / 14}rem`,
   },
 }));
 
@@ -185,7 +185,7 @@ export default function HomeHero() {
                   sx={{
                       textAlign: 'center',
                       lineHeight: 1.2,
-                      mb: 1
+                      mb: 0
                   }}
               >
                   Experience content<br/> like never before with
@@ -207,13 +207,13 @@ export default function HomeHero() {
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Typography variant="body1" sx={{ textAlign: 'center', mb:2, mt: 0, color: 'text.secondary' }}>
+              <Typography variant="body1" sx={{ textAlign: 'center', mb:2, mt: 0, color: 'text.secondary'}}>
               Discover stories, art, and <b>experiences</b> like never before, <b>connecting</b> you with creators in a <b>decentralized</b>, <b>space built just for you</b>.
               </Typography>
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Stack spacing={4} direction="row" sx={{mt: 1}}>
+              <Stack spacing={3.5} direction="row" sx={{mt: 1}}>
                   <Stack alignItems="center" spacing={2}>
                       <Button
                           component={RouterLink}
