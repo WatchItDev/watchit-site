@@ -213,7 +213,7 @@ export default function HomeHero() {
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Stack spacing={4} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 1}}>
+              <Stack spacing={4} direction="row" sx={{mt: 1}}>
                   <Stack alignItems="center" spacing={2}>
                       <Button
                           component={RouterLink}
@@ -223,7 +223,7 @@ export default function HomeHero() {
                           variant="contained"
                           startIcon={<IconRocket />}
                       >
-                          Launch App
+                          {mdUp ? 'Launch App' : 'Launch'}
                       </Button>
                   </Stack>
 
@@ -236,7 +236,7 @@ export default function HomeHero() {
                       rel="noopener"
                       href={paths.discord}
                   >
-                      Join us on Discord
+                      {mdUp ? 'Join us on Discord' : 'Join us'}
                   </Button>
               </Stack>
           </m.div>
