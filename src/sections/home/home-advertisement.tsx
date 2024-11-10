@@ -126,9 +126,9 @@ export default function HomeAdvertisement() {
                         textWrap: 'wrap',
                     }}
                 >
-                    Don’t miss out on the latest news, updates, and exclusive releases from Watchit. By subscribing with your email,
-                    you'll not only stay informed about everything happening in the world of independent cinema, but you'll also earn special rewards!
-                    Be part of our growing community and get rewarded for being an early supporter. Just enter your email below to get started!
+                    Stay updated with the latest news, exclusive releases, and content drops from Watchit. 
+                    Subscribe with your email to be the first to know and unlock special rewards along the way! Join our growing community and enjoy perks as an early supporter. 
+                    Just enter your email below to get started!
                 </Typography>
             </m.div>
 

@@ -69,7 +69,7 @@ const CARDS = [
   },
   {
     icon: '/assets/icons/home/ic_search.svg',
-    label: 'AI-Powered Movie Search',
+    label: 'AI-Powered Video Search',
     description: 'AI tags content for faster search.'
   },
   {
