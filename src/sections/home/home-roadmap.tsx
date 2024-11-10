@@ -51,7 +51,7 @@ export const QUARTERS = [
   },
   {
     label: '2024 Q3',
-    progress: 80,
+    progress: 95,
     color: 'info',
     value: [
       {
@@ -61,7 +61,7 @@ export const QUARTERS = [
         isDone: false
       },
       {
-        task: 'Protocol Core Development',
+        task: 'Integration with Synapse Protocol',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
@@ -80,19 +80,11 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'DAO & Foundation',
-        isDone: false
-      },
-      {
         task: 'Studio First Steps',
         isDone: false
       },
       {
-        task: 'Layer Zero First Steps',
-        isDone: false
-      },
-      {
-        task: 'Continue Protocol Development',
+        task: 'Continue Integrations with Synapse',
         isDone: false
       },
     ],
@@ -103,19 +95,11 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Audits & Compliance',
+        task: 'Studio Beta Release',
         isDone: false
       },
       {
-        task: 'Continue Integration with Layer Zero',
-        isDone: false
-      },
-      {
-        task: 'Continue Studio Development',
-        isDone: false
-      },
-      {
-        task: 'Protocol Documentation Release',
+        task: 'MMC Economics First Steps',
         isDone: false
       },
 
@@ -127,22 +111,13 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Finalize MVP Testnet',
-        isDone: false,
-        dependency: 'MVP Testnet'
-      },
-      {
-        task: 'Studio Beta Release',
+        task: 'MMC Economics',
         isDone: false
       },
       {
-        task: 'OS Toolkit First Steps',
+        task: 'Audits & Compliance',
         isDone: false
-      },
-      {
-        task: 'Node First Steps',
-        isDone: false
-      },
+      }
     ],
   },
   {
@@ -151,15 +126,15 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'CDN IAC First Steps',
+        task: 'Content Development',
         isDone: false
       },
       {
-        task: 'Continue Node Development',
+        task: 'DAO & Foundation',
         isDone: false
       },
       {
-        task: 'Continue OS Toolkit Development',
+        task: 'Governance Platform',
         isDone: false
       },
     ],
@@ -170,21 +145,13 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Analytics First Steps',
+        task: 'Analytics & Monitoring',
         isDone: false
       },
       {
-        task: 'Continue CDN IAC Development',
+        task: 'Distribution Market',
         isDone: false
-      },
-      {
-        task: 'Beta Node Release',
-        isDone: false
-      },
-      {
-        task: 'Beta OS Toolkit',
-        isDone: false
-      },
+      }
     ],
   },
   {
@@ -193,15 +160,11 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'CDN IAC First Release',
+        task: 'Integrations with Layer Zero',
         isDone: false
       },
       {
-        task: 'Distribution Network Development',
-        isDone: false
-      },
-      {
-        task: 'Continue Analytics Development',
+        task: 'Integrations with Lit',
         isDone: false
       },
       {
@@ -250,9 +213,8 @@ export default function HomeWhat() {
                 textWrap: 'wrap',
               }}
             >
-              Our roadmap lays out bold plans to strengthen our ecosystem, empower filmmakers, and foster community-driven infrastructures.
-              We are committed to delivering an immersive, engaging experience for fans. 
-              <b>Together, we're shaping the future of cinema.</b>
+              Our roadmap outlines ambitious plans to strengthen our ecosystem, support creators, and build a community-driven platform. We’re committed to delivering engaging screen experiences that captivate audiences. 
+              <b>Together, we’re shaping the future of digital entertainment.</b>
             </Typography>
           </m.div>
 

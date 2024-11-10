@@ -67,7 +67,7 @@ export default function HomeView() {
         
         <HomeRoadmap />
         <HomeGovernance />
-        <HomeProtocol />
+        {/* <HomeProtocol /> */}
 
         <HomeAdvertisement />
       </Box>

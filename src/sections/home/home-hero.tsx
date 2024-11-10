@@ -188,8 +188,7 @@ export default function HomeHero() {
                       mb: 1
                   }}
               >
-                  Experience the<br/>
-                  future of cinema with
+                  Experience content<br/> like never before with
               </Typography>
           </m.div>
 
@@ -208,13 +207,13 @@ export default function HomeHero() {
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Typography variant="body1" sx={{ textAlign: 'center', mb:3, mt: 0, color: 'text.secondary' }}>
-              Where AI meets blockchain to revolutionize entertainment—connecting movie lovers and creators in a personalized space.
+              <Typography variant="body1" sx={{ textAlign: 'center', mb:2, mt: 0, color: 'text.secondary' }}>
+              Discover stories, art, and <b>experiences</b> like never before, <b>connecting</b> you with creators in a <b>decentralized</b>, <b>space built just for you</b>.
               </Typography>
           </m.div>
 
           <m.div variants={varFade().in}>
-              <Stack spacing={1.5} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 1}}>
+              <Stack spacing={4} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 1}}>
                   <Stack alignItems="center" spacing={2}>
                       <Button
                           component={RouterLink}

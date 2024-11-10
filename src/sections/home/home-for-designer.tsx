@@ -52,11 +52,9 @@ export default function HomeForDesigner() {
                       textWrap: 'wrap'
                   }}
               >
-                  For movie fans and cinema lovers, Watchit brings you an exceptional experience
-                  through our user-friendly applications. Designed with you in mind, our apps
-                  enhance your digital cinema journey, providing seamless access to a diverse range
-                  of films across a decentralized network.
-              </Typography>
+                  For fans of captivating stories and immersive content, Watchit delivers an exceptional experience through our user-friendly apps. 
+                  Designed with you in mind, our platform elevates your digital journey, providing seamless access to a diverse world of visual experiences within a decentralized network.              
+                  </Typography>
           </m.div>
 
           <m.div variants={varFade().inUp}>
