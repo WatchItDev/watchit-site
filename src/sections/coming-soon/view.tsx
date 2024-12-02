@@ -15,7 +15,7 @@ import { ComingSoonIllustration } from 'src/assets/illustrations';
 // ----------------------------------------------------------------------
 
 export default function ComingSoonView() {
-  const { days, hours, minutes, seconds } = useCountdownDate(new Date('12/01/2024 21:30'));
+  const { days, hours, minutes, seconds } = useCountdownDate(new Date('12/15/2024 21:30'));
 
   return (
     <>
