@@ -15,7 +15,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // theme
 import { textGradient, bgGradient, bgBlur } from 'src/theme/css';
 // layouts
-import { HEADER } from 'src/layouts/config-layout';
+import {HEADER, SHOULD_SHOW_ANNOUNCEMENT_BAR} from 'src/layouts/config-layout';
 import { RouterLink } from 'src/routes/components';
 import { MotionContainer, varFade } from 'src/components/animate';
 import {IconBrandDiscordFilled, IconRocket} from "@tabler/icons-react";
@@ -367,7 +367,7 @@ export default function HomeHero() {
 
       {mdUp && renderPolygons}
 
-      <Box sx={{ height: { md: '100vh' } }} />
+      <Box sx={{ height: { md: SHOULD_SHOW_ANNOUNCEMENT_BAR ? 'calc(100vh - 5.9rem)' : '100vh' } }} />
     </>
   );
 }

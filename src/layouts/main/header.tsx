@@ -16,7 +16,7 @@ import { paths } from 'src/routes/paths';
 // components
 import Logo from 'src/components/logo';
 //
-import { HEADER } from '../config-layout';
+import {HEADER, SHOULD_SHOW_ANNOUNCEMENT_BAR} from '../config-layout';
 import { navConfig } from './config-navigation';
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
@@ -33,7 +33,7 @@ export default function Header() {
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   return (
-    <AppBar>
+    <AppBar position={SHOULD_SHOW_ANNOUNCEMENT_BAR ? 'sticky' : 'fixed'}>
       <Toolbar
         disableGutters
         sx={{
@@ -45,6 +45,7 @@ export default function Header() {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,
           }),
+            backgroundColor: '#20262e',
           ...(offsetTop && {
             ...bgBlur({
               color: theme.palette.background.default,
