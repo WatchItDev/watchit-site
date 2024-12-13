@@ -1,68 +1,117 @@
 // @mui
-import { alpha } from '@mui/material/styles';
+import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Stack from "@mui/material/Stack";
+import Card from "@mui/material/Card";
+
+// motion
+import { m } from 'framer-motion';
+
 // components
-import { MotionViewport } from 'src/components/animate';
 import Grid from "@mui/material/Unstable_Grid2";
-import ReactPlayer from 'react-player';
 import ListItemButton from "@mui/material/ListItemButton";
 import Image from "../../components/image";
+import { MotionViewport, varFade } from 'src/components/animate';
+import Carousel, { CarouselArrows, useCarousel } from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
-const CARDS = [
+const MAIN_CARDS = [
   {
     icon: ' /assets/icons/home/ic_social.svg',
     label: 'Social-Fi Interaction',
-    description: 'Enhanced community engagement.'
-  },
-  {
-    icon: ' /assets/icons/home/ic_cinema.svg',
-    label: 'Support Independent Cinema',
-    description: 'Direct engagement with creators.'
+    description: 'Build deeper connections between audiences, enabling them to share and collaborate around their favorite films.'
   },
   {
     icon: ' /assets/icons/home/ic_token.svg',
-    label: 'Innovative monetization models',
-    description: 'Diverse revenue strategies.'
+    label: 'Monetization Models',
+    description: 'Give creators full control over how they earn from their content and experiences, with adaptable revenue options.'
   },
   {
     icon: ' /assets/icons/home/ic_ad.svg',
     label: 'Effortless Promotion Tools',
-    description: 'Community-driven promotion.'
-  },
-  {
-    icon: ' /assets/icons/home/ic_lock.svg',
-    label: 'Secure Digital Ownership',
-    description: 'On-chain DRM and rights management.'
+    description: 'Allow the community to promote content organically, eliminating the need for costly traditional advertising.'
   },
   {
     icon: ' /assets/icons/home/ic_community.svg',
-    label: 'Collaborative Distribution Network',
-    description: 'Open marketplace for distributors.'
+    label: 'Distribution Marketplace',
+    description: 'Create an open space where creators and distributors can negotiate and collaborate easily, all in one place.'
   },
   {
-    icon: ' /assets/icons/home/ic_coins.svg',
-    label: 'Flexible Revenue Strategies',
-    description: 'Creators set their own terms.'
+    icon: ' /assets/icons/home/ic_cinema.svg',
+    label: 'Support Creators',
+    description: 'Connect creators with their audience to get valuable feedback and build a vibrant, creative ecosystem.'
   },
   {
-    icon: ' /assets/icons/home/ic_filmMaker.svg',
-    label: 'Creative Studio for Filmmakers',
-    description: 'Empowering creative projects.'
+    icon: ' /assets/icons/home/ic_lock.svg',
+    label: 'Rights Management',
+    description: 'Ensure fair and transparent IP management, with every transaction securely recorded on the blockchain."'
+  },
+];
+
+const CARDS = [
+  {
+    icon: '/assets/icons/home/ic_tools.svg',
+    label: 'AI Creative Studio',
+    description: 'AI tools for editing and VFX.'
   },
   {
-    icon: ' /assets/icons/home/ic_distribution.svg',
-    label: 'Film3 protocol',
-    description: 'Decentralized film distribution.'
-  }
+    icon: '/assets/icons/home/ic_subtitles.svg',
+    label: 'AI-Powered Subtitle and Translation',
+    description: 'Auto-generate subtitles and live translations.'
+  },
+  {
+    icon: '/assets/icons/home/ic_cinema.svg',
+    label: 'Audience Popularity Analysis',
+    description: 'Analyze feedback and predict trends.'
+  },
+  {
+    icon: '/assets/icons/home/ic_search.svg',
+    label: 'AI-Powered Video Search',
+    description: 'AI tags content for faster search.'
+  },
+  {
+    icon: '/assets/icons/home/ic_brain.svg',
+    label: 'AI-Powered Anomaly Detection',
+    description: 'Detects unusual activity and alerts in real-time.'
+  },
+  {
+    icon: '/assets/icons/home/ic_warning.svg',
+    label: 'AI-Powered Content Moderation',
+    description: 'Detect harmful content in uploads and comments.'
+  },
+  {
+    icon: '/assets/icons/home/ic_user.svg',
+    label: 'AI-Driven Recommendations',
+    description: 'Personalized film suggestions based on user habits.'
+  },
 ];
 
 // ----------------------------------------------------------------------
 
 export default function HomeBenefits() {
+  const theme = useTheme();
+
+  const carousel = useCarousel({
+    infinite: true,
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '10px',
+    responsive: [
+      {
+        breakpoint: 1279,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 959,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  });
 
   return (
     <Container
@@ -71,33 +120,59 @@ export default function HomeBenefits() {
         py: { xs: 6, md: 15 },
       }}
     >
+      <Stack
+        spacing={3}
+        sx={{
+          textAlign: 'center',
+          mb: { xs: 5, md: 5 },
+        }}
+      >
+        <m.div variants={varFade().inUp}>
+          <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
+            Cool Tools & Perks
+          </Typography>
+        </m.div>
+      </Stack>
+
+      <Box
+        sx={{
+          position: 'relative',
+          '& .slick-center .card-slide': {
+            boxShadow: `-40px 40px 80px transparent`,
+          }
+        }}
+      >
+        <CarouselArrows
+          // filled
+          shape="rounded"
+          onNext={carousel.onNext}
+          onPrev={carousel.onPrev}
+        >
+          <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
+            {MAIN_CARDS.map((card, index) => (
+              <Box key={card.label} component={m.div} variants={varFade().in}>
+                <Card
+                  className={'card-slide'}
+                  sx={{
+                    textAlign: 'center',
+                    textWrap: 'wrap',
+                    boxShadow: { md: 'none' },
+                    bgcolor: 'transparent',
+                    p: 5,
+                  }}
+                >
+                  <Box component="img" src={card.icon} alt={card.label} sx={{ mx: 'auto', width: 60, height: 60 }} />
+                  <Typography variant="h5" sx={{ mt: 1, mb: 1, height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {card.label}
+                  </Typography>
+                  <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
+                </Card>
+              </Box>
+            ))}
+          </Carousel>
+        </CarouselArrows>
+      </Box>
       <Grid container>
-        <Grid xs={12} md={12}>
-          <Box sx={{
-            p: 0, mb: 3,
-            'video': {
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: (theme) => ({
-                md: `-40px 40px 80px ${theme.palette.mode === 'light'
-                    ? alpha(theme.palette.grey[500], 0.16)
-                    : alpha(theme.palette.common.black, 0.4)
-                  }`
-              })
-            },
-          }}>
-            <ReactPlayer
-              url="assets/video/Watchit_intro.mp4"
-              width="100%"
-              height="100%"
-              controls
-              loop={true}
-              muted={true}
-              playing={true}
-              playsinline={true}
-            />
-          </Box>
-        </Grid>
         <Grid xs={12} md={12} sx={{ position: 'relative' }}>
           <Box sx={{ display: 'flex', alignItems: 'flex-start', flexWrap: 'wrap', justifyContent: 'space-between', p: 1, gap: 1 }}>
             {CARDS.map((card) => (
@@ -106,6 +181,7 @@ export default function HomeBenefits() {
           </Box>
         </Grid>
       </Grid>
+
     </Container>
   );
 }

@@ -10,7 +10,8 @@ import HomeExplore from '../home-explore';
 import HomeForDesigner from '../home-for-designer';
 import HomeAdvertisement from '../home-advertisement';
 import HomeRoadmap from "../home-roadmap";
-import HomeWhat from "../home-what";
+import HomeProtocol from "../home-protocol";
+import HomeGovernance from "../home-governance";
 
 // ----------------------------------------------------------------------
 
@@ -63,10 +64,10 @@ export default function HomeView() {
           <HomeForDesigner />
           <StyledPolygon anchor="bottom" />
         </Box>
-
-        <HomeWhat />
-
+        
         <HomeRoadmap />
+        <HomeGovernance />
+        {/* <HomeProtocol /> */}
 
         <HomeAdvertisement />
       </Box>

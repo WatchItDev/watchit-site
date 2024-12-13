@@ -15,7 +15,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // theme
 import { textGradient, bgGradient, bgBlur } from 'src/theme/css';
 // layouts
-import { HEADER } from 'src/layouts/config-layout';
+import {HEADER, SHOULD_SHOW_ANNOUNCEMENT_BAR} from 'src/layouts/config-layout';
 import { RouterLink } from 'src/routes/components';
 import { MotionContainer, varFade } from 'src/components/animate';
 import {IconBrandDiscordFilled, IconRocket} from "@tabler/icons-react";
@@ -53,14 +53,14 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   padding: 0,
   marginTop: 8,
   lineHeight: 1,
-  marginBottom: 24,
-  letterSpacing: 8,
+  marginBottom: 20,
+  letterSpacing: 6,
   textAlign: 'center',
   backgroundSize: '400%',
-  fontSize: `${64 / 16}rem`,
+  fontSize: `${64 / 13.5}rem`,
   fontFamily: "'Barlow', sans-serif",
   [theme.breakpoints.up('md')]: {
-    fontSize: `${96 / 16}rem`,
+    fontSize: `${96 / 14}rem`,
   },
 }));
 
@@ -185,11 +185,10 @@ export default function HomeHero() {
                   sx={{
                       textAlign: 'center',
                       lineHeight: 1.2,
-                      mb: 2
+                      mb: 0
                   }}
               >
-                  Experience the<br/>
-                  future of cinema with
+                  Experience content<br/> like never before with
               </Typography>
           </m.div>
 
@@ -203,19 +202,18 @@ export default function HomeHero() {
                       repeat: Infinity,
                   }}
               >
-                  #Film3
+                  Web3xAI
               </StyledTextGradient>
           </m.div>
 
-          {/*<m.div variants={varFade().in}>*/}
-          {/*    <Typography variant="body2" sx={{textAlign: 'center', mb:3}}>*/}
-          {/*        A new era of cinema is here. Access unique films and enjoy a secure and transparent experience with*/}
-          {/*        blockchain technology.*/}
-          {/*    </Typography>*/}
-          {/*</m.div>*/}
+          <m.div variants={varFade().in}>
+              <Typography variant="body1" sx={{ textAlign: 'center', mb:2, mt: 0, color: 'text.secondary'}}>
+              Discover stories, art, and <b>experiences</b> like never before, <b>connecting</b> you with creators in a <b>decentralized</b>, <b>space built just for you</b>.
+              </Typography>
+          </m.div>
 
           <m.div variants={varFade().in}>
-              <Stack spacing={1.5} direction={{xs: 'column-reverse', sm: 'row'}} sx={{mt: 3}}>
+              <Stack spacing={3.5} direction="row" sx={{mt: 1}}>
                   <Stack alignItems="center" spacing={2}>
                       <Button
                           component={RouterLink}
@@ -225,7 +223,7 @@ export default function HomeHero() {
                           variant="contained"
                           startIcon={<IconRocket />}
                       >
-                          Launch App
+                          {mdUp ? 'Launch App' : 'Launch'}
                       </Button>
                   </Stack>
 
@@ -238,7 +236,7 @@ export default function HomeHero() {
                       rel="noopener"
                       href={paths.discord}
                   >
-                      Join us on Discord
+                      {mdUp ? 'Join us on Discord' : 'Join us'}
                   </Button>
               </Stack>
           </m.div>
@@ -369,7 +367,7 @@ export default function HomeHero() {
 
       {mdUp && renderPolygons}
 
-      <Box sx={{ height: { md: '100vh' } }} />
+      <Box sx={{ height: { md: SHOULD_SHOW_ANNOUNCEMENT_BAR ? 'calc(100vh - 5.9rem)' : '100vh' } }} />
     </>
   );
 }

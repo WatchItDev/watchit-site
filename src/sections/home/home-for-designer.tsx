@@ -17,8 +17,6 @@ import Stack from "@mui/material/Stack";
 export default function HomeForDesigner() {
   const theme = useTheme();
 
-  const upMd = useResponsive('up', 'md');
-
   const renderDescription = (
       <Box sx={{textAlign: 'center', mt: {xs: 10, md: 12}}}>
           <m.div variants={varFade().inUp}>
@@ -31,8 +29,8 @@ export default function HomeForDesigner() {
               <Typography
                   variant="h2"
                   sx={{
-                      mt: 3,
-                      mb: 1,
+                      mt: 1,
+                      mb: 2,
                       ...textGradient(
                           `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 100%`
                       ),
@@ -46,19 +44,17 @@ export default function HomeForDesigner() {
           <m.div variants={varFade().inLeft}>
               <Typography
                   sx={{
-                      maxWidth: { xs: '100%', md: '80%' },
+                      maxWidth: { xs: '94%', md: '80%' },
                       color: 'text.primary',
                       mb: 4,
                       mx: { xs: 'auto', md: 0 },
-                      textAlign: { xs: 'center', md: 'left' },
-                      textWrap: 'balance'
+                      textAlign: { xs: 'justify', md: 'left' },
+                      textWrap: 'wrap'
                   }}
               >
-                  For movie fans and cinema lovers, Watchit brings you an exceptional experience
-                  through our user-friendly applications. Designed with you in mind, our apps
-                  enhance your digital cinema journey, providing seamless access to a diverse range
-                  of films across a decentralized network.
-              </Typography>
+                  For fans of captivating stories and immersive content, Watchit delivers an exceptional experience through our user-friendly apps. 
+                  Designed with you in mind, our platform elevates your digital journey, providing seamless access to a diverse world of visual experiences within a decentralized network.              
+                  </Typography>
           </m.div>
 
           <m.div variants={varFade().inUp}>

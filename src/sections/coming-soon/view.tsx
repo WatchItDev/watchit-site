@@ -1,13 +1,8 @@
 // @mui
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 // import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
-import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 // hooks
 import { useCountdownDate } from 'src/hooks/use-countdown';
 // _mock
@@ -20,7 +15,7 @@ import { ComingSoonIllustration } from 'src/assets/illustrations';
 // ----------------------------------------------------------------------
 
 export default function ComingSoonView() {
-  const { days, hours, minutes, seconds } = useCountdownDate(new Date('10/01/2024 21:30'));
+  const { days, hours, minutes, seconds } = useCountdownDate(new Date('12/15/2024 21:30'));
 
   return (
     <>

@@ -51,17 +51,21 @@ export const QUARTERS = [
   },
   {
     label: '2024 Q3',
-    progress: 50,
+    progress: 95,
     color: 'info',
     value: [
       {
-        task: 'MVP First Steps',
+        task: 'MVP Testnet',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
       },
       {
+<<<<<<< HEAD
         task: 'Protocol First Steps',
+=======
+        task: 'Integration with Synapse Protocol',
+>>>>>>> landing_remake
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
@@ -80,17 +84,13 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Continue MVP Development',
+        task: 'Studio First Steps',
         isDone: false
       },
       {
-        task: 'Watchit DAO & Foundation',
+        task: 'Continue Integrations with Synapse',
         isDone: false
       },
-      {
-        task: 'Integration with Farcaster Protocol',
-        isDone: false
-      }
     ],
   },
   {
@@ -99,17 +99,14 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'OS Distributor Toolkit First Steps',
+        task: 'Studio Beta Release',
         isDone: false
       },
       {
-        task: 'Streaming Node First Steps',
+        task: 'MMC Economics First Steps',
         isDone: false
       },
-      {
-        task: 'MVP Open Beta Testnet',
-        isDone: false
-      },
+
     ],
   },
   {
@@ -118,21 +115,13 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'CDN IAC First Steps',
-        isDone: false
-      },
-      {
-        task: 'Continue OS Distributor Toolkit Dev',
+        task: 'MMC Economics',
         isDone: false
       },
       {
         task: 'Audits & Compliance',
         isDone: false
-      },
-      {
-        task: 'Beta Streaming Node',
-        isDone: false
-      },
+      }
     ],
   },
   {
@@ -141,23 +130,15 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Studio First Steps',
+        task: 'Content Development',
         isDone: false
       },
       {
-        task: 'Continue CDN IAC Development',
+        task: 'DAO & Foundation',
         isDone: false
       },
       {
-        task: 'Alpha OS Distributor Toolkit',
-        isDone: false
-      },
-      {
-        task: 'MVP Mainnet Deploy',
-        isDone: false
-      },
-      {
-        task: 'Protocol Documentation Release',
+        task: 'Governance Platform',
         isDone: false
       },
     ],
@@ -168,21 +149,13 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Analytics First Steps',
+        task: 'Analytics & Monitoring',
         isDone: false
       },
       {
-        task: 'Continue Studio Development',
+        task: 'Distribution Market',
         isDone: false
-      },
-      {
-        task: 'CDN IAC First Release',
-        isDone: false
-      },
-      {
-        task: 'Content Development',
-        isDone: false
-      },
+      }
     ],
   },
   {
@@ -191,19 +164,11 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Smart TV App First Steps',
+        task: 'Integrations with Layer Zero',
         isDone: false
       },
       {
-        task: 'Mobile App First Steps',
-        isDone: false
-      },
-      {
-        task: 'Continue Analytics Development',
-        isDone: false
-      },
-      {
-        task: 'Beta Studio',
+        task: 'Integrations with Lit',
         isDone: false
       },
       {
@@ -231,30 +196,33 @@ export default function HomeWhat() {
       <Grid container columnSpacing={{ md: 3 }}>
         <Grid xs={12}>
           <m.div variants={varFade().inDown}>
-            <Typography variant="overline" sx={{color: 'text.disabled'}}>
+            <Typography variant="overline" sx={{ color: 'text.disabled' }}>
               Roadmap
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inRight}>
-            <Typography variant="h2" sx={{mb: 3}}>
+            <Typography variant="h2" sx={{ mb: 2, mt: 1 }}>
               Our Plan
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inRight} style={{ display: 'flex', justifyContent: 'center' }}>
             <Typography
-                sx={{
-                  mx: 'auto',
-                  maxWidth: 640,
-                  color: 'text.secondary',
-                  textWrap: 'balance'
-                }}
+              sx={{
+                mx: 'auto',
+                maxWidth: '94%',
+                color: 'text.secondary',
+                textAlign: 'justify',
+                textWrapStyle: 'auto',
+                textWrap: 'wrap',
+                whiteSpace: 'normal',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word'
+              }}
             >
-              Our roadmap outlines our ambitious plans to enhance our ecosystem,
-              support filmmakers, incentivize community infrastructures, and
-              create an engaging experience for viewers. Together, we're
-              shaping the future of cinema.
+              Our roadmap outlines ambitious plans to strengthen our ecosystem, support creators, and build a community-driven platform.
+              We’re committed to delivering engaging screen experiences that captivate audiences. <b>Together, we’re shaping the future of digital entertainment.</b>
             </Typography>
           </m.div>
 
@@ -267,47 +235,47 @@ export default function HomeWhat() {
             justifyContent: 'space-between'
           }}>
             {QUARTERS.map((quarter, index) => (
-                <Box component={m.div} key={quarter.label} variants={varFade().inRight} sx={{width: { xs: '100%', md: '30%' }, mb: 3}}>
-                  <Stack direction="row" alignItems="center" sx={{mb: 1}}>
-                    <Typography variant="subtitle2" sx={{flexGrow: 1, textAlign: 'left'}}>
-                      {quarter.label}
-                    </Typography>
+              <Box component={m.div} key={quarter.label} variants={varFade().inRight} sx={{ width: { xs: '100%', md: '30%' }, mb: 3 }}>
+                <Stack direction="row" alignItems="center" sx={{ mb: 1 }}>
+                  <Typography variant="subtitle2" sx={{ flexGrow: 1, textAlign: 'left' }}>
+                    {quarter.label}
+                  </Typography>
 
-                    <Typography variant="body2" sx={{color: 'text.secondary'}}>
-                      {fPercent(quarter.progress)}
-                    </Typography>
-                  </Stack>
-                  <LinearProgress
-                      color={quarter.color as any}
-                      variant="determinate"
-                      value={quarter.progress}
-                  />
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {fPercent(quarter.progress)}
+                  </Typography>
+                </Stack>
+                <LinearProgress
+                  color={quarter.color as any}
+                  variant="determinate"
+                  value={quarter.progress}
+                />
 
-                  <Stack spacing={1} sx={{mt: 2}}>
-                    {quarter.value.map((item: any, idx) => (
-                        <Stack direction="row" alignItems="center" key={idx}>
-                          <Typography
-                              variant="body2"
-                              sx={{
-                                flexGrow: 1,
-                                textDecoration: item.isDone ? 'line-through' : 'none',
-                                textAlign: 'left'
-                              }}
-                          >
-                            {item.task}
-                          </Typography>
-                          <Typography variant="body2" sx={{color: item?.statusColor ? item.statusColor : item.isDone ? 'success.main' : 'error.main'}}>
-                            {item?.status ? item.status : item.isDone ? 'Done' : 'Pending'}
-                          </Typography>
-                        </Stack>
-                    ))}
-                  </Stack>
-                </Box>
+                <Stack spacing={1} sx={{ mt: 2 }}>
+                  {quarter.value.map((item: any, idx) => (
+                    <Stack direction="row" alignItems="center" key={idx}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          flexGrow: 1,
+                          textDecoration: item.isDone ? 'line-through' : 'none',
+                          textAlign: 'left'
+                        }}
+                      >
+                        {item.task}
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: item?.statusColor ? item.statusColor : item.isDone ? 'success.main' : 'error.main' }}>
+                        {item?.status ? item.status : item.isDone ? 'Done' : 'Pending'}
+                      </Typography>
+                    </Stack>
+                  ))}
+                </Stack>
+              </Box>
             ))}
           </Stack>
         </Grid>
       </Grid>
     </Container>
-      // </Box>
+    // </Box>
   );
 }
