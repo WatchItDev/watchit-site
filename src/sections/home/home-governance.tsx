@@ -67,15 +67,19 @@ export default function HomeGovernance() {
                         <Typography
                             sx={{
                                 display: { xs: 'block', md: 'none' },
-                                maxWidth: { xs: '95%', md: '80%' },
+                                maxWidth: { xs: '94%', md: '80%' },
                                 color: 'text.primary',
                                 mb: 4,
                                 mx: { xs: 'auto', md: 0 },
                                 textAlign: { xs: 'justify', md: 'left' },
-                                textWrap: 'wrap'
+                                // textWrapStyle: "pretty",
+                                textWrap: 'wrap',
+                                whiteSpace: 'normal',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'break-all',
                             }}
                         >
-                            Multimedia Coin (MMC) powers our media distribution protocol, providing users with governance rights and enabling a wide range of utilities within a decentralized ecosystem.
+                            MMC powers our media distribution protocol, providing users with governance rights and enabling a wide range of utilities within a decentralized ecosystem.
                         </Typography>
                     </m.div>
                 </Stack>
@@ -111,7 +115,16 @@ export default function HomeGovernance() {
                         </m.div>
 
                         <m.div variants={varFade().inRight}>
-                            <Typography sx={{ color: 'text.secondary', mx: { xs: 'auto', md: 0 }, maxWidth: { xs: '95%' }, textAlign: { xs: 'justify', textWrap: 'wrap' } }}>
+                            <Typography sx={{
+                                color: 'text.secondary',
+                                mx: { xs: 'auto', md: 0 }, 
+                                maxWidth: { xs: '94%' }, 
+                                textAlign: { xs: 'justify', textWrap: 'wrap' },  
+                                textWrap: 'wrap',
+                                whiteSpace: 'normal',
+                                wordBreak: 'break-word',
+                                overflowWrap: 'break-word',
+                            }}>
                                 Our economic model ensures a sustainable balance within the ecosystem,
                                 allowing value to flow seamlessly between creators, distributors, and the community.
                             </Typography>

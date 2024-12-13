@@ -27,22 +27,22 @@ const MAIN_CARDS = [
   {
     icon: ' /assets/icons/home/ic_token.svg',
     label: 'Monetization Models',
-    description: 'Give creators flexible revenue options and full control over how they monetize their content.'
+    description: 'Give creators full control over how they earn from their content and experiences, with adaptable revenue options.'
   },
   {
     icon: ' /assets/icons/home/ic_ad.svg',
     label: 'Effortless Promotion Tools',
-    description: 'Let audiences organically promote content with simple, community-driven tools, eliminating the need for costly traditional advertising.'
+    description: 'Allow the community to promote content organically, eliminating the need for costly traditional advertising.'
   },
   {
     icon: ' /assets/icons/home/ic_community.svg',
     label: 'Distribution Marketplace',
-    description: 'Infrastructure providers offer services in an open marketplace, allowing filmmakers and distributors to easily negotiate and collaborate.'
+    description: 'Create an open space where creators and distributors can negotiate and collaborate easily, all in one place.'
   },
   {
     icon: ' /assets/icons/home/ic_cinema.svg',
-    label: 'Support Indie Cinema',
-    description: 'Connect independent filmmakers with their audience for valuable feedback and support, fostering a vibrant creative ecosystem.'
+    label: 'Support Creators',
+    description: 'Connect creators with their audience to get valuable feedback and build a vibrant, creative ecosystem.'
   },
   {
     icon: ' /assets/icons/home/ic_lock.svg',
@@ -55,7 +55,7 @@ const CARDS = [
   {
     icon: '/assets/icons/home/ic_tools.svg',
     label: 'AI Creative Studio',
-    description: 'AI tools for editing, scriptwriting, and VFX.'
+    description: 'AI tools for editing and VFX.'
   },
   {
     icon: '/assets/icons/home/ic_subtitles.svg',

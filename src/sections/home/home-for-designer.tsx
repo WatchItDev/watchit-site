@@ -44,7 +44,7 @@ export default function HomeForDesigner() {
           <m.div variants={varFade().inLeft}>
               <Typography
                   sx={{
-                      maxWidth: { xs: '95%', md: '80%' },
+                      maxWidth: { xs: '94%', md: '80%' },
                       color: 'text.primary',
                       mb: 4,
                       mx: { xs: 'auto', md: 0 },

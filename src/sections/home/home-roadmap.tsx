@@ -207,14 +207,18 @@ export default function HomeWhat() {
             <Typography
               sx={{
                 mx: 'auto',
-                maxWidth: '95%',
+                maxWidth: '94%',
                 color: 'text.secondary',
                 textAlign: 'justify',
+                textWrapStyle: 'auto',
                 textWrap: 'wrap',
+                whiteSpace: 'normal',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word'
               }}
             >
-              Our roadmap outlines ambitious plans to strengthen our ecosystem, support creators, and build a community-driven platform. We’re committed to delivering engaging screen experiences that captivate audiences. 
-              <b>Together, we’re shaping the future of digital entertainment.</b>
+              Our roadmap outlines ambitious plans to strengthen our ecosystem, support creators, and build a community-driven platform.
+              We’re committed to delivering engaging screen experiences that captivate audiences. <b>Together, we’re shaping the future of digital entertainment.</b>
             </Typography>
           </m.div>
 
