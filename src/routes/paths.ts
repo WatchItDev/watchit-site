@@ -28,7 +28,7 @@ export const paths = {
   mailchimp: 'https://movie.us13.list-manage.com/subscribe/post?u=095b0fb0ed98ad646c10cdeb9&amp;id=439954add4&amp;f_id=004295e2f0',
   webapp: 'https://app.watchit.movie',
   telegram: 'https://t.me/watchitofficial',
-  reddit: 'https://www.reddit.com/r/watchitprotocol/',
+  reddit: 'https://www.reddit.com/user/Watchit_V/',
   matrix: 'https://matrix.to/#/#watchit:matrix.org',
   fosstodon: 'https://fosstodon.org/@watchit',
   fediverse: 'https://fediverse.tv/c/watchit/videos',
