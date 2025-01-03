@@ -147,11 +147,11 @@ export const QUARTERS = [
         isDone: false
       },
       {
-        task: 'Distribution Market',
+        task: 'Distribution Dashboard',
         isDone: false
       },
       {
-        task: 'Rights Market',
+        task: 'Rights Marketplace',
         isDone: false
       }
     ],

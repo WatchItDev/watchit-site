@@ -74,8 +74,8 @@ const CARDS = [
   },
   {
     icon: '/assets/icons/home/ic_brain.svg',
-    label: 'AI-Powered Anomaly Detection',
-    description: 'Detects unusual activity and alerts in real-time.'
+    label: "AI-Agents Content Onboarding Support",
+    description: "Streamlines content onboarding with AI-driven assistance."
   },
   {
     icon: '/assets/icons/home/ic_warning.svg',
