@@ -51,41 +51,35 @@ export const QUARTERS = [
   },
   {
     label: '2024 Q3',
-    progress: 95,
-    color: 'info',
+    progress: 100,
+    color: 'success',
     value: [
       {
         task: 'MVP Testnet',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
       {
         task: 'Integration with Synapse Protocol',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
       {
         task: 'Integration with Lens Protocol',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       }
     ],
   },
   {
     label: '2024 Q4',
-    progress: 0,
-    color: 'warning',
+    progress: 100,
+    color: 'success',
     value: [
       {
-        task: 'Studio First Steps',
-        isDone: false
+        task: 'Account Abstraction Integration',
+        isDone: true
       },
       {
         task: 'Continue Integrations with Synapse',
-        isDone: false
+        isDone: true
       },
     ],
   },
@@ -95,14 +89,17 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Studio Beta Release',
+        task: 'Financial Dashboard',
+        status: 'On It',
+        statusColor: 'info.main',
         isDone: false
       },
       {
-        task: 'MMC Economics First Steps',
+        task: 'Governance Platform',
+        status: 'On It',
+        statusColor: 'info.main',
         isDone: false
       },
-
     ],
   },
   {
@@ -110,6 +107,10 @@ export const QUARTERS = [
     progress: 0,
     color: 'warning',
     value: [
+      {
+        task: 'Studio First Steps',
+        isDone: false
+      },
       {
         task: 'MMC Economics',
         isDone: false
@@ -133,10 +134,7 @@ export const QUARTERS = [
         task: 'DAO & Foundation',
         isDone: false
       },
-      {
-        task: 'Governance Platform',
-        isDone: false
-      },
+
     ],
   },
   {
