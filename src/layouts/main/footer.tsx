@@ -27,11 +27,10 @@ const LINKS = [
     {
         headline: 'Socials',
         children: [
+            { name: 'X', href: paths.twitter },
             { name: 'Telegram', href: paths.telegram },
             { name: 'Reddit', href: paths.reddit },
-            { name: 'Matrix', href: paths.matrix },
-            { name: 'Fosstodon', href: paths.fosstodon },
-            { name: 'Fediverse', href: paths.fediverse },
+            { name: 'Matrix', href: paths.matrix }
         ],
     },
     {

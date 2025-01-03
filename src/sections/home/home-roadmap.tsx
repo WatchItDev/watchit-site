@@ -51,45 +51,35 @@ export const QUARTERS = [
   },
   {
     label: '2024 Q3',
-    progress: 95,
-    color: 'info',
+    progress: 100,
+    color: 'success',
     value: [
       {
         task: 'MVP Testnet',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
       {
-<<<<<<< HEAD
-        task: 'Protocol First Steps',
-=======
         task: 'Integration with Synapse Protocol',
->>>>>>> landing_remake
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
       {
         task: 'Integration with Lens Protocol',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       }
     ],
   },
   {
     label: '2024 Q4',
-    progress: 0,
-    color: 'warning',
+    progress: 100,
+    color: 'success',
     value: [
       {
-        task: 'Studio First Steps',
-        isDone: false
+        task: 'Account Abstraction Integration',
+        isDone: true
       },
       {
         task: 'Continue Integrations with Synapse',
-        isDone: false
+        isDone: true
       },
     ],
   },
@@ -99,14 +89,17 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Studio Beta Release',
+        task: 'Financial Dashboard',
+        status: 'On It',
+        statusColor: 'info.main',
         isDone: false
       },
       {
-        task: 'MMC Economics First Steps',
+        task: 'Governance Platform',
+        status: 'On It',
+        statusColor: 'info.main',
         isDone: false
       },
-
     ],
   },
   {
@@ -114,6 +107,10 @@ export const QUARTERS = [
     progress: 0,
     color: 'warning',
     value: [
+      {
+        task: 'Studio First Steps',
+        isDone: false
+      },
       {
         task: 'MMC Economics',
         isDone: false
@@ -137,10 +134,7 @@ export const QUARTERS = [
         task: 'DAO & Foundation',
         isDone: false
       },
-      {
-        task: 'Governance Platform',
-        isDone: false
-      },
+
     ],
   },
   {
@@ -154,6 +148,10 @@ export const QUARTERS = [
       },
       {
         task: 'Distribution Market',
+        isDone: false
+      },
+      {
+        task: 'Rights Market',
         isDone: false
       }
     ],
@@ -211,18 +209,16 @@ export default function HomeWhat() {
             <Typography
               sx={{
                 mx: 'auto',
-                maxWidth: '94%',
+                maxWidth: '95%',
                 color: 'text.secondary',
                 textAlign: 'justify',
-                textWrapStyle: 'auto',
                 textWrap: 'wrap',
-                whiteSpace: 'normal',
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word'
               }}
             >
-              Our roadmap outlines ambitious plans to strengthen our ecosystem, support creators, and build a community-driven platform.
-              We’re committed to delivering engaging screen experiences that captivate audiences. <b>Together, we’re shaping the future of digital entertainment.</b>
+              Our roadmap outlines our ambitious plans to enhance our ecosystem,
+              support filmmakers, incentivize community infrastructures, and
+              create an engaging experience for viewers. <b>Together, we're
+              shaping the future of cinema.</b>
             </Typography>
           </m.div>
 
