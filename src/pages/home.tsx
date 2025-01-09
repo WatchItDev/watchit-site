@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Watchit: The Future of Video Content Powered by Web3 and AI</title>
+        <title>Watchit: A New Era of Video Content Powered by Web3 and AI</title>
       </Helmet>
 
       <HomeView />
