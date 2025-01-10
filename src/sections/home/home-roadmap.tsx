@@ -85,14 +85,12 @@ export const QUARTERS = [
   },
   {
     label: '2025 Q1',
-    progress: 0,
+    progress: 50,
     color: 'warning',
     value: [
       {
         task: 'Financial Dashboard',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
       {
         task: 'Governance Platform',
