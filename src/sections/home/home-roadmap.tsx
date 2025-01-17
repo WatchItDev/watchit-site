@@ -85,7 +85,7 @@ export const QUARTERS = [
   },
   {
     label: '2025 Q1',
-    progress: 50,
+    progress: 40,
     color: 'warning',
     value: [
       {
@@ -93,7 +93,13 @@ export const QUARTERS = [
         isDone: true
       },
       {
-        task: 'Governance Platform',
+        task: 'Governance Portal',
+        status: 'On It',
+        statusColor: 'info.main',
+        isDone: false
+      },
+      {
+        task: 'Marketing Tools First Steps',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
@@ -132,7 +138,10 @@ export const QUARTERS = [
         task: 'DAO & Foundation',
         isDone: false
       },
-
+      {
+        task: 'Ownership Management',
+        isDone: false
+      }
     ],
   },
   {
@@ -161,10 +170,6 @@ export const QUARTERS = [
     value: [
       {
         task: 'Integrations with Layer Zero',
-        isDone: false
-      },
-      {
-        task: 'Integrations with Lit',
         isDone: false
       },
       {
