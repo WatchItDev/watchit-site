@@ -93,7 +93,7 @@ export const QUARTERS = [
         isDone: true
       },
       {
-        task: 'Governance Portal',
+        task: 'IP Administration First Steps',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
@@ -116,11 +116,11 @@ export const QUARTERS = [
         isDone: false
       },
       {
-        task: 'MMC Economics',
+        task: 'Governance Portal',
         isDone: false
       },
       {
-        task: 'Audits & Compliance',
+        task: 'MMC Economics',
         isDone: false
       }
     ],
@@ -132,6 +132,10 @@ export const QUARTERS = [
     value: [
       {
         task: 'Content Development',
+        isDone: false
+      },
+      {
+        task: 'Audits & Compliance',
         isDone: false
       },
       {
