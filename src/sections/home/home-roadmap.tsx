@@ -112,15 +112,15 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
+        task: 'Community growth',
+        isDone: false
+      },
+      {
         task: 'Studio First Steps',
         isDone: false
       },
       {
         task: 'Governance Portal',
-        isDone: false
-      },
-      {
-        task: 'MMC Economics',
         isDone: false
       }
     ],
@@ -132,6 +132,10 @@ export const QUARTERS = [
     value: [
       {
         task: 'Content Development',
+        isDone: false
+      },
+      {
+        task: 'MMC Economics',
         isDone: false
       },
       {
