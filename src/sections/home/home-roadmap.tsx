@@ -142,10 +142,6 @@ export const QUARTERS = [
         task: 'DAO & Foundation',
         isDone: false
       },
-      {
-        task: 'Ownership Management',
-        isDone: false
-      }
     ],
   },
   {
