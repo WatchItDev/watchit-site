@@ -112,7 +112,7 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Community growth',
+        task: 'Community Growth',
         isDone: false
       },
       {
