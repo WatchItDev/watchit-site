@@ -112,6 +112,10 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
+        task: 'WIT AI Agent',
+        isDone: false
+      },
+      {
         task: 'Community Growth',
         isDone: false
       },
