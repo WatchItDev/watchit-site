@@ -35,7 +35,7 @@ const LINKS = [
     },
     {
         headline: 'Contact',
-        children: [{ name: 'info@watchit.movie', href: '#' }],
+        children: [{ name: 'contact@watchit.movie', href: '#' }],
     },
 ];
 

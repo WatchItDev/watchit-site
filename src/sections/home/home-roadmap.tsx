@@ -100,9 +100,8 @@ export const QUARTERS = [
       },
       {
         task: 'Marketing Tools First Steps',
-        status: 'On It',
         statusColor: 'info.main',
-        isDone: false
+        isDone: true
       },
     ],
   },
