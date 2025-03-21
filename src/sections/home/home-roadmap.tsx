@@ -93,16 +93,17 @@ export const QUARTERS = [
         isDone: true
       },
       {
+        task: 'Marketing Tools First Steps',
+        statusColor: 'info.main',
+        isDone: true
+      },
+      {
         task: 'IP Administration First Steps',
         status: 'On It',
         statusColor: 'info.main',
         isDone: false
       },
-      {
-        task: 'Marketing Tools First Steps',
-        statusColor: 'info.main',
-        isDone: true
-      },
+      
     ],
   },
   {
