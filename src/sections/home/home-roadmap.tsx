@@ -85,7 +85,7 @@ export const QUARTERS = [
   },
   {
     label: '2025 Q1',
-    progress: 40,
+    progress: 80,
     color: 'warning',
     value: [
       {
@@ -94,7 +94,6 @@ export const QUARTERS = [
       },
       {
         task: 'Marketing Tools First Steps',
-        statusColor: 'info.main',
         isDone: true
       },
       {
