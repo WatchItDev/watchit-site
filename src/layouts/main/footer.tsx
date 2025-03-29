@@ -30,7 +30,7 @@ const LINKS = [
             { name: 'X', href: paths.twitter },
             { name: 'Telegram', href: paths.telegram },
             { name: 'Reddit', href: paths.reddit },
-            { name: 'Matrix', href: paths.matrix }
+            { name: 'Medium', href: paths.medium }
         ],
     },
     {
@@ -123,7 +123,7 @@ export default function Footer() {
                 </Grid>
 
                 <Typography variant="body2" sx={{ mt: { xs: 5, md: 10 }, textAlign: 'center' }}>
-                    © 2024. All rights reserved
+                    © 2025. All rights reserved
                 </Typography>
             </Container>
         </Box>

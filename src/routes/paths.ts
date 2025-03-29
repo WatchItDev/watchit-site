@@ -30,6 +30,7 @@ export const paths = {
   twitter: 'https://x.com/watchit_app',
   telegram: 'https://t.me/watchitofficial',
   reddit: 'https://www.reddit.com/user/Watchit_V/',
+  medium: 'https://medium.com/@watchit.app',
   matrix: 'https://matrix.to/#/#watchit:matrix.org',
   fosstodon: 'https://fosstodon.org/@watchit',
   fediverse: 'https://fediverse.tv/c/watchit/videos',
