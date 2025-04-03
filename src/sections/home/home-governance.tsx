@@ -16,7 +16,6 @@ import { paths } from 'src/routes/paths';
 const tokenUtilities = [
     "Unlock Content",
     "Access Content",
-    "Staking",
     "Support Creators",
     "Collect Rewards",
     "Exclusive Access",
