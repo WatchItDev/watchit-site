@@ -85,7 +85,7 @@ export const QUARTERS = [
   },
   {
     label: '2025 Q1',
-    progress: 80,
+    progress: 100,
     color: 'warning',
     value: [
       {
@@ -95,13 +95,7 @@ export const QUARTERS = [
       {
         task: 'Marketing Tools First Steps',
         isDone: true
-      },
-      {
-        task: 'IP Administration First Steps',
-        status: 'On It',
-        statusColor: 'info.main',
-        isDone: false
-      },
+      }
       
     ],
   },
@@ -111,19 +105,17 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
+        task: 'Achievements & Leaderboard',
+        status: 'On It',
+        statusColor: 'info.main',
+        isDone: false
+      },
+      {
         task: 'WIT AI Agent',
         isDone: false
       },
       {
         task: 'Community Growth',
-        isDone: false
-      },
-      {
-        task: 'Studio First Steps',
-        isDone: false
-      },
-      {
-        task: 'Governance Portal',
         isDone: false
       }
     ],
@@ -134,21 +126,17 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Content Development',
+        task: 'Governance Portal',
         isDone: false
       },
       {
-        task: 'MMC Economics',
+        task: 'IP Administration First Steps',
         isDone: false
       },
       {
-        task: 'Audits & Compliance',
+        task: 'Studio First Steps',
         isDone: false
-      },
-      {
-        task: 'DAO & Foundation',
-        isDone: false
-      },
+      }
     ],
   },
   {
@@ -157,15 +145,15 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
+        task: 'Content Development',
+        isDone: false
+      },
+      {
+        task: 'Audits & Compliance',
+        isDone: false
+      },
+      {
         task: 'Analytics & Monitoring',
-        isDone: false
-      },
-      {
-        task: 'Distribution Dashboard',
-        isDone: false
-      },
-      {
-        task: 'Rights Marketplace',
         isDone: false
       }
     ],
@@ -176,7 +164,11 @@ export const QUARTERS = [
     color: 'warning',
     value: [
       {
-        task: 'Integrations with Layer Zero',
+        task: 'Distribution Market',
+        isDone: false
+      },
+      {
+        task: 'Rights Marketplace',
         isDone: false
       },
       {
