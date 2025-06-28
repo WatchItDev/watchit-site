@@ -1,5 +1,4 @@
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -55,7 +54,7 @@ const CARDS = [
   {
     icon: '/assets/icons/home/ic_tools.svg',
     label: 'AI Creative Studio',
-    description: 'AI tools for editing and VFX.'
+    description: 'AI tools for filmmaking and storytelling.'
   },
   {
     icon: '/assets/icons/home/ic_subtitles.svg',
@@ -92,7 +91,7 @@ const CARDS = [
 // ----------------------------------------------------------------------
 
 export default function HomeBenefits() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   const carousel = useCarousel({
     infinite: true,

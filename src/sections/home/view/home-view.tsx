@@ -10,8 +10,8 @@ import HomeExplore from '../home-explore';
 import HomeForDesigner from '../home-for-designer';
 import HomeAdvertisement from '../home-advertisement';
 import HomeRoadmap from "../home-roadmap";
-import HomeProtocol from "../home-protocol";
-import HomeGovernance from "../home-governance";
+// import HomeProtocol from "../home-protocol";
+// import HomeGovernance from "../home-governance";
 
 // ----------------------------------------------------------------------
 
@@ -66,7 +66,7 @@ export default function HomeView() {
         </Box>
         
         <HomeRoadmap />
-        <HomeGovernance />
+        {/* <HomeGovernance /> */}
         {/* <HomeProtocol /> */}
 
         <HomeAdvertisement />

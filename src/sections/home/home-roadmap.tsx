@@ -101,7 +101,7 @@ export const QUARTERS = [
   },
   {
     label: '2025 Q2',
-    progress: 0,
+    progress: 10,
     color: 'warning',
     value: [
       {
